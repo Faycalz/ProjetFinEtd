@@ -2,17 +2,20 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="495.0" prefWidth="830.0" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="834.0" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <children>
       <VBox prefHeight="200.0" prefWidth="415.0" style="-fx-background-color: #d8e3e7;" HBox.hgrow="ALWAYS">
          <children>
@@ -32,7 +35,7 @@
                         <Insets left="10.0" />
                      </HBox.margin>
                   </ImageView>
-                  <Label text="Graduate service">
+                  <Label style="-fx-font-size: 14; -fx-font-family: Arial;" text="Graduate service">
                      <padding>
                         <Insets top="15.0" />
                      </padding>
@@ -67,7 +70,7 @@
       </VBox>
       <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="415.0" stylesheets="@application.css" HBox.hgrow="ALWAYS">
          <children>
-            <HBox prefHeight="148.0" prefWidth="397.0">
+            <HBox prefHeight="153.0" prefWidth="400.0">
                <opaqueInsets>
                   <Insets top="-20.0" />
                </opaqueInsets>
@@ -78,13 +81,21 @@
                   <Insets top="-30.0" />
                </VBox.margin>
                <children>
-                  <ImageView fitHeight="150.0" fitWidth="396.0" pickOnBounds="true" preserveRatio="true">
+                  <Label opacity="0.55" prefHeight="17.0" prefWidth="262.0" text="Welcome back , please Login to your account">
                      <HBox.margin>
-                        <Insets top="30.0" />
+                        <Insets left="60.0" top="140.0" />
                      </HBox.margin>
-                  </ImageView>
+                  </Label>
+                  <Label fx:id="lbl2" prefHeight="35.0" prefWidth="292.0" text="Welcome back !">
+                     <HBox.margin>
+                        <Insets left="-200.0" top="90.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
                </children></HBox>
-            <HBox alignment="CENTER_LEFT" prefHeight="93.0" prefWidth="417.0" spacing="8.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="82.0" prefWidth="400.0" spacing="8.0">
                <children>
                   <FontAwesomeIconView fill="#407bff" glyphName="USER" size="25" />
                   <JFXTextField fx:id="usernameField" labelFloat="true" prefHeight="25.0" prefWidth="209.0" promptText="Username">
@@ -94,9 +105,9 @@
                   </JFXTextField>
                </children>
             </HBox>
-            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="8.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="87.0" prefWidth="400.0" spacing="8.0">
                <children>
-                  <FontAwesomeIconView fill="#407bff" glyphName="LOCK" size="25" />
+                  <FontAwesomeIconView fill="#407bff" glyphName="LOCK" size="25" text="" />
                   <JFXPasswordField fx:id="passwordField" labelFloat="true" prefHeight="25.0" prefWidth="209.0" promptText="Password">
                      <HBox.margin>
                         <Insets left="15.0" />
@@ -113,27 +124,38 @@
                   </Label>
                </children>
             </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="60.0">
+            <HBox prefHeight="98.0" prefWidth="400.0" spacing="40.0">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
                <padding>
                   <Insets top="30.0" />
                </padding>
-            </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <JFXButton fx:id="onLogin" onAction="#onLogin" prefHeight="25.0" prefWidth="79.0" ripplerFill="#4d9dee" text="Login">
+                  <JFXRadioButton fx:id="TeacherRbtn" prefHeight="41.0" prefWidth="103.0" text="Teacher">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Groupe" />
+                     </toggleGroup>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="StudentRbtn" prefHeight="41.0" prefWidth="99.0" text="Student " toggleGroup="$Groupe" />
+               </children>
+            </HBox>
+            <HBox prefHeight="119.0" prefWidth="420.0">
+               <children>
+                  <JFXButton fx:id="onLogin" onAction="#onLogin" prefHeight="33.0" prefWidth="101.0" ripplerFill="#4d9dee" text="Login">
                      <HBox.margin>
                         <Insets left="30.0" right="50.0" top="30.0" />
                      </HBox.margin>
                   </JFXButton>
-                  <JFXButton fx:id="btn2" layoutX="10.0" layoutY="10.0" onAction="#onSignUp" prefHeight="32.0" prefWidth="94.0" ripplerFill="#4d9dee" style="-fx-background-radius: 60;" text="Signup">
+                  <JFXButton fx:id="btn2" layoutX="10.0" layoutY="10.0" prefHeight="33.0" prefWidth="100.0" ripplerFill="#4d9dee" text="Signup">
                      <HBox.margin>
                         <Insets left="30.0" right="50.0" top="30.0" />
                      </HBox.margin>
                   </JFXButton>
                </children>
+               <VBox.margin>
+                  <Insets left="-20.0" />
+               </VBox.margin>
             </HBox>
          </children>
          <padding>

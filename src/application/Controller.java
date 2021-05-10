@@ -1,6 +1,8 @@
 package application;
 
 import java.io.IOException;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.time.LocalTime;
 import java.util.ResourceBundle;
 
@@ -8,6 +10,9 @@ import javax.print.DocFlavor.URL;
 import javax.swing.JOptionPane;
 
 import org.controlsfx.control.Notifications;
+
+import com.jfoenix.controls.JFXRadioButton;
+
 
 import database.DbConnection;
 import impl.org.controlsfx.i18n.Translation;
@@ -29,6 +34,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -37,7 +43,7 @@ import javafx.util.Duration;
 
 
 public class Controller {
-
+	public AnchorPane loginpane;
 	@FXML
 	private Label label1;
 	
@@ -46,19 +52,29 @@ public class Controller {
 	@FXML
 	private PasswordField passwordField;
 	@FXML
-	
+	private JFXRadioButton TeacherRbtn;
 
-	private void onLogin() {
+	@FXML
+	private JFXRadioButton StudentRbtn;
+	 public static String typedID = null;
+	
+    String id = null, pass = null;
+	 public void onLogin(ActionEvent event) throws IOException  {
 		
-		
+		 if (StudentRbtn.isSelected()== false && TeacherRbtn.isSelected()== false)   {
+			 label1.setText("Select your");
+     		label1.setStyle("-fx-text-fill: red ; -fx-font-size : 14  ");
+     		label1.setVisible(true);
+       	 }
 		if(usernameField.getText().matches("[a-zA-Z0-9_] {4,}")) {
 			return;
 		}
 		if(passwordField.getText().isEmpty()) {
+			
 			return;
 		}
 		
-		int status = DbConnection.checkLogin(usernameField.getText().trim().toLowerCase(), passwordField.getText());
+		/*int status = DbConnection.checkLogin(usernameField.getText().trim().toLowerCase(), passwordField.getText());
 		
 		switch (status) {
 		case 0 : {
@@ -105,14 +121,101 @@ public class Controller {
 		 break;
 		
 		
-		}
+		}*/
 		
-		
-		
+		typedID = usernameField.getText();
+        String typedPassword = passwordField.getText();
+        if (StudentRbtn.isSelected()) {
+            String q1 = "SELECT * FROM etudiant  WHERE username = '" + typedID + "'";
+
+            try {
+                ResultSet rs1 = DbConnection.executeQuery(q1, DbConnection.createConnection());
+
+                while (rs1.next()) {
+                    id = rs1.getString("username");
+                    pass = rs1.getString("password");
+                }
+            } catch (SQLException ex) {
+                System.out.println(ex);
+            }
+            if (typedID.equals(id) && typedPassword.equals(pass)) {
+            	Stage stage = (Stage) usernameField.getScene().getWindow();		
+    			Parent root = null;
+    			try {
+    				root = FXMLLoader.load(getClass().getResource("/system/FxmlSys.fxml"));
+    			} catch (IOException e) {
+    				// TODO Auto-generated catch block
+    				e.printStackTrace();
+    			}
+    			stage.setScene(new Scene(root));
+
+            } else {
+            	Notifications notif2 = Notifications.create();
+        		Image img2 = new Image("/images/account.png");
+        		
+        		notif2.title("Try Again");
+        		notif2.text("The username or password you entered is incorrect.");
+        		notif2.darkStyle();
+        		notif2.hideAfter(Duration.seconds(5));
+        		notif2.position(Pos.BOTTOM_RIGHT);
+        		notif2.graphic(new ImageView(img2) );
+        		notif2.show();
+        		label1.setText("Username or Password incorrect !");
+        		label1.setStyle("-fx-text-fill: red ; -fx-font-size : 14  ");
+        		label1.setVisible(true);
+            }
+        } else if (TeacherRbtn.isSelected()) {
+            String q1 = "SELECT * FROM prof  WHERE username = '" + typedID + "'";
+            id = null;
+            pass = null;
+            try {
+                ResultSet rs1 = DbConnection.executeQuery(q1, DbConnection.createConnection());
+
+                while (rs1.next()) {
+                    id = rs1.getString("username");
+                    
+                    pass = rs1.getString("password");
+                    
+
+                }
+            } catch (SQLException ex) {
+                System.out.println(ex);
+            }
+            if (typedID.equals(id) && typedPassword.equals(pass)) {
+            	Stage stage = (Stage) usernameField.getScene().getWindow();		
+    			Parent root = null;
+    			try {
+    				root = FXMLLoader.load(getClass().getResource("/system/FxmlSys.fxml"));
+    			} catch (IOException e) {
+    				// TODO Auto-generated catch block
+    				e.printStackTrace();
+    			}
+    			stage.setScene(new Scene(root));
+
+            } else {
+            	Notifications notif2 = Notifications.create();
+        		Image img2 = new Image("/images/account.png");
+        		
+        		notif2.title("Try Again");
+        		notif2.text("The username or password you entered is incorrect.");
+        		notif2.darkStyle();
+        		notif2.hideAfter(Duration.seconds(5));
+        		notif2.position(Pos.BOTTOM_RIGHT);
+        		notif2.graphic(new ImageView(img2) );
+        		notif2.show();
+        		label1.setText("Username or Password incorrect !");
+        		label1.setStyle("-fx-text-fill: red ; -fx-font-size : 14  ");
+        		label1.setVisible(true);
+              
+            }
+            
+        }
+        
+     
 	}
 	
-
-	@FXML
+	
+	/*@FXML
 	private void onSignUp(ActionEvent event) throws IOException {
 		
 		
@@ -130,7 +233,7 @@ public class Controller {
 		
 		primaryStage.show();
 		
-	}
+	}*/
 	
 	
 	
