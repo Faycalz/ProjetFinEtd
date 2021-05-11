@@ -142,7 +142,7 @@ public class Controller {
             	Stage stage = (Stage) usernameField.getScene().getWindow();		
     			Parent root = null;
     			try {
-    				root = FXMLLoader.load(getClass().getResource("/system/FxmlSys.fxml"));
+    				root = FXMLLoader.load(getClass().getResource("/etudiant/EtdFirstWindow.fxml"));
     			} catch (IOException e) {
     				// TODO Auto-generated catch block
     				e.printStackTrace();

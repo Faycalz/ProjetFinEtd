@@ -1,1 +1,12 @@
-@charset "ISO-8859-1";
+
+.gradient-background {
+	-fx-background-color: linear-gradient(from 40% 40% to 100% 100% ,#045de9 ,#09c6f9);
+}
+.line-color{
+	-fx-background-color: white;
+	
+}
+.container{
+	-fx-background-color: rgba(255,255,255,0.2);
+	-fx-background-radius: 10;
+}
