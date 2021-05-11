@@ -237,7 +237,11 @@ public class Controller {
 	
 	
 	
-	
+	 @FXML
+	    void initialize() throws IOException {
+
+
+	    }
 	
 	
 	

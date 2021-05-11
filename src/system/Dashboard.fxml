@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="604.0" prefWidth="840.0" styleClass="container" stylesheets="@StyleSys.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+   <children>
+      <Label layoutX="14.0" layoutY="7.0" prefHeight="46.0" prefWidth="106.0" text="Dashboard">
+         <font>
+            <Font name="octicons" size="20.0" />
+         </font>
+      </Label>
+      <Pane layoutX="21.0" layoutY="79.0" prefHeight="131.0" prefWidth="805.0" styleClass="container" stylesheets="@StyleSys.css">
+         <children>
+            <ImageView fitHeight="387.0" fitWidth="341.0" layoutX="450.0" layoutY="-156.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Downloads/Telecommuting-pana%20(2).png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
