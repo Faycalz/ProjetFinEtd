@@ -10,3 +10,15 @@
 	-fx-background-color: rgba(255,255,255,1);
 	-fx-background-radius: 10;
 }
+.container2{
+	-fx-background-color: #407bff;
+	-fx-background-radius: 10;
+}
+.container3{
+	-fx-background-color: linear-gradient(from 40% 40% to 100% 100% ,#045de9 ,#09c6f9);
+	-fx-background-radius: 10;
+	
+}
+.shadow{
+	-fx-effect: dropshadow(three-pass-box , rgba(0,0,0,0.2) , 10 , 0 , 0 , 10) ;
+}

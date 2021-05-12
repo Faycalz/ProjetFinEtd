@@ -40,6 +40,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
+import system.ControllerSys;
 
 
 public class Controller {
@@ -240,6 +241,7 @@ public class Controller {
 	 @FXML
 	    void initialize() throws IOException {
 
+		 
 
 	    }
 	
