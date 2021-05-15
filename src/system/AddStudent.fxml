@@ -155,7 +155,7 @@
          <children>
             <ImageView fitHeight="466.0" fitWidth="394.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../Downloads/Add%20tasks%20(1).gif" />
+                  <Image url="@../images/Add%20tasks%20(1).gif" />
                </image>
             </ImageView>
          </children>
