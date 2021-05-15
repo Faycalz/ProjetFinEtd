@@ -5,6 +5,7 @@ import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.PieChart;
@@ -23,6 +24,9 @@ public class DashController  implements Initializable{
 				);
 		pieChart.setData(pieChartData);
 	}
+	
+	
+	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		iniPieChart();

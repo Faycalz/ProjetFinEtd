@@ -8,6 +8,7 @@ import java.util.ResourceBundle;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.PieChart;
@@ -24,7 +25,7 @@ public class ControllerSys implements Initializable{
     @FXML
     private BorderPane mainPane;
     
-	@FXML
+	
 	
 	/*void initialize() {
 		 FxmlLoaderr object = new FxmlLoaderr();
@@ -33,15 +34,17 @@ public class ControllerSys implements Initializable{
 		
 	     
 		}*/
-	public void iniPieChart() {
-		ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList(
-				new PieChart.Data("Theme 1", 50),
-				new PieChart.Data("Theme 2", 25),
-				new PieChart.Data("Theme 3", 50),
-				new PieChart.Data("Theme 4", 30)
-				);
-		pieChart.setData(pieChartData);
+
+    
+    @FXML
+	void studentAction(ActionEvent event) {
+		
+    	FxmlLoaderr object = new FxmlLoaderr();
+	     Pane view = object.getPage("Student");
+	     mainPane.setCenter(view);
+		
 	}
+    
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub

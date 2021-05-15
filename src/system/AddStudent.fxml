@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="806.0" style="-fx-background-color: #ECEFF1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="339.0" layoutY="14.0" text="Student Details" textFill="#2882ff">
+         <font>
+            <Font name="octicons" size="22.0" />
+         </font>
+      </Label>
+      <VBox layoutX="413.0" layoutY="52.0" prefHeight="436.0" prefWidth="393.0">
+         <children>
+            <HBox prefHeight="70.0" prefWidth="200.0">
+               <children>
+                  <HBox prefHeight="70.0" prefWidth="117.0">
+                     <children>
+                        <Label text="Name">
+                           <HBox.margin>
+                              <Insets left="15.0" top="33.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <JFXTextField fx:id="Insertname" focusColor="#407bff" prefHeight="25.0" prefWidth="170.0">
+                     <HBox.margin>
+                        <Insets left="30.0" top="20.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="200.0">
+               <children>
+                  <HBox prefHeight="70.0" prefWidth="117.0">
+                     <children>
+                        <Label text="Last Name">
+                           <HBox.margin>
+                              <Insets left="15.0" top="33.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <JFXTextField fx:id="Insertlastname" focusColor="#407bff" prefHeight="25.0" prefWidth="170.0">
+                     <HBox.margin>
+                        <Insets left="30.0" top="20.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="80.0" prefHeight="70.0" prefWidth="200.0">
+               <children>
+                  <HBox prefHeight="70.0" prefWidth="117.0">
+                     <children>
+                        <Label prefHeight="16.0" prefWidth="91.0" text="Date of birth">
+                           <HBox.margin>
+                              <Insets left="15.0" top="33.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <JFXDatePicker fx:id="Insertbirthday" defaultColor="#407bff" prefHeight="25.0" prefWidth="179.0">
+                     <HBox.margin>
+                        <Insets left="30.0" top="20.0" />
+                     </HBox.margin>
+                  </JFXDatePicker>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="80.0" prefHeight="70.0" prefWidth="200.0" spacing="25.0">
+               <children>
+                  <HBox prefHeight="70.0" prefWidth="117.0">
+                     <children>
+                        <Label text="gender">
+                           <HBox.margin>
+                              <Insets left="15.0" top="33.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <JFXRadioButton fx:id="male" text="Male">
+                     <HBox.margin>
+                        <Insets top="33.0" />
+                     </HBox.margin>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="gendergroup" />
+                     </toggleGroup>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="female" text="Female" toggleGroup="$gendergroup">
+                     <HBox.margin>
+                        <Insets top="33.0" />
+                     </HBox.margin>
+                  </JFXRadioButton>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="80.0" prefHeight="70.0" prefWidth="200.0">
+               <children>
+                  <HBox prefHeight="70.0" prefWidth="117.0">
+                     <children>
+                        <Label text="Group">
+                           <HBox.margin>
+                              <Insets left="15.0" top="33.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <JFXComboBox fx:id="InsertGroup" prefHeight="25.0" prefWidth="135.0">
+                     <HBox.margin>
+                        <Insets left="40.0" top="27.0" />
+                     </HBox.margin>
+                  </JFXComboBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="85.0" prefWidth="393.0" spacing="60.0">
+               <children>
+                  <JFXButton prefHeight="25.0" prefWidth="97.0" text="Save" />
+                  <JFXButton prefHeight="25.0" prefWidth="126.0" text="Clear" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="10.0" layoutY="52.0" prefHeight="436.0" prefWidth="393.0">
+         <children>
+            <ImageView fitHeight="466.0" fitWidth="394.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Downloads/Add%20tasks%20(1).gif" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+   </children>
+</Pane>

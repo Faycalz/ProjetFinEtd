@@ -42,11 +42,11 @@
                         <Insets top="29.0" />
                      </HBox.margin>
                   </Pane>
-                  <JFXButton ellipsisString="" prefHeight="55.0" prefWidth="49.0">
+                  <JFXButton ellipsisString="" prefHeight="36.0" prefWidth="36.0" ripplerFill="#4294ff">
                      <graphic>
-                        <ImageView fitHeight="47.0" fitWidth="103.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../images/home.png" />
+                              <Image url="@../images/home%20(1).png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -54,11 +54,11 @@
                         <Insets top="2.0" />
                      </HBox.margin>
                   </JFXButton>
-                  <JFXButton ellipsisString="" prefHeight="55.0" prefWidth="50.0">
+                  <JFXButton ellipsisString="" prefHeight="44.0" prefWidth="33.0">
                      <graphic>
-                        <ImageView fitHeight="47.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../images/logout.png" />
+                              <Image url="@../images/exit.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -70,12 +70,180 @@
             </HBox>
          </top>
          <left>
-            <VBox prefHeight="200.0" prefWidth="250.0" styleClass="container" stylesheets="@StyleSys.css" BorderPane.alignment="CENTER">
+            <VBox prefHeight="599.0" prefWidth="250.0" styleClass="container" stylesheets="@StyleSys.css" BorderPane.alignment="CENTER">
                <BorderPane.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </BorderPane.margin>
                <children>
-                  <HBox prefHeight="100.0" prefWidth="200.0" />
+                  <HBox prefHeight="70.0" prefWidth="250.0">
+                     <children>
+                        <ImageView fitHeight="46.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/user.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="10.0" top="7.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label prefHeight="50.0" prefWidth="60.0" text="Username">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets left="13.0" top="6.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children></HBox>
+                  <Pane maxHeight="35.0" prefHeight="8.0" prefWidth="218.0" style="-fx-background-color: #EAE7E6;" styleClass="line-color" stylesheets="@StyleSys.css" VBox.vgrow="ALWAYS">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets left="20.0" right="18.0" />
+                     </VBox.margin>
+                  </Pane>
+                  <HBox prefHeight="77.0" prefWidth="250.0">
+                     <children>
+                        <JFXButton alignment="BASELINE_LEFT" graphicTextGap="30.0" prefHeight="72.0" prefWidth="269.0" text="Dashboard" textFill="#000000b2">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/home%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="77.0" prefWidth="250.0">
+                     <children>
+                        <JFXButton alignment="BASELINE_LEFT" graphicTextGap="30.0" onAction="#studentAction" prefHeight="105.0" prefWidth="250.0" text="Students Management" textFill="#000000b2">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/team.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="77.0" prefWidth="250.0">
+                     <children>
+                        <JFXButton alignment="BASELINE_LEFT" graphicTextGap="30.0" prefHeight="72.0" prefWidth="287.0" text="Group Management" textFill="#000000b2">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/users.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="77.0" prefWidth="250.0">
+                     <children>
+                        <JFXButton alignment="BASELINE_LEFT" graphicTextGap="30.0" prefHeight="72.0" prefWidth="409.0" text="Subjects " textFill="#000000b2">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/paper.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="77.0" prefWidth="250.0">
+                     <children>
+                        <JFXButton alignment="BASELINE_LEFT" graphicTextGap="30.0" prefHeight="72.0" prefWidth="357.0" text="Session" textFill="#000000b2">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/choosing.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="77.0" prefWidth="250.0">
+                     <children>
+                        <JFXButton alignment="BASELINE_LEFT" graphicTextGap="30.0" prefHeight="72.0" prefWidth="343.0" text="Team" textFill="#000000b2">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/two-graduate-students.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="77.0" prefWidth="250.0">
+                     <children>
+                        <JFXButton alignment="BASELINE_LEFT" graphicTextGap="30.0" prefHeight="72.0" prefWidth="331.0" text="Evaluation" textFill="#000000b2">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/checklist.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
                </children>
             </VBox>
          </left>
