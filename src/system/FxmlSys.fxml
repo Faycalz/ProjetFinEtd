@@ -107,7 +107,7 @@
                   </Pane>
                   <HBox prefHeight="77.0" prefWidth="250.0">
                      <children>
-                        <JFXButton alignment="BASELINE_LEFT" graphicTextGap="30.0" prefHeight="72.0" prefWidth="269.0" text="Dashboard" textFill="#000000b2">
+                        <JFXButton alignment="BASELINE_LEFT" graphicTextGap="30.0" onAction="#DashAction" prefHeight="72.0" prefWidth="269.0" text="Dashboard" textFill="#000000b2">
                            <font>
                               <Font size="15.0" />
                            </font>
@@ -151,7 +151,7 @@
                   </HBox>
                   <HBox prefHeight="77.0" prefWidth="250.0">
                      <children>
-                        <JFXButton alignment="BASELINE_LEFT" graphicTextGap="30.0" prefHeight="72.0" prefWidth="287.0" text="Group Management" textFill="#000000b2">
+                        <JFXButton alignment="BASELINE_LEFT" graphicTextGap="30.0" onAction="#GroupAction" prefHeight="72.0" prefWidth="287.0" text="Group Management" textFill="#000000b2">
                            <font>
                               <Font size="15.0" />
                            </font>

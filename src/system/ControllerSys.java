@@ -45,6 +45,25 @@ public class ControllerSys implements Initializable{
 		
 	}
     
+    @FXML
+   	void DashAction(ActionEvent event) {
+   		
+       	FxmlLoaderr object = new FxmlLoaderr();
+   	     Pane view = object.getPage("Dashboard");
+   	     mainPane.setCenter(view);
+   		
+   	}
+       
+    @FXML
+   	void GroupAction(ActionEvent event) {
+   		
+       	FxmlLoaderr object = new FxmlLoaderr();
+   	     Pane view = object.getPage("Group");
+   	     mainPane.setCenter(view);
+   		
+   	}
+       
+    
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub

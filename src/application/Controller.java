@@ -63,7 +63,7 @@ public class Controller {
 	 public void onLogin(ActionEvent event) throws IOException  {
 		
 		 if (StudentRbtn.isSelected()== false && TeacherRbtn.isSelected()== false)   {
-			 label1.setText("Select your");
+			 label1.setText("please choose an option ");
      		label1.setStyle("-fx-text-fill: red ; -fx-font-size : 14  ");
      		label1.setVisible(true);
        	 }
@@ -155,7 +155,7 @@ public class Controller {
         		Image img2 = new Image("/images/account.png");
         		
         		notif2.title("Try Again");
-        		notif2.text("The username or password you entered is incorrect.");
+        		notif2.text("The username or password is incorrect.");
         		notif2.darkStyle();
         		notif2.hideAfter(Duration.seconds(5));
         		notif2.position(Pos.BOTTOM_RIGHT);

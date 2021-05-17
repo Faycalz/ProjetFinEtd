@@ -17,6 +17,7 @@ public class DbConnection {
 	private static final String DB_NAME = "gestion_pfe";
 	private static Statement st = null;
 	public static Connection con = null;
+	public static Connection conn;
 	
 	public DbConnection() {
 		createConnection();
@@ -104,6 +105,18 @@ public class DbConnection {
         } finally {
         }
         return result;
+    }
+	public static void Setconnection() throws ClassNotFoundException
+    {
+        try{
+            String url="jdbc:mysql://localhost/gestion_pfe";
+            Class.forName("com.mysql.jdbc.Driver");
+            con=DriverManager.getConnection(url, "root" ,"");
+            System.out.println("سلاااام");
+        }
+        catch(SQLException ex){
+            
+        }
     }
 	
 	
