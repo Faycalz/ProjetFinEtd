@@ -9,23 +9,17 @@
 #onLogin{
 	-fx-background-color: #407bff;
 	-fx-text-fill: white;
-	-fx-background-radius: 10;
-	
-	
+	-fx-background-radius: 15;
+	-fx-border-radius: 15;
 }
-#btn2{
-	
+
+#onLogin:hover{
+	-fx-background-color: #F6F6F8;
 	-fx-text-fill: #407bff;
-	-fx-background-radius: 9;
-	-fx-border-radius: 100;
-	-fx-border-color: #435560;
-	
+	-fx-background-radius: 15;
+	-fx-border-radius: 15;
 }
-#lbl2{
-	-fx-font-size: 24;
-	-fx-font-family:  "Times New Roman";
-	
-}
+
 
 
 

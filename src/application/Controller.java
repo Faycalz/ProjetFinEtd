@@ -149,6 +149,8 @@ public class Controller {
     				e.printStackTrace();
     			}
     			stage.setScene(new Scene(root));
+    			stage.setResizable(false);
+    			stage.centerOnScreen();
 
             } else {
             	Notifications notif2 = Notifications.create();
@@ -192,6 +194,8 @@ public class Controller {
     				e.printStackTrace();
     			}
     			stage.setScene(new Scene(root));
+    			stage.setResizable(false);
+    			stage.centerOnScreen();
 
             } else {
             	Notifications notif2 = Notifications.create();

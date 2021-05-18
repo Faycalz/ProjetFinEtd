@@ -17,28 +17,23 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="806.0" style="-fx-background-color: #ECEFF1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="system.AddStudentController">
    <children>
-      <Label layoutX="339.0" layoutY="14.0" text="Student Details" textFill="#2882ff">
-         <font>
-            <Font name="octicons" size="22.0" />
-         </font>
-      </Label>
       <VBox layoutX="413.0" layoutY="52.0" prefHeight="436.0" prefWidth="393.0">
          <children>
             <HBox prefHeight="70.0" prefWidth="200.0">
                <children>
                   <HBox prefHeight="70.0" prefWidth="117.0">
                      <children>
-                        <Label text="Name">
+                        <Label text="Name" textFill="#453d3db4">
                            <HBox.margin>
                               <Insets left="15.0" top="33.0" />
                            </HBox.margin>
                            <font>
-                              <Font name="Arial" size="14.0" />
+                              <Font name="Arial Bold" size="15.0" />
                            </font>
                         </Label>
                      </children>
                   </HBox>
-                  <JFXTextField fx:id="Insertname" focusColor="#407bff" prefHeight="25.0" prefWidth="170.0">
+                  <JFXTextField fx:id="Insertname" focusColor="#68a5fa" prefHeight="25.0" prefWidth="170.0">
                      <HBox.margin>
                         <Insets left="30.0" top="20.0" />
                      </HBox.margin>
@@ -49,17 +44,17 @@
                <children>
                   <HBox prefHeight="70.0" prefWidth="117.0">
                      <children>
-                        <Label text="Last Name">
+                        <Label text="Last Name" textFill="#453d3db2">
                            <HBox.margin>
                               <Insets left="15.0" top="33.0" />
                            </HBox.margin>
                            <font>
-                              <Font name="Arial" size="14.0" />
+                              <Font name="Arial Bold" size="15.0" />
                            </font>
                         </Label>
                      </children>
                   </HBox>
-                  <JFXTextField fx:id="Insertlastname" focusColor="#407bff" prefHeight="25.0" prefWidth="170.0">
+                  <JFXTextField fx:id="Insertlastname" focusColor="#68a5fa" prefHeight="25.0" prefWidth="170.0">
                      <HBox.margin>
                         <Insets left="30.0" top="20.0" />
                      </HBox.margin>
@@ -70,17 +65,17 @@
                <children>
                   <HBox prefHeight="70.0" prefWidth="117.0">
                      <children>
-                        <Label prefHeight="16.0" prefWidth="91.0" text="Date of birth">
+                        <Label prefHeight="16.0" prefWidth="91.0" text="Date of birth" textFill="#453d3db2">
                            <HBox.margin>
                               <Insets left="15.0" top="33.0" />
                            </HBox.margin>
                            <font>
-                              <Font name="Arial" size="14.0" />
+                              <Font name="Arial Bold" size="15.0" />
                            </font>
                         </Label>
                      </children>
                   </HBox>
-                  <JFXDatePicker fx:id="Insertbirthday" defaultColor="#407bff" prefHeight="25.0" prefWidth="179.0">
+                  <JFXDatePicker fx:id="Insertbirthday" defaultColor="#68a5fa" prefHeight="25.0" prefWidth="179.0">
                      <HBox.margin>
                         <Insets left="30.0" top="20.0" />
                      </HBox.margin>
@@ -91,12 +86,12 @@
                <children>
                   <HBox prefHeight="70.0" prefWidth="117.0">
                      <children>
-                        <Label text="gender">
+                        <Label text="Gender" textFill="#453d3db4">
                            <HBox.margin>
                               <Insets left="15.0" top="33.0" />
                            </HBox.margin>
                            <font>
-                              <Font name="Arial" size="14.0" />
+                              <Font name="Arial Bold" size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -123,12 +118,12 @@
                <children>
                   <HBox prefHeight="70.0" prefWidth="117.0">
                      <children>
-                        <Label text="Group">
+                        <Label text="Group" textFill="#453d3db1">
                            <HBox.margin>
                               <Insets left="15.0" top="33.0" />
                            </HBox.margin>
                            <font>
-                              <Font name="Arial" size="14.0" />
+                              <Font name="Arial Bold" size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -142,12 +137,21 @@
             </HBox>
             <HBox prefHeight="85.0" prefWidth="393.0" spacing="60.0">
                <children>
-                  <JFXButton onAction="#save" prefHeight="25.0" prefWidth="97.0" text="Save" />
-                  <JFXButton prefHeight="25.0" prefWidth="126.0" text="Clear" />
+                  <JFXButton fx:id="save" prefHeight="37.0" prefWidth="130.0" stylesheets="@StyleSys.css" text="Save" textFill="#141414b4">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXButton>
+                  <JFXButton fx:id="reset" prefHeight="37.0" prefWidth="130.0" stylesheets="@StyleSys.css" text="Reset" textFill="#0f0f0fb4">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXButton>
                </children>
                <VBox.margin>
                   <Insets />
                </VBox.margin>
+               <padding>
+                  <Insets left="49.0" top="25.0" />
+               </padding>
             </HBox>
          </children>
       </VBox>
@@ -160,5 +164,20 @@
             </ImageView>
          </children>
       </VBox>
+      <HBox layoutY="-1.0" prefHeight="45.0" prefWidth="806.0" style="-fx-background-color: #68A5FA;">
+         <children>
+            <Label prefHeight="45.0" prefWidth="333.0" text="Student Information" textFill="#ffffff">
+               <HBox.margin>
+                  <Insets left="255.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
    </children>
 </Pane>

@@ -22,3 +22,32 @@
 .shadow{
 	-fx-effect: dropshadow(three-pass-box , rgba(0,0,0,0.2) , 10 , 0 , 0 , 10) ;
 }
+
+#save, #reset {
+  -fx-background-color: white; 
+  -fx-color: black; 
+  -fx-border-color:#4d9dee;
+  -fx-border-radius: 16;
+  -fx-background-radius: 16;
+}
+
+ #reset:hover {
+  -fx-background-color:  #68A5FA;
+  -fx-color: white;
+  -fx-border-radius: 16;
+}
+
+#save:hover {
+  -fx-background-color:  #68A5FA;
+  -fx-color: white;
+  -fx-border-radius: 16;
+}
+
+.table-view{
+	-fx-background-color: transparent;
+}
+
+
+
+
+
