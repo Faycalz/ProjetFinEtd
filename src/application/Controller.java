@@ -67,12 +67,12 @@ public class Controller {
      		label1.setStyle("-fx-text-fill: red ; -fx-font-size : 14  ");
      		label1.setVisible(true);
        	 }
-		if(usernameField.getText().matches("[a-zA-Z0-9_] {4,}")) {
-			return;
+		if(usernameField.getText().matches("[a-zA-Z0-9_] {4,}") ) {
+			return ;
 		}
 		if(passwordField.getText().isEmpty()) {
 			
-			return;
+			System.out.println("password");
 		}
 		
 		/*int status = DbConnection.checkLogin(usernameField.getText().trim().toLowerCase(), passwordField.getText());

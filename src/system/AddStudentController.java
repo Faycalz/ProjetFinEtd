@@ -1,10 +1,12 @@
 package system;
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 
 import javax.print.DocFlavor.URL;
@@ -69,7 +71,8 @@ public class AddStudentController implements Initializable{
 	    ResultSet rs = null;
 	    PreparedStatement preparedStatement;
 	    String query;
-	   
+	    private boolean update;
+	    int studentId;
 	  
 	  
 	  
@@ -113,10 +116,39 @@ public class AddStudentController implements Initializable{
 		}
 		//RadioButton selectedRadioButton = (RadioButton) gendergroup.getSelectedToggle();
 		
+	
+		
 		private void getQuery() {
-		       query = "INSERT INTO etudiant (`nom`,`prenom`,`date_naissance`,`id_groupe`, `username`,`password`) VALUES (?,?,?,?,?,?)";
 
-		    }
+	        if (update == false) {
+	            
+	            query = "INSERT INTO etudiant (`nom`,`prenom`,`date_naissance`,`id_groupe`, `username`,`password`) VALUES (?,?,?,?,?,?)";
+
+
+	        }else{
+	            query = "UPDATE `etudiant` SET "
+	                    + "`nom`=?,"
+	                    + "`prenom`=?,"
+	                    + "`date_naissance`=?,"
+	                    + "`id_groupe`=?,"
+	                    + "`username`=?,"
+	                    + "`password`= ? WHERE num_insc = '"+studentId+"'";
+	        }
+
+	    }
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 			
 		private void insert() {
 		
@@ -125,7 +157,7 @@ public class AddStudentController implements Initializable{
 	            preparedStatement = con.prepareStatement(query);
 	            preparedStatement.setString(1, Insertname.getText());
 	            preparedStatement.setString(2, Insertlastname.getText());
-	            preparedStatement.setString(3, Insertbirthday.getValue().toString());
+	            preparedStatement.setString(3, String.valueOf(Insertbirthday.getValue()));
 	            
 	            preparedStatement.setString(4, InsertGroup.getValue().toString());
 	            preparedStatement.setString(5, Insertname.getText());
@@ -138,6 +170,18 @@ public class AddStudentController implements Initializable{
 	        }
 
 	    }
+		
+		@FXML
+	    private void clean() {
+			Insertname.setText(null);
+			Insertlastname.setText(null);
+			Insertbirthday.setValue(null);
+			InsertGroup.setValue(null);
+			
+	       
+	        
+	    }
+
 		
 		
 		
@@ -172,7 +216,7 @@ public class AddStudentController implements Initializable{
 				
 				 getQuery();
 				 insert();
-				 
+				 clean();
 				 Notifications.create()
                  .title("About Us")
                  .text("success")
@@ -184,6 +228,24 @@ public class AddStudentController implements Initializable{
 		
 			
 		}
+		
+		 void setTextField(int id ,String name, String lastname, LocalDate birthday) {
+
+			 studentId=id;
+			 Insertname.setText(name);
+			 Insertlastname.setText(lastname);
+			 Insertbirthday.setValue(birthday);
+			 
+			// InsertGroup.setValue(group);
+		    
+
+		    }
+	
+
+		void setUpdate(boolean b) {
+	        this.update = b;
+
+	    }
 		
 		
 		

@@ -11,18 +11,26 @@ import javax.swing.JOptionPane;
 
 
 import database.DbConnection;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javafx.util.Callback;
 import system.Student;
 import system.ControllerSys;
 
@@ -57,6 +65,8 @@ public class StudentManagememntController {
     
     @FXML
     private TableColumn<Student, String> Gender;
+    @FXML
+    private TableColumn<Student, String> Edit;
     
     String query = null;
     Connection connection = null;
@@ -81,7 +91,6 @@ public class StudentManagememntController {
         }
 
     }
-    
     
     
     
@@ -122,7 +131,7 @@ public class StudentManagememntController {
                         resultSet.getInt("num_insc"),
                         resultSet.getString("nom"),
                         resultSet.getString("prenom"),
-                        resultSet.getString("date_naissance"),
+                        resultSet.getDate("date_naissance"),
                         resultSet.getString("username"),
                         resultSet.getString("password"),
                         resultSet.getInt("id_groupe"),
@@ -155,6 +164,95 @@ public class StudentManagememntController {
         Gender.setCellValueFactory(new PropertyValueFactory<>("gender"));
       
 
+      //add cell of button edit 
+        Callback<TableColumn<Student, String>, TableCell<Student, String>> cellFoctory = (TableColumn<Student, String> param) -> {
+           // make cell containing buttons
+           final TableCell<Student, String> cell = new TableCell<Student, String>() {
+               @Override
+               public void updateItem(String item, boolean empty) {
+                   super.updateItem(item, empty);
+                   //that cell created only on non-empty rows
+                   if (empty) {
+                       setGraphic(null);
+                       setText(null);
+
+                   } else {
+
+                       FontAwesomeIconView deleteIcon = new FontAwesomeIconView(FontAwesomeIcon.TRASH);
+                       FontAwesomeIconView editIcon = new FontAwesomeIconView(FontAwesomeIcon.PENCIL_SQUARE);
+
+                       deleteIcon.setStyle(
+                               " -fx-cursor: hand ;"
+                               + "-glyph-size:28px;"
+                               + "-fx-fill:#ff1744;"
+                       );
+                       editIcon.setStyle(
+                               " -fx-cursor: hand ;"
+                               + "-glyph-size:28px;"
+                               + "-fx-fill:#00E676;"
+                       );
+                       deleteIcon.setOnMouseClicked((MouseEvent event) -> {
+                           
+                           try {
+                               student = Table.getSelectionModel().getSelectedItem();
+                               query = "DELETE FROM etudiant WHERE num_insc  ="+student.getId();
+                               connection = DbConnection.createConnection();
+                               preparedStatement = connection.prepareStatement(query);
+                               preparedStatement.execute();
+                               refreshView();
+                               
+                           } catch (SQLException ex) {
+                               Logger.getLogger(StudentManagememntController.class.getName()).log(Level.SEVERE, null, ex);
+                           }
+                           
+                          
+
+                         
+
+                       });
+                       editIcon.setOnMouseClicked((MouseEvent event) -> {
+                           
+                           student = Table.getSelectionModel().getSelectedItem();
+                           FXMLLoader loader = new FXMLLoader ();
+                           loader.setLocation(getClass().getResource("AddStudent.fxml"));
+                           try {
+                               loader.load();
+                           } catch (IOException ex) {
+                               Logger.getLogger(StudentManagememntController.class.getName()).log(Level.SEVERE, null, ex);
+                           }
+                           
+                           AddStudentController addStudentController = loader.getController();
+                           addStudentController.setUpdate(true);
+                           addStudentController.setTextField(student.getId(),student.getName(), student.getLastname(),student.getBirthday().toLocalDate());
+                           Parent parent = loader.getRoot();
+                           Stage stage = new Stage();
+                           stage.setScene(new Scene(parent));
+                           stage.initStyle(StageStyle.UTILITY);
+                           stage.show();
+                           
+
+                          
+
+                       });
+
+                       HBox managebtn = new HBox(editIcon, deleteIcon);
+                       managebtn.setStyle("-fx-alignment:center");
+                       HBox.setMargin(deleteIcon, new Insets(2, 2, 0, 3));
+                       HBox.setMargin(editIcon, new Insets(2, 3, 0, 2));
+
+                       setGraphic(managebtn);
+
+                       setText(null);
+
+                   }
+               }
+
+           };
+
+           return cell;
+       };
+        Edit.setCellFactory(cellFoctory);
+        Table.setItems(StudentList);
 
 
     }

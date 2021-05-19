@@ -42,7 +42,7 @@
                         <Insets top="29.0" />
                      </HBox.margin>
                   </Pane>
-                  <JFXButton ellipsisString="" prefHeight="36.0" prefWidth="36.0" ripplerFill="#4294ff">
+                  <JFXButton fx:id="HomeBtn" ellipsisString="" prefHeight="36.0" prefWidth="36.0" ripplerFill="#4294ff">
                      <graphic>
                         <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -54,7 +54,7 @@
                         <Insets top="2.0" />
                      </HBox.margin>
                   </JFXButton>
-                  <JFXButton ellipsisString="" prefHeight="44.0" prefWidth="33.0">
+                  <JFXButton fx:id="LogouBtn" ellipsisString="" onAction="#logout" prefHeight="44.0" prefWidth="33.0">
                      <graphic>
                         <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                            <image>

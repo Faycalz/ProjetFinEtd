@@ -27,15 +27,16 @@
                      <children>
                         <TableView fx:id="Table" prefHeight="470.0" prefWidth="930.0" stylesheets="@StyleSys.css" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                           <columns>
-                            <TableColumn fx:id="Id" prefWidth="75.0" text="ID" />
-                            <TableColumn fx:id="Name" prefWidth="125.0" text="Name" />
-                              <TableColumn fx:id="LastName" prefWidth="125.0" text="Last Name" />
-                              <TableColumn fx:id="Bday" prefWidth="110.0" text="Birthday" />
-                              <TableColumn fx:id="Username" minWidth="3.0" prefWidth="115.0" text="Username" />
-                              <TableColumn fx:id="Password" minWidth="0.0" prefWidth="115.0" text="Password" />
-                              <TableColumn fx:id="Group" prefWidth="54.0" text="Group" />
-                              <TableColumn fx:id="Teamid" prefWidth="92.0" text="Team Code" />
-                              <TableColumn fx:id="Gender" prefWidth="92.0" text="gender" />
+                            <TableColumn fx:id="Id" prefWidth="53.0" text="ID" />
+                            <TableColumn fx:id="Name" prefWidth="100.0" text="Name" />
+                              <TableColumn fx:id="LastName" prefWidth="100.0" text="Last Name" />
+                              <TableColumn fx:id="Bday" prefWidth="100.0" text="Birthday" />
+                              <TableColumn fx:id="Username" minWidth="3.0" prefWidth="79.0" text="Username" />
+                              <TableColumn fx:id="Password" minWidth="0.0" prefWidth="90.0" text="Password" />
+                              <TableColumn fx:id="Group" prefWidth="63.0" text="Group" />
+                              <TableColumn fx:id="Teamid" prefWidth="73.0" text="Team Code" />
+                              <TableColumn fx:id="Gender" prefWidth="64.0" text="gender" />
+                              <TableColumn fx:id="Edit" prefWidth="89.0" text="Edit" />
                           </columns>
                         </TableView>
                      </children>

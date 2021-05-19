@@ -1,11 +1,13 @@
 package system;
 
+import java.sql.Date;
+
 public class Student {
 
 	int id ;
 	String name;
 	String lastname;
-	String birthday;
+	Date birthday;
 	String username;
 	String password;
 	int group;
@@ -16,19 +18,18 @@ public class Student {
 	
 
 
-	public Student(int id, String name, String lastname, String birthday, String username , String password, int group,
-			int team , String gender) {
+	public Student(int id, String name, String lastname, Date birthday, String username, String password, int group,
+			int team, String gender) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.lastname = lastname;
-		this.username = username;
 		this.birthday = birthday;
+		this.username = username;
 		this.password = password;
 		this.group = group;
 		this.team = team;
 		this.gender = gender;
-		
 	}
 
 
@@ -60,6 +61,15 @@ public class Student {
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
 	}
+	
+	public Date getBirthday() {
+		return birthday;
+	}
+
+
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
+	}
 
 
 	public String getUsername() {
@@ -71,15 +81,6 @@ public class Student {
 		this.username = username;
 	}
 
-
-	public String getBirthday() {
-		return birthday;
-	}
-
-
-	public void setBirthday(String birthday) {
-		this.birthday = birthday;
-	}
 
 
 	public String getPassword() {
