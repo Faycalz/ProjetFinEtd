@@ -9,6 +9,7 @@ import java.util.logging.Logger;
 
 import javax.swing.JOptionPane;
 
+import com.jfoenix.controls.JFXButton;
 
 import database.DbConnection;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
@@ -26,6 +27,8 @@ import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
@@ -33,6 +36,7 @@ import javafx.stage.StageStyle;
 import javafx.util.Callback;
 import system.Student;
 import system.ControllerSys;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 
 public class StudentManagememntController {
 
@@ -178,19 +182,14 @@ public class StudentManagememntController {
 
                    } else {
 
-                       FontAwesomeIconView deleteIcon = new FontAwesomeIconView(FontAwesomeIcon.TRASH);
+                       FontAwesomeIconView deleteIcon = new FontAwesomeIconView(FontAwesomeIcon.TRASH_ALT);
                        FontAwesomeIconView editIcon = new FontAwesomeIconView(FontAwesomeIcon.PENCIL_SQUARE);
-
-                       deleteIcon.setStyle(
-                               " -fx-cursor: hand ;"
-                               + "-glyph-size:28px;"
-                               + "-fx-fill:#ff1744;"
-                       );
-                       editIcon.setStyle(
-                               " -fx-cursor: hand ;"
-                               + "-glyph-size:28px;"
-                               + "-fx-fill:#00E676;"
-                       );
+                       
+              
+                       deleteIcon.setId("my_icon");
+                       deleteIcon.setStyleClass("StyleSys.css");
+                       editIcon.setId("edit_icon");
+                       editIcon.setStyleClass("StyleSys.css");
                        deleteIcon.setOnMouseClicked((MouseEvent event) -> {
                            
                            try {
@@ -235,7 +234,7 @@ public class StudentManagememntController {
 
                        });
 
-                       HBox managebtn = new HBox(editIcon, deleteIcon);
+                       HBox managebtn = new HBox(editIcon,deleteIcon);
                        managebtn.setStyle("-fx-alignment:center");
                        HBox.setMargin(deleteIcon, new Insets(2, 2, 0, 3));
                        HBox.setMargin(editIcon, new Insets(2, 3, 0, 2));

@@ -119,6 +119,16 @@
 }
 
 
+#my_icon{
+	
+	-glyph-size:28px;
+	-fx-fill:#ff3800;
+}
+#edit_icon{
+	
+	-glyph-size:28px;
+	-fx-fill:#00E84F;
+}
 
 
 

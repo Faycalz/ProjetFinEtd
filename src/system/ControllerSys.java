@@ -52,13 +52,7 @@ public class ControllerSys implements Initializable{
 		}
     }
 	
-	/*void initialize() {
-		 FxmlLoaderr object = new FxmlLoaderr();
-	     Pane view = object.getPage("Dashboard");
-	     mainPane.setCenter(view);
-		
-	     
-		}*/
+	
 
    
     

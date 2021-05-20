@@ -29,29 +29,29 @@ import javafx.stage.StageStyle;
 public class groupController {
 
 	@FXML
-    private JFXButton RefGrp;
+    private TableView<Group> tableGroup;
 
     @FXML
-    private JFXButton DelGrp;
+    private TableColumn<Group, String> nameGrp;
+
+    @FXML
+    private TableColumn<Group, Integer> CapGrp;
+
+    @FXML
+    private TableColumn<Group, Integer> TechGrp;
+
+    @FXML
+    private TableColumn<Group, String> Update;
+
+    @FXML
+    private TableColumn<Group, String> Delete;
 
     @FXML
     private JFXButton AddGrp;
 
     @FXML
-    private JFXButton UpGrp;
-    
-    @FXML
-    private TableView<Group> Table;
-    
-    @FXML
-    private TableColumn<Group, Integer> IdG;
-    
-    @FXML
-    private TableColumn<Group, String> NameG;
-    
-    @FXML
-    private TableColumn<Group, Integer> TeachG;
-    
+    private JFXButton RefGrp;
+
 
     String query = null;
     Connection connection = null;
@@ -71,37 +71,15 @@ public class groupController {
             stage.initStyle(StageStyle.UTILITY);
             stage.setResizable(false);
             stage.show();
-          //refreshView();
+            refreshView();
         } catch (IOException ex) {
             Logger.getLogger(StudentManagememntController.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
     
-   /* 
-    int index;
-    @FXML
-    void delete(ActionEvent event) {
-
-        index = TableView.getSelectionModel().getSelectedIndex();
-        if (index <= -1){
-            return;
-        }
-        Integer from_table=Id.getCellData(index);
-        Connection conn;
-        PreparedStatement pst;
-        conn = DbConnection.createConnection();
-        String sql = "delete from group where `id` = ? " ;
-        try {
-            pst = conn.prepareStatement(sql);
-            pst.setInt(1, from_table);
-            pst.execute();
-            JOptionPane.showConfirmDialog(null, "Are you sure?");
-            //refreshView();
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e);
-        }
-    }
+   
+  
     
     
 
@@ -109,17 +87,17 @@ public class groupController {
     public void refreshView() {
         try {
             GroupList.clear();
-            query = "SELECT * FROM etudiant";
+            query = "SELECT * FROM groups";
             preparedStatement = connection.prepareStatement(query);
             resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
             	GroupList.add(new Group(
-                        resultSet.getInt("id"),
-                        resultSet.getString("nom"),
+                        resultSet.getString("nom_grp"),
+                        resultSet.getInt("Capacité"),
                         resultSet.getInt("id_prof")  
             			 ));
-                Table.setItems(GroupList);
+            	tableGroup.setItems(GroupList);
             }
 
 
@@ -130,7 +108,7 @@ public class groupController {
     }
     
     
-*/
+
     
     
     
@@ -151,14 +129,14 @@ public class groupController {
     
     
     
-    /*  
+    
     private void loadInfo() {
         System.out.println("Loading info");
         connection = DbConnection.createConnection();
-        //refreshView();
-        Id.setCellValueFactory(new PropertyValueFactory<>("id"));
-        Name.setCellValueFactory(new PropertyValueFactory<>("name"));
-        Teacher.setCellValueFactory(new PropertyValueFactory<>("teacher"));
+        refreshView();
+        nameGrp.setCellValueFactory(new PropertyValueFactory<>("nom"));
+       CapGrp.setCellValueFactory(new PropertyValueFactory<>("capacity"));
+        TechGrp.setCellValueFactory(new PropertyValueFactory<>("prof"));
 
       
 
@@ -173,6 +151,6 @@ public class groupController {
 
     }
     
-    */
+    
    
 }

@@ -6,7 +6,7 @@ public class Group {
 	String nom;
 	int capacity;
 	int prof;
-	public Group(String nom, int capacity, int prof) {
+	public Group(String nom, int capacity,int prof) {
 		super();
 		this.nom = nom;
 		this.capacity = capacity;
