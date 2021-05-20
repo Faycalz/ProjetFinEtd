@@ -17,7 +17,7 @@
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="834.0" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <children>
-      <VBox prefHeight="200.0" prefWidth="415.0" style="-fx-background-color: #d8e3e7;" HBox.hgrow="ALWAYS">
+      <VBox prefHeight="200.0" prefWidth="415.0" style="-fx-background-color: #ECEFF1;" HBox.hgrow="ALWAYS">
          <children>
             <HBox prefHeight="81.0" prefWidth="418.0" spacing="20.0">
                <opaqueInsets>
@@ -32,7 +32,7 @@
                         <Image url="@../images/mortarboard.png" />
                      </image>
                      <HBox.margin>
-                        <Insets left="10.0" top="24.0" />
+                        <Insets left="10.0" top="22.0" />
                      </HBox.margin>
                   </ImageView>
                   <Label fx:id="txt1" text="Graduate service">
@@ -40,10 +40,10 @@
                         <Insets top="15.0" />
                      </padding>
                      <HBox.margin>
-                        <Insets top="20.0" />
+                        <Insets top="18.0" />
                      </HBox.margin>
                      <font>
-                        <Font name="System Bold" size="19.0" />
+                        <Font name="System Bold" size="16.0" />
                      </font>
                   </Label>
                </children>
@@ -53,9 +53,9 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <ImageView fitHeight="459.0" fitWidth="418.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="418.0" fitWidth="409.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../images/Secure%20login-rafiki%20(1).png" />
+                        <Image url="@../images/Secure%20login.gif" />
                      </image>
                      <cursor>
                         <Cursor fx:constant="DEFAULT" />
@@ -74,7 +74,7 @@
             <Insets top="30.0" />
          </padding>
       </VBox>
-      <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="415.0" stylesheets="@application.css" HBox.hgrow="ALWAYS">
+      <VBox alignment="CENTER_LEFT" prefHeight="504.0" prefWidth="434.0" style="-fx-background-color: #fff;" stylesheets="@application.css" HBox.hgrow="ALWAYS">
          <children>
             <HBox prefHeight="153.0" prefWidth="400.0">
                <opaqueInsets>
@@ -87,23 +87,23 @@
                   <Insets top="-5.0" />
                </VBox.margin>
                <children>
-                  <Label opacity="0.55" prefHeight="17.0" prefWidth="274.0" text="Welcome back, please Login to your account">
+                  <Label opacity="0.55" prefHeight="14.0" prefWidth="260.0" text="Welcome back, please Login to your account">
                      <HBox.margin>
-                        <Insets left="58.0" top="147.0" />
+                        <Insets left="59.0" top="147.0" />
                      </HBox.margin>
                      <padding>
                         <Insets left="15.0" />
                      </padding>
                      <font>
-                        <Font name="Rockwell" size="12.0" />
+                        <Font name="Calibri" size="13.0" />
                      </font>
                   </Label>
                   <Label fx:id="lbl2" prefHeight="46.0" prefWidth="185.0" stylesheets="@application.css" text="Welcome back !" textFill="#407bff">
                      <HBox.margin>
-                        <Insets left="-210.0" top="82.0" />
+                        <Insets left="-215.0" top="82.0" />
                      </HBox.margin>
                      <font>
-                        <Font name="Calibri Bold" size="23.0" />
+                        <Font name="Calibri Bold" size="25.0" />
                      </font>
                   </Label>
                </children></HBox>
@@ -114,6 +114,9 @@
                      <HBox.margin>
                         <Insets left="15.0" />
                      </HBox.margin>
+                     <font>
+                        <Font name="Calibri" size="16.0" />
+                     </font>
                   </JFXTextField>
                </children>
                <VBox.margin>
@@ -128,7 +131,7 @@
                         <Insets left="15.0" />
                      </HBox.margin>
                      <font>
-                        <Font name="Rockwell" size="12.0" />
+                        <Font name="Calibri" size="16.0" />
                      </font>
                   </JFXPasswordField>
                </children>
@@ -142,12 +145,15 @@
                      <HBox.margin>
                         <Insets left="67.0" />
                      </HBox.margin>
+                     <font>
+                        <Font name="Calibri Bold" size="13.0" />
+                     </font>
                   </Label>
                </children>
             </HBox>
-            <HBox prefHeight="63.0" prefWidth="346.0" spacing="40.0">
+            <HBox prefHeight="58.0" prefWidth="302.0" spacing="40.0">
                <VBox.margin>
-                  <Insets left="55.0" top="20.0" />
+                  <Insets left="60.0" top="20.0" />
                </VBox.margin>
                <children>
                   <JFXRadioButton fx:id="TeacherRbtn" prefHeight="41.0" prefWidth="103.0" text="Teacher">
@@ -158,12 +164,12 @@
                         <Insets />
                      </HBox.margin>
                      <font>
-                        <Font name="Rockwell" size="12.0" />
+                        <Font name="Calibri" size="14.0" />
                      </font>
                   </JFXRadioButton>
                   <JFXRadioButton fx:id="StudentRbtn" prefHeight="41.0" prefWidth="99.0" text="Student " toggleGroup="$Groupe">
                      <font>
-                        <Font name="Rockwell" size="12.0" />
+                        <Font name="Calibri" size="14.0" />
                      </font></JFXRadioButton>
                </children>
                <padding>
@@ -175,9 +181,9 @@
                   <Insets left="-20.0" />
                </VBox.margin>
                <children>
-                  <JFXButton fx:id="onLogin" onAction="#onLogin" prefHeight="37.0" prefWidth="106.0" ripplerFill="#4d9dee" text="Login">
+                  <JFXButton fx:id="onLogin" onAction="#onLogin" prefHeight="37.0" prefWidth="228.0" ripplerFill="#4d9dee" text="Login">
                      <HBox.margin>
-                        <Insets left="145.0" top="18.0" />
+                        <Insets left="90.0" top="18.0" />
                      </HBox.margin>
                      <font>
                         <Font name="Calibri Bold" size="16.0" />

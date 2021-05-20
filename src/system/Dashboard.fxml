@@ -21,17 +21,20 @@
          <children>
             <Label layoutX="57.0" layoutY="15.0" prefHeight="36.0" prefWidth="40.0" text="Hi, " textFill="WHITE">
                <font>
-                  <Font name="octicons" size="25.0" />
+                  <Font name="Calibri" size="29.0" />
                </font>
             </Label>
-            <Label fx:id="Name" layoutX="90.0" layoutY="15.0" prefHeight="36.0" prefWidth="186.0" text="Name" textFill="WHITE">
+            <Label fx:id="Name" layoutX="90.0" layoutY="15.0" prefHeight="36.0" prefWidth="339.0" text="Name" textFill="WHITE">
                <font>
-                  <Font name="octicons" size="25.0" />
+                  <Font name="Calibri" size="29.0" />
                </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
             </Label>
             <Label layoutX="77.0" layoutY="75.0" prefHeight="27.0" prefWidth="264.0" text="connect with your students !" textFill="WHITE">
                <font>
-                  <Font size="18.0" />
+                  <Font name="Calibri" size="18.0" />
                </font>
             </Label>
             <ImageView fitHeight="355.0" fitWidth="378.0" layoutX="403.0" layoutY="-144.0" pickOnBounds="true" preserveRatio="true">
@@ -51,7 +54,7 @@
                <children>
                   <Label prefHeight="46.0" prefWidth="106.0" text="Teachers" textFill="#fcfcfc">
                      <font>
-                        <Font name="octicons" size="20.0" />
+                        <Font name="Calibri" size="25.0" />
                      </font>
                      <VBox.margin>
                         <Insets left="10.0" right="10.0" top="10.0" />
@@ -59,7 +62,7 @@
                   </Label>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <Label prefHeight="55.0" prefWidth="42.0" text="5" textFill="#fcfcfc">
+                        <Label fx:id="teacherNum" prefHeight="55.0" prefWidth="42.0" text="5" textFill="#fcfcfc">
                            <font>
                               <Font name="octicons" size="39.0" />
                            </font>
@@ -72,7 +75,7 @@
                <children>
                   <Label prefHeight="23.0" prefWidth="92.0" text="Students" textFill="#fcfcfc">
                      <font>
-                        <Font name="octicons" size="20.0" />
+                        <Font name="Calibri" size="25.0" />
                      </font>
                      <VBox.margin>
                         <Insets left="10.0" right="10.0" top="10.0" />
@@ -80,7 +83,7 @@
                   </Label>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <Label prefHeight="55.0" prefWidth="80.0" text="160" textFill="#fcfcfc">
+                        <Label fx:id="StudentNum" prefHeight="55.0" prefWidth="80.0" text="160" textFill="#fcfcfc">
                            <font>
                               <Font name="octicons" size="39.0" />
                            </font>
@@ -93,7 +96,7 @@
                <children>
                   <Label prefHeight="23.0" prefWidth="84.0" text="Groups" textFill="#fcfcfc">
                      <font>
-                        <Font name="octicons" size="20.0" />
+                        <Font name="Calibri" size="25.0" />
                      </font>
                      <VBox.margin>
                         <Insets left="10.0" right="10.0" top="10.0" />
@@ -101,7 +104,7 @@
                   </Label>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <Label prefHeight="55.0" prefWidth="59.0" text="18" textFill="#fcfcfc">
+                        <Label fx:id="GroupNum" prefHeight="55.0" prefWidth="59.0" text="18" textFill="#fcfcfc">
                            <font>
                               <Font name="octicons" size="39.0" />
                            </font>
@@ -114,7 +117,7 @@
       </HBox>
       <Label layoutX="22.0" layoutY="14.0" prefHeight="27.0" prefWidth="140.0" styleClass="shadow" stylesheets="@StyleSys.css" text="Dashboard">
          <font>
-            <Font name="octicons" size="21.0" />
+            <Font name="Calibri" size="25.0" />
          </font>
       </Label>
       <HBox layoutX="14.0" layoutY="185.0" prefHeight="235.0" prefWidth="805.0">
@@ -123,11 +126,14 @@
                <children>
                   <Label prefHeight="17.0" prefWidth="130.0" text="Subject Statistics">
                      <font>
-                        <Font size="14.0" />
+                        <Font name="Calibri" size="16.0" />
                      </font>
                      <padding>
                         <Insets left="10.0" />
                      </padding>
+                     <VBox.margin>
+                        <Insets top="8.0" />
+                     </VBox.margin>
                   </Label>
                   <PieChart fx:id="pieChart" legendVisible="false" styleClass="shadow" stylesheets="@StyleSys.css" />
                </children>
@@ -138,8 +144,11 @@
                      <children>
                         <Label text="Groups Statistics">
                            <font>
-                              <Font size="14.0" />
+                              <Font name="Calibri" size="16.0" />
                            </font>
+                           <VBox.margin>
+                              <Insets top="8.0" />
+                           </VBox.margin>
                         </Label>
                         <BarChart prefHeight="218.0" prefWidth="342.0" styleClass="shadow" stylesheets="@StyleSys.css">
                           <xAxis>

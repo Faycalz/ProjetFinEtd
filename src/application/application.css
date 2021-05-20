@@ -2,22 +2,39 @@
 
 
 .radio-button:hover {
-    -fx-font-size: 14;
+    -fx-font-size: 15;
+    -fx-font-family: Calibri;
+    -fx-font-weight: bold;
     
 }
 
 #onLogin{
+	
 	-fx-background-color: #407bff;
 	-fx-text-fill: white;
-	-fx-background-radius: 15;
-	-fx-border-radius: 15;
+	-fx-background-radius: 22;
+	-fx-border-radius: 22;
 }
 
 #onLogin:hover{
+	-fx-font-weight: bold;
 	-fx-background-color: #F6F6F8;
 	-fx-text-fill: #407bff;
-	-fx-background-radius: 15;
-	-fx-border-radius: 15;
+	-fx-background-radius: 20;
+	-fx-border-radius: 20;
+	-fx-border-color: #407bff;
+	-fx-border-width: 1;
+}
+
+#onLogin:pressed{
+	-fx-font-weight: bold;
+	-fx-background-color: #F6F6F8;
+	-fx-text-fill: #407bff;
+	-fx-background-radius: 20;
+	-fx-border-radius: 20;
+	-fx-border-color: #407bff;
+	-fx-border-width: 1;
+	-fx-rotate:14;
 }
 
 

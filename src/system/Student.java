@@ -10,7 +10,7 @@ public class Student {
 	Date birthday;
 	String username;
 	String password;
-	int group;
+	String group;
 	int team;
 	String gender ;
 	
@@ -18,7 +18,7 @@ public class Student {
 	
 
 
-	public Student(int id, String name, String lastname, Date birthday, String username, String password, int group,
+	public Student(int id, String name, String lastname, Date birthday, String username, String password, String group,
 			int team, String gender) {
 		super();
 		this.id = id;
@@ -93,12 +93,12 @@ public class Student {
 	}
 
 
-	public int getGroup() {
+	public String getGroup() {
 		return group;
 	}
 
 
-	public void setGroup(int group) {
+	public void setGroup(String group) {
 		this.group = group;
 	}
 

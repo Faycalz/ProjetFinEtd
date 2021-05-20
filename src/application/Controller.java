@@ -245,7 +245,8 @@ public class Controller {
 	 @FXML
 	    void initialize() throws IOException {
 
-		 
+		 TeacherRbtn.setSelectedColor(Color.web("#407bff",1));
+		 StudentRbtn.setSelectedColor(Color.web("#407bff",1));
 
 	    }
 	

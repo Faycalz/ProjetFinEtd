@@ -42,7 +42,7 @@
                         <Insets top="29.0" />
                      </HBox.margin>
                   </Pane>
-                  <JFXButton fx:id="HomeBtn" ellipsisString="" prefHeight="36.0" prefWidth="36.0" ripplerFill="#4294ff">
+                  <JFXButton ellipsisString="" prefHeight="36.0" prefWidth="36.0" ripplerFill="#4294ff">
                      <graphic>
                         <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -54,7 +54,7 @@
                         <Insets top="2.0" />
                      </HBox.margin>
                   </JFXButton>
-                  <JFXButton fx:id="LogouBtn" ellipsisString="" onAction="#logout" prefHeight="44.0" prefWidth="33.0">
+                  <JFXButton ellipsisString="" prefHeight="44.0" prefWidth="33.0">
                      <graphic>
                         <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -151,7 +151,7 @@
                   </HBox>
                   <HBox prefHeight="77.0" prefWidth="250.0">
                      <children>
-                        <JFXButton alignment="BASELINE_LEFT" graphicTextGap="30.0" prefHeight="72.0" prefWidth="287.0" text="Group Management" textFill="#000000b2">
+                        <JFXButton alignment="BASELINE_LEFT" graphicTextGap="30.0" onAction="#GroupAction" prefHeight="72.0" prefWidth="287.0" text="Group Management" textFill="#000000b2">
                            <font>
                               <Font size="15.0" />
                            </font>

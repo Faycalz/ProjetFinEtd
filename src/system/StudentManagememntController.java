@@ -134,7 +134,7 @@ public class StudentManagememntController {
                         resultSet.getDate("date_naissance"),
                         resultSet.getString("username"),
                         resultSet.getString("password"),
-                        resultSet.getInt("id_groupe"),
+                        resultSet.getString("id_grp"),
                         resultSet.getInt("code_binome"),  
                         resultSet.getString("gender")
                       
@@ -223,7 +223,7 @@ public class StudentManagememntController {
                            
                            AddStudentController addStudentController = loader.getController();
                            addStudentController.setUpdate(true);
-                           addStudentController.setTextField(student.getId(),student.getName(), student.getLastname(),student.getBirthday().toLocalDate());
+                           addStudentController.setTextField(student.getId(),student.getName(), student.getLastname(),student.getBirthday().toLocalDate() , student.getGroup());
                            Parent parent = loader.getRoot();
                            Stage stage = new Stage();
                            stage.setScene(new Scene(parent));

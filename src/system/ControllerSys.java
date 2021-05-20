@@ -86,7 +86,7 @@ public class ControllerSys implements Initializable{
    	void GroupAction(ActionEvent event) {
    		
        	FxmlLoaderr object = new FxmlLoaderr();
-   	     Pane view = object.getPage("Group");
+   	     Pane view = object.getPage("GroupFxml");
    	     mainPane.setCenter(view);
    		
    	}
