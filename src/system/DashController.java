@@ -24,7 +24,7 @@ public class DashController  implements Initializable{
 	Connection connection = null;
     PreparedStatement preparedStatement = null;
     ResultSet resultSet = null;
-    String query = null;
+    String query = null ;
     String query2 = null;
     String query3 = null;
     String query4= null ;
@@ -33,13 +33,15 @@ public class DashController  implements Initializable{
     String query7 = null;
     
     int count4,count5,count6,count7;
-    int tnum=6;
+   
     int theme1 ,theme2,theme3,theme4;
     
 	@FXML
 	private PieChart pieChart;
+	
     @FXML
     private Label Name;
+    
     @FXML
     private Label teacherNum;
 

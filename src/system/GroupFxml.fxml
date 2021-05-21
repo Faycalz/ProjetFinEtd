@@ -24,9 +24,8 @@
                           <columns>
                             <TableColumn fx:id="nameGrp" prefWidth="182.0" text="Group name" />
                             <TableColumn fx:id="CapGrp" minWidth="0.0" prefWidth="179.0" text="Capacity" />
-                              <TableColumn fx:id="TechGrp" prefWidth="190.0" text="Teacher" />
-                              <TableColumn fx:id="Update" minWidth="0.0" prefWidth="88.0" text="Update" />
-                              <TableColumn fx:id="Delete" prefWidth="87.0" text="Delete" />
+                              <TableColumn fx:id="TechGrp" prefWidth="212.0" text="Teacher" />
+                              <TableColumn fx:id="Delete" prefWidth="154.0" text="Delete" />
                           </columns>
                         </TableView>
                      </children>

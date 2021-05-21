@@ -4,9 +4,9 @@ public class Group {
 
 	
 	String nom;
-	int capacity;
-	int prof;
-	public Group(String nom, int capacity,int prof) {
+	String capacity;
+	String prof;
+	public Group(String nom, String capacity,String prof) {
 		super();
 		this.nom = nom;
 		this.capacity = capacity;
@@ -18,16 +18,18 @@ public class Group {
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
-	public int getCapacity() {
+	
+	public String getCapacity() {
 		return capacity;
 	}
-	public void setCapacity(int capacity) {
+	public void setCapacity(String capacity) {
 		this.capacity = capacity;
 	}
-	public int getProf() {
+	
+	public String getProf() {
 		return prof;
 	}
-	public void setProf(int prof) {
+	public void setProf(String prof) {
 		this.prof = prof;
 	}
 	

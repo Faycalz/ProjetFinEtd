@@ -123,7 +123,7 @@
             </HBox>
             <HBox layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0" spacing="60.0" stylesheets="@StyleSys.css">
                <children>
-                  <JFXButton fx:id="save" prefHeight="37.0" prefWidth="130.0" text="Save" textFill="#121212cb">
+                  <JFXButton fx:id="save" onAction="#save" prefHeight="37.0" prefWidth="130.0" text="Save" textFill="#121212cb">
                      <font>
                         <Font name="Calibri Bold" size="14.0" />
                      </font></JFXButton>
