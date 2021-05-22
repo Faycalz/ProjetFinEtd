@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="806.0" style="-fx-background-color: #ECEFF1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.TeacherController">
+   <children>
+      <HBox prefHeight="45.0" prefWidth="806.0" style="-fx-background-color: #407bff;">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/more.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </ImageView>
+            <Label prefHeight="45.0" prefWidth="333.0" text="Teacher Information" textFill="#ffffff" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="170.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font name="Calibri Bold" size="29.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <VBox layoutY="52.0" prefHeight="436.0" prefWidth="393.0">
+         <children>
+            <ImageView fitHeight="436.0" fitWidth="393.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Teaching.gif" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <VBox layoutX="413.0" layoutY="52.0" prefHeight="436.0" prefWidth="393.0">
+         <children>
+            <HBox prefHeight="70.0" prefWidth="200.0">
+               <children>
+                  <HBox prefHeight="70.0" prefWidth="117.0">
+                     <children>
+                        <Label text="Name" textFill="#453d3db5">
+                           <HBox.margin>
+                              <Insets left="15.0" top="33.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Arial Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <JFXTextField fx:id="nameT" focusColor="#407bff" prefHeight="25.0" prefWidth="170.0">
+                     <HBox.margin>
+                        <Insets left="30.0" top="20.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="200.0">
+               <children>
+                  <HBox prefHeight="70.0" prefWidth="117.0">
+                     <children>
+                        <Label text="Last name" textFill="#453d3db5">
+                           <HBox.margin>
+                              <Insets left="15.0" top="33.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Arial Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <JFXTextField fx:id="lastNameT" focusColor="#407bff" prefHeight="25.0" prefWidth="170.0">
+                     <HBox.margin>
+                        <Insets left="30.0" top="20.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" top="15.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="80.0" prefHeight="70.0" prefWidth="200.0">
+               <children>
+                  <HBox prefHeight="70.0" prefWidth="117.0">
+                     <children>
+                        <Label text="Degree" textFill="#453d3db5">
+                           <HBox.margin>
+                              <Insets left="15.0" top="33.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Arial Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <JFXTextField fx:id="Degree" focusColor="#407bff" prefHeight="25.0" prefWidth="170.0">
+                     <HBox.margin>
+                        <Insets left="30.0" top="20.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" top="15.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="85.0" prefWidth="393.0" spacing="60.0">
+               <children>
+                  <JFXButton fx:id="save" onAction="#save" prefHeight="37.0" prefWidth="130.0" stylesheets="@StyleSys.css" text="Save" textFill="#141414b5">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="-14.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="reset" prefHeight="37.0" prefWidth="130.0" stylesheets="@StyleSys.css" text="Reset" textFill="#0f0f0fb4">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets left="49.0" top="25.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</Pane>

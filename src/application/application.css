@@ -24,6 +24,7 @@
 	-fx-border-radius: 20;
 	-fx-border-color: #407bff;
 	-fx-border-width: 1;
+	-fx-effect: dropshadow(three-pass-box, rgba(83,136,254,1), 6, 0, 0, 0);
 }
 
 #onLogin:pressed{

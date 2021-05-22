@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="604.0" prefWidth="840.0" styleClass="container" stylesheets="@StyleSys.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.DashController">
+   <children>
+      <Pane layoutX="14.0" layoutY="51.0" prefHeight="131.0" prefWidth="805.0" stylesheets="@StyleSys.css">
+         <children>
+            <Label layoutX="57.0" layoutY="15.0" prefHeight="36.0" prefWidth="40.0" text="Hi, " textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="29.0" />
+               </font>
+            </Label>
+            <Label fx:id="Name" layoutX="90.0" layoutY="15.0" prefHeight="36.0" prefWidth="339.0" text="Name" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="29.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label layoutX="77.0" layoutY="75.0" prefHeight="27.0" prefWidth="264.0" text="connect with your students !" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="352.0" fitWidth="355.0" layoutX="403.0" layoutY="-144.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Telecommuting-pana%20(3).png" />
+               </image>
+            </ImageView>
+         </children>
+         <styleClass>
+            <String fx:value="container2" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </Pane>
+      <HBox layoutX="21.0" layoutY="426.0" prefHeight="164.0" prefWidth="805.0" spacing="12.0" styleClass="shadow" stylesheets="@StyleSys.css">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="container3" stylesheets="@StyleSys.css" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label prefHeight="46.0" prefWidth="106.0" text="Teachers" textFill="#fcfcfc">
+                     <font>
+                        <Font name="Calibri" size="25.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label fx:id="teacherNum" prefHeight="55.0" prefWidth="42.0" text="5" textFill="#fcfcfc">
+                           <font>
+                              <Font name="octicons" size="39.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" styleClass="container3" stylesheets="@StyleSys.css" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label prefHeight="23.0" prefWidth="92.0" text="Students" textFill="#fcfcfc">
+                     <font>
+                        <Font name="Calibri" size="25.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label fx:id="StudentNum" prefHeight="55.0" prefWidth="80.0" text="160" textFill="#fcfcfc">
+                           <font>
+                              <Font name="octicons" size="39.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" styleClass="container3" stylesheets="@StyleSys.css" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label prefHeight="23.0" prefWidth="84.0" text="Groups" textFill="#fcfcfc">
+                     <font>
+                        <Font name="Calibri" size="25.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label fx:id="GroupNum" prefHeight="55.0" prefWidth="59.0" text="18" textFill="#fcfcfc">
+                           <font>
+                              <Font name="octicons" size="39.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Label layoutX="22.0" layoutY="14.0" prefHeight="27.0" prefWidth="140.0" styleClass="shadow" stylesheets="@StyleSys.css" text="Dashboard">
+         <font>
+            <Font name="Calibri" size="25.0" />
+         </font>
+      </Label>
+      <HBox layoutX="14.0" layoutY="185.0" prefHeight="235.0" prefWidth="805.0">
+         <children>
+            <VBox prefHeight="235.0" prefWidth="410.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="130.0" text="Subject Statistics">
+                     <font>
+                        <Font name="Calibri" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="8.0" />
+                     </VBox.margin>
+                  </Label>
+                  <PieChart fx:id="pieChart" legendVisible="false" styleClass="shadow" stylesheets="@StyleSys.css" />
+               </children>
+            </VBox>
+            <HBox prefHeight="235.0" prefWidth="395.0">
+               <children>
+                  <VBox prefHeight="235.0" prefWidth="395.0">
+                     <children>
+                        <Label text="Groups Statistics">
+                           <font>
+                              <Font name="Calibri" size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="8.0" />
+                           </VBox.margin>
+                        </Label>
+                        <BarChart fx:id="BarChart" prefHeight="218.0" prefWidth="342.0" styleClass="shadow" stylesheets="@StyleSys.css">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </BarChart>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

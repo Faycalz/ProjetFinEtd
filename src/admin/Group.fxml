@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="840.0" styleClass="container" stylesheets="@StyleSys.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.groupController">
+   <children>
+      <Pane layoutX="-4.0" prefHeight="604.0" prefWidth="848.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-4.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ScrollPane layoutX="66.0" layoutY="126.0" prefHeight="459.0" prefWidth="746.0" style="-fx-border-color: white;">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="466.0" prefWidth="722.0">
+                     <children>
+                        <TableView fx:id="tableGroup" fixedCellSize="0.0" prefHeight="396.0" prefWidth="729.0" stylesheets="@StyleSys.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="nameGrp" prefWidth="182.0" text="Group name" />
+                            <TableColumn fx:id="CapGrp" minWidth="0.0" prefWidth="179.0" text="Capacity" />
+                              <TableColumn fx:id="TechGrp" prefWidth="190.0" text="Teacher" />
+                              <TableColumn fx:id="Update" minWidth="0.0" prefWidth="88.0" text="Update" />
+                              <TableColumn fx:id="Delete" prefWidth="87.0" text="Delete" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+            <HBox layoutX="608.0" layoutY="53.0" prefHeight="56.0" prefWidth="160.0">
+               <children>
+                  <JFXButton fx:id="RefGrp" onAction="#refreshView" prefHeight="68.0" prefWidth="168.0" ripplerFill="#ffffff34" text="Refresh" textFill="#000000ba">
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" opacity="0.57" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/refresh%20(2).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <HBox layoutX="424.0" layoutY="53.0" prefHeight="56.0" prefWidth="160.0">
+               <children>
+                  <JFXButton fx:id="AddGrp" onAction="#getAddView" prefHeight="60.0" prefWidth="159.0" ripplerFill="#ffffff34" text="New Group" textFill="#000000ba">
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="46.0" fitWidth="36.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/add%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

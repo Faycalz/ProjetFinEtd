@@ -1,0 +1,226 @@
+
+.gradient-background {
+	-fx-background-color: linear-gradient(from 40% 40% to 100% 100% ,#045de9 ,#09c6f9);
+}
+.line-color{
+	-fx-background-color: white;
+	
+}
+.container{
+	-fx-background-color: rgba(255,255,255,1);
+	-fx-background-radius: 10;
+}
+.container2{
+	-fx-background-color: #407bff;
+	-fx-background-radius: 10;
+}
+.container3{
+	-fx-background-color: linear-gradient(from 40% 40% to 100% 100% ,#045de9 ,#09c6f9);
+	-fx-background-radius: 10;
+	
+}
+.shadow{
+	-fx-effect: dropshadow(three-pass-box , rgba(0,0,0,0.2) , 10 , 0 , 0 , 10) ;
+}
+
+
+#save, #reset {
+  -fx-background-color:  #407bff;
+  -fx-border-radius: 16;
+  -fx-background-radius: 16;
+  -fx-text-fill: white;
+}
+
+ #reset:hover {
+  -fx-background-color:  white;
+  -fx-border-color:#407bff;
+  -fx-text-fill: #407bff;
+  -fx-border-radius: 16;
+}
+
+#save:hover {
+  -fx-background-color:  white;
+  -fx-border-color:#407bff;
+  -fx-text-fill: #407bff;
+  -fx-border-radius: 16;
+}
+
+
+.table-view{
+-fx-background-color: #407bff;
+-fx-background-radius: 10;
+}
+.table-view .column-header-background{
+	-fx-background-color: #407bff;
+	-fx-background-radius: 10;
+	-fx-background-insets: 0 0 10 0;
+	-fx-padding: 0 0 10 0;
+	-fx-effect: dropshadow(three-pass-box , rgba(0,0,0,0.2) , 20 , 0 , 0 , 2) ;
+}
+
+.table-view .column-header, .table-view .filler{
+	-fx-size: 40;
+	-fx-background-color: transparent;
+	
+}
+
+.table-view .column-header .label{
+	-fx-text-fill: white;
+	-fx-font-weight: bold;
+	-fx-font-size: 15;
+}
+
+#IdG, #NameG, #TeachG{
+	-fx-font-family: Calibri;
+}
+
+
+
+
+#AddS, #rem, #RefS, #RefSess{
+	-fx-border-radius: 25;
+    -fx-background-radius: 25;
+   
+}
+
+
+#AddGrp, #AddTeach, #AddSess{
+	-fx-border-radius: 25;
+	-fx-background-radius: 25;
+	
+}
+
+#AddGrp:hover{
+	
+	-fx-effect: dropshadow(three-pass-box, rgba(1,182,63,1), 10, 0, 0, 0);
+}
+
+#AddSess:hover{
+	
+	-fx-effect: dropshadow(three-pass-box, rgba(1,182,63,1), 10, 0, 0, 0);
+}
+
+#AddTeach:hover{
+	
+	-fx-effect: dropshadow(three-pass-box, rgba(1,182,63,1), 10, 0, 0, 0);
+}
+
+
+#AddS:hover{
+	
+	-fx-effect: dropshadow(three-pass-box, rgba(1,182,63,1), 10, 0, 0, 0);
+}
+
+#rem:hover{
+	
+	-fx-effect: dropshadow(three-pass-box, rgba(255,69,69,1), 10, 0, 0, 0);
+}
+
+#RefS:hover{
+	
+	-fx-effect: dropshadow(three-pass-box, rgba(64,123,255,1), 10, 0, 0, 0);
+}
+#RefSess:hover{
+	
+	-fx-effect: dropshadow(three-pass-box, rgba(64,123,255,1), 10, 0, 0, 0);
+}
+
+#RefGrp, #RefTeach{
+	-fx-border-radius: 25;
+    -fx-background-radius: 25;
+    
+}
+#RefGrp:hover{
+	-fx-effect: dropshadow(three-pass-box, rgba(64,123,255,1), 10, 0, 0, 0);
+	
+}
+
+#RefTeach:hover{
+	-fx-effect: dropshadow(three-pass-box, rgba(64,123,255,1), 10, 0, 0, 0);
+	
+}
+
+
+#my_icon{
+	
+	-glyph-size:28px;
+	-fx-fill:#ff3800;
+}
+#edit_icon{
+	
+	-glyph-size:28px;
+	-fx-fill:#00E84F;
+}
+
+#dash, #studM, #grpM, #teacherAd, #sesP, #teamP, #Eval{
+	-fx-border-radius: 30;
+	-fx-background-radius: 30;
+}
+
+#dash:hover{
+	-fx-font-size: 16;
+	-fx-text-fill: #4a83ff;
+	-fx-padding: 10px;
+	-fx-font-weight: Bold;
+}
+
+#studM:hover{
+	-fx-font-size: 16;
+	-fx-text-fill: #4a83ff;
+	-fx-padding: 4px;
+	-fx-font-weight: Bold;
+}
+
+#grpM:hover{
+	-fx-font-size: 16;
+	-fx-text-fill: #4a83ff;
+	-fx-padding: 4px;
+	-fx-font-weight: Bold;
+}
+ #teacherAd:hover{
+	-fx-font-size: 16;
+	-fx-text-fill: #4a83ff;
+	-fx-padding: 4px;
+	-fx-font-weight: Bold;
+}
+
+#sesP:hover{
+	-fx-font-size: 16;
+	-fx-text-fill: #4a83ff;
+	-fx-padding: 4px;
+	-fx-font-weight: Bold;
+}
+
+#teamP:hover{
+	-fx-font-size: 16;
+	-fx-text-fill: #4a83ff;
+	-fx-padding: 4px;
+	-fx-font-weight: Bold;
+}
+
+#Eval:hover{
+	-fx-font-size: 16;
+	-fx-text-fill: #4a83ff;
+	-fx-padding: 4px;
+	-fx-font-weight: Bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

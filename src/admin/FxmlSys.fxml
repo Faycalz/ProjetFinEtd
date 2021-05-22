@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="663.0" prefWidth="1111.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.ControllerSys">
+   <children>
+      <BorderPane fx:id="mainPane" layoutX="-5.0" layoutY="-5.0" prefHeight="660.0" prefWidth="1110.0">
+         <top>
+            <HBox prefHeight="48.0" prefWidth="1110.0" spacing="10.0" BorderPane.alignment="TOP_LEFT">
+               <children>
+                  <ImageView fitHeight="47.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="10.0" top="7.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@../images/mortarboard.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="21.0" prefWidth="164.0" text="Graduate Service">
+                     <font>
+                        <Font name="Calibri Bold" size="19.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" top="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Pane maxHeight="1.0" prefHeight="0.0" prefWidth="764.0" styleClass="line-color" stylesheets="@StyleSys.css" HBox.hgrow="ALWAYS">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets top="29.0" />
+                     </HBox.margin>
+                  </Pane>
+                  <JFXButton ellipsisString="" prefHeight="36.0" prefWidth="36.0" ripplerFill="#4294ff">
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/home%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets top="2.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton ellipsisString="" prefHeight="44.0" prefWidth="33.0">
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/exit.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets top="2.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </top>
+         <left>
+            <VBox prefHeight="599.0" prefWidth="250.0" styleClass="container" stylesheets="@StyleSys.css" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+               <children>
+                  <HBox prefHeight="70.0" prefWidth="250.0">
+                     <children>
+                        <ImageView fitHeight="46.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/user.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="10.0" top="7.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label prefHeight="50.0" prefWidth="72.0" text="Username">
+                           <font>
+                              <Font name="Calibri" size="16.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets left="13.0" top="6.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children></HBox>
+                  <Pane maxHeight="5.0" prefHeight="0.0" prefWidth="218.0" style="-fx-background-color: #EAE7E6;" styleClass="line-color" stylesheets="@StyleSys.css" VBox.vgrow="ALWAYS">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets left="20.0" right="18.0" />
+                     </VBox.margin>
+                  </Pane>
+                  <HBox prefHeight="77.0" prefWidth="250.0">
+                     <children>
+                        <JFXButton fx:id="dash" alignment="BASELINE_LEFT" graphicTextGap="30.0" onAction="#DashAction" prefHeight="72.0" prefWidth="269.0" text="Dashboard" textFill="#0000008d">
+                           <font>
+                              <Font name="Calibri Bold" size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/dashboard.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="77.0" prefWidth="263.0">
+                     <children>
+                        <JFXButton fx:id="studM" alignment="BASELINE_LEFT" graphicTextGap="30.0" onAction="#studentAction" prefHeight="72.0" prefWidth="255.0" text="Students Management" textFill="#0000008d">
+                           <font>
+                              <Font name="Calibri Bold" size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/team.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="77.0" prefWidth="250.0">
+                     <children>
+                        <JFXButton fx:id="grpM" alignment="BASELINE_LEFT" graphicTextGap="30.0" onAction="#GroupAction" prefHeight="72.0" prefWidth="287.0" text="Group Management" textFill="#0000008c">
+                           <font>
+                              <Font name="Calibri Bold" size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/users.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="77.0" prefWidth="250.0">
+                     <children>
+                        <JFXButton fx:id="teacherAd" alignment="BASELINE_LEFT" graphicTextGap="30.0" onAction="#TeacherAction" prefHeight="72.0" prefWidth="343.0" text="Teacher Management" textFill="#0000008c">
+                           <font>
+                              <Font name="Calibri Bold" size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/coaching.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="77.0" prefWidth="250.0">
+                     <children>
+                        <JFXButton fx:id="sesP" alignment="BASELINE_LEFT" graphicTextGap="30.0" onAction="#SessionAction" prefHeight="72.0" prefWidth="357.0" text="Session" textFill="#0000008c">
+                           <font>
+                              <Font name="Calibri Bold" size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/coaching.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <Pane minHeight="0.0" prefHeight="599.0" prefWidth="680.0" styleClass="container" stylesheets="@StyleSys.css" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
