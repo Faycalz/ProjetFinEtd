@@ -77,7 +77,7 @@ public class AddStudentController implements Initializable{
 	private boolean update;
 	int studentId;
 	
-	
+	int id;
 	
 
 
@@ -179,6 +179,25 @@ public class AddStudentController implements Initializable{
 
 	}
 
+	
+	
+void generatePass() {
+    	
+    	
+    	   String q1 = "SELECT num_insc+1 AS id FROM etudiant ORDER BY num_insc DESC LIMIT 1";
+
+           try {
+               ResultSet rs1 = DbConnection.executeQuery(q1, DbConnection.createConnection());
+
+               while (rs1.next()) {
+                   id = rs1.getInt("id");
+                   
+                   
+               }
+           } catch (SQLException ex) {
+               System.out.println(ex);
+           }
+    }
 
 	@FXML
 	public void save (ActionEvent event )  {
@@ -215,14 +234,14 @@ public class AddStudentController implements Initializable{
 
 
 
-
+			generatePass();
 
 			preparedStatement = con.prepareStatement(query);
 			preparedStatement.setString(1, Insertname.getText());
 			preparedStatement.setString(2, Insertlastname.getText());
 			preparedStatement.setString(3, String.valueOf(Insertbirthday.getValue()));
 			preparedStatement.setString(4, InsertGroup.getValue().toString());
-			preparedStatement.setString(5, Insertname.getText());
+			preparedStatement.setString(5,Insertname.getText()+id);
 			preparedStatement.setString(6, Insertlastname.getText());
 			JFXRadioButton selectedRadioButton = (JFXRadioButton) gendergroup.getSelectedToggle();
 			preparedStatement.setString(7, selectedRadioButton.getText() );

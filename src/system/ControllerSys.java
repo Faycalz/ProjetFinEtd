@@ -85,6 +85,23 @@ public class ControllerSys implements Initializable{
    		
    	}
        
+    @FXML
+   	void SubjectAction(ActionEvent event) {
+   		
+       	FxmlLoaderr object = new FxmlLoaderr();
+   	     Pane view = object.getPage("Subject");
+   	     mainPane.setCenter(view);
+   		
+   	}
+    
+    @FXML
+   	void SessionAction(ActionEvent event) {
+   		
+       	FxmlLoaderr object = new FxmlLoaderr();
+   	     Pane view = object.getPage("Session");
+   	     mainPane.setCenter(view);
+   		
+   	}
     
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {

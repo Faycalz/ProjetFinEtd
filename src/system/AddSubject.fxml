@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="806.0" style="-fx-background-color: #eceff1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="48.0" prefWidth="806.0" style="-fx-background-color: #407bff;">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/more.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </ImageView>
+            <Label prefHeight="58.0" prefWidth="329.0" text="Create New Subject" textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="170.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font name="Calibri Bold" size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <VBox layoutX="403.0" layoutY="60.0" prefHeight="429.0" prefWidth="406.0" style="-fx-background-color: #eceff1;">
+         <children>
+            <HBox prefHeight="63.0" prefWidth="385.0">
+               <children>
+                  <Label prefHeight="59.0" prefWidth="123.0" text="Title" textFill="#000000cb">
+                     <font>
+                        <Font name="Calibri Bold" size="17.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </Label>
+                  <JFXTextArea fx:id="title" focusColor="#407bff" prefHeight="43.0" prefWidth="161.0">
+                     <padding>
+                        <Insets top="16.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="60.0" />
+                     </HBox.margin>
+                  </JFXTextArea>
+               </children>
+               <padding>
+                  <Insets left="35.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="7.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="63.0" prefWidth="390.0">
+               <children>
+                  <Label prefHeight="59.0" prefWidth="123.0" text="Field" textFill="#000000cb">
+                     <font>
+                        <Font name="Calibri Bold" size="17.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </Label>
+                  <JFXTextArea fx:id="field" focusColor="#407bff" prefHeight="43.0" prefWidth="161.0">
+                     <HBox.margin>
+                        <Insets left="60.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets top="16.0" />
+                     </padding>
+                  </JFXTextArea>
+               </children>
+               <padding>
+                  <Insets left="35.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="73.0" prefHeight="63.0" prefWidth="390.0">
+               <children>
+                  <Label prefHeight="59.0" prefWidth="123.0" text="Description" textFill="#000000cb">
+                     <font>
+                        <Font name="Calibri Bold" size="17.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </Label>
+                  <JFXTextArea fx:id="descrip" focusColor="#407bff" prefHeight="43.0" prefWidth="161.0">
+                     <padding>
+                        <Insets top="16.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="60.0" />
+                     </HBox.margin>
+                  </JFXTextArea>
+               </children>
+               <padding>
+                  <Insets left="35.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="136.0" prefHeight="63.0" prefWidth="390.0">
+               <children>
+                  <Label prefHeight="59.0" prefWidth="123.0" text="Keywords" textFill="#000000cb">
+                     <font>
+                        <Font name="Calibri Bold" size="17.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </Label>
+                  <JFXTextArea fx:id="keyw" focusColor="#407bff" prefHeight="43.0" prefWidth="161.0">
+                     <padding>
+                        <Insets top="16.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="60.0" />
+                     </HBox.margin>
+                  </JFXTextArea>
+               </children>
+               <padding>
+                  <Insets left="35.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="199.0" prefHeight="63.0" prefWidth="390.0">
+               <children>
+                  <Label prefHeight="59.0" prefWidth="171.0" text="Development tools" textFill="#000000cb">
+                     <font>
+                        <Font name="Calibri Bold" size="17.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </Label>
+                  <JFXTextArea fx:id="devtool" focusColor="#407bff" prefHeight="43.0" prefWidth="161.0">
+                     <padding>
+                        <Insets top="16.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="13.0" />
+                     </HBox.margin>
+                  </JFXTextArea>
+               </children>
+               <padding>
+                  <Insets left="35.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="102.0" prefWidth="406.0" spacing="60.0" stylesheets="@StyleSys.css">
+               <children>
+                  <JFXButton fx:id="save" prefHeight="37.0" prefWidth="130.0" text="Save" textFill="#121212cb">
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="reset" prefHeight="37.0" prefWidth="130.0" text="Reset" textFill="#121212cc">
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets left="49.0" top="40.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutY="50.0" prefHeight="439.0" prefWidth="406.0" style="-fx-background-color: #eceff1;">
+         <children>
+            <ImageView fitHeight="405.0" fitWidth="412.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Exams%20(1).gif" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+   </children>
+</Pane>

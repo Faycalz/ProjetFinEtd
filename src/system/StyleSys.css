@@ -23,32 +23,36 @@
 	-fx-effect: dropshadow(three-pass-box , rgba(0,0,0,0.2) , 10 , 0 , 0 , 10) ;
 }
 
+
 #save, #reset {
-  -fx-background-color: white; 
-  -fx-border-color:#4d9dee;
+  -fx-background-color:  #407bff;
   -fx-border-radius: 16;
   -fx-background-radius: 16;
+  -fx-text-fill: white;
 }
 
  #reset:hover {
-  -fx-background-color:  #407bff;
-  -fx-text-fill: white;
+  -fx-background-color:  white;
+  -fx-border-color:#407bff;
+  -fx-text-fill: #407bff;
   -fx-border-radius: 16;
 }
 
 #save:hover {
-  -fx-background-color:  #407bff;
-  -fx-text-fill: white;
+  -fx-background-color:  white;
+  -fx-border-color:#407bff;
+  -fx-text-fill: #407bff;
   -fx-border-radius: 16;
 }
 
+
 .table-view{
 -fx-background-color: #407bff;
--fx-background-radius: 30;
+-fx-background-radius: 10;
 }
 .table-view .column-header-background{
 	-fx-background-color: #407bff;
-	-fx-background-radius: 30;
+	-fx-background-radius: 10;
 	-fx-background-insets: 0 0 10 0;
 	-fx-padding: 0 0 10 0;
 	-fx-effect: dropshadow(three-pass-box , rgba(0,0,0,0.2) , 20 , 0 , 0 , 2) ;
@@ -73,32 +77,55 @@
 
 
 
-#AddGrp, #AddS, #rem, #RefS{
+#AddS, #rem, #RefS, #RefSess{
 	-fx-border-radius: 25;
     -fx-background-radius: 25;
    
 }
+
+
+#AddGrp, #AddSub, #AddSess{
+	-fx-border-radius: 25;
+	-fx-background-radius: 25;
+	
+}
+
 #AddGrp:hover{
 	
-	-fx-effect: dropshadow(three-pass-box, rgba(64,123,255,1), 10, 0, 0, 0);
+	-fx-effect: dropshadow(three-pass-box, rgba(1,182,63,1), 10, 0, 0, 0);
 }
+
+#AddSess:hover{
+	
+	-fx-effect: dropshadow(three-pass-box, rgba(1,182,63,1), 10, 0, 0, 0);
+}
+
+#AddSub:hover{
+	
+	-fx-effect: dropshadow(three-pass-box, rgba(1,182,63,1), 10, 0, 0, 0);
+}
+
 
 #AddS:hover{
 	
-	-fx-effect: dropshadow(three-pass-box, rgba(64,123,255,1), 10, 0, 0, 0);
+	-fx-effect: dropshadow(three-pass-box, rgba(1,182,63,1), 10, 0, 0, 0);
 }
 
 #rem:hover{
 	
-	-fx-effect: dropshadow(three-pass-box, rgba(64,123,255,1), 10, 0, 0, 0);
+	-fx-effect: dropshadow(three-pass-box, rgba(255,69,69,1), 10, 0, 0, 0);
 }
 
 #RefS:hover{
 	
 	-fx-effect: dropshadow(three-pass-box, rgba(64,123,255,1), 10, 0, 0, 0);
 }
+#RefSess:hover{
+	
+	-fx-effect: dropshadow(three-pass-box, rgba(64,123,255,1), 10, 0, 0, 0);
+}
 
-#RefGrp{
+#RefGrp, #RefSub{
 	-fx-border-radius: 25;
     -fx-background-radius: 25;
     
@@ -108,14 +135,9 @@
 	
 }
 
-#DelGrp{
-	-fx-border-radius: 25;
-    -fx-background-radius: 25;
-    
-}
-#DelGrp:hover{
-	
+#RefSub:hover{
 	-fx-effect: dropshadow(three-pass-box, rgba(64,123,255,1), 10, 0, 0, 0);
+	
 }
 
 
@@ -129,6 +151,70 @@
 	-glyph-size:28px;
 	-fx-fill:#00E84F;
 }
+
+#dash, #studM, #grpM, #subP, #sesP, #teamP, #Eval{
+	-fx-border-radius: 30;
+	-fx-background-radius: 30;
+}
+
+#dash:hover{
+	-fx-font-size: 16;
+	-fx-text-fill: #4a83ff;
+	-fx-padding: 10px;
+	-fx-font-weight: Bold;
+}
+
+#studM:hover{
+	-fx-font-size: 16;
+	-fx-text-fill: #4a83ff;
+	-fx-padding: 4px;
+	-fx-font-weight: Bold;
+}
+
+#grpM:hover{
+	-fx-font-size: 16;
+	-fx-text-fill: #4a83ff;
+	-fx-padding: 4px;
+	-fx-font-weight: Bold;
+}
+#subP:hover{
+	-fx-font-size: 16;
+	-fx-text-fill: #4a83ff;
+	-fx-padding: 4px;
+	-fx-font-weight: Bold;
+}
+
+#sesP:hover{
+	-fx-font-size: 16;
+	-fx-text-fill: #4a83ff;
+	-fx-padding: 4px;
+	-fx-font-weight: Bold;
+}
+
+#teamP:hover{
+	-fx-font-size: 16;
+	-fx-text-fill: #4a83ff;
+	-fx-padding: 4px;
+	-fx-font-weight: Bold;
+}
+
+#Eval:hover{
+	-fx-font-size: 16;
+	-fx-text-fill: #4a83ff;
+	-fx-padding: 4px;
+	-fx-font-weight: Bold;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
