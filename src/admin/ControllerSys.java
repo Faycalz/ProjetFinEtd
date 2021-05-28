@@ -127,9 +127,6 @@ public class ControllerSys implements Initializable{
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
-		
-		
-		
 		 FxmlLoaderr object = new FxmlLoaderr();
 	     Pane view = object.getPage("Dashboard");
 	     mainPane.setCenter(view);

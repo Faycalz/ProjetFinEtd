@@ -10,12 +10,15 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXTextField;
 
 import database.DbConnection;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -71,6 +74,8 @@ public class StudentManagememntController {
     private TableColumn<Student, String> Gender;
     @FXML
     private TableColumn<Student, String> Edit;
+    @FXML
+    private JFXTextField filterField;
     
     String query = null;
     Connection connection = null;
@@ -260,7 +265,42 @@ public class StudentManagememntController {
     @FXML
     void initialize() {
         loadInfo();
-
+        // Wrap the ObservableList in a FilteredList (initially display all data).
+        FilteredList<Student> filteredData = new FilteredList<>(StudentList, b -> true);
+		
+		// 2. Set the filter Predicate whenever the filter changes.
+		filterField.textProperty().addListener((observable, oldValue, newValue) -> {
+			filteredData.setPredicate(student -> {
+				// If filter text is empty, display all persons.
+								
+				if (newValue == null || newValue.isEmpty()) {
+					return true;
+				}
+				
+				// Compare first name and last name of every person with filter text.
+				String lowerCaseFilter = newValue.toLowerCase();
+				
+				if (student.getName().toLowerCase().indexOf(lowerCaseFilter) != -1 ) {
+					return true; // Filter matches first name.
+				} else if (student.getLastname().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+					return true; // Filter matches last name.
+				}
+				else if (student.getGroup().toLowerCase().indexOf(lowerCaseFilter) != -1)
+				     return true;
+				     else  
+				    	 return false; // Does not match.
+			});
+		});
+		
+		// 3. Wrap the FilteredList in a SortedList. 
+		SortedList<Student> sortedData = new SortedList<>(filteredData);
+		
+		// 4. Bind the SortedList comparator to the TableView comparator.
+		// 	  Otherwise, sorting the TableView would have no effect.
+		sortedData.comparatorProperty().bind(Table.comparatorProperty());
+		
+		// 5. Add sorted (and filtered) data to the table.
+		Table.setItems(sortedData);
     }
     
     

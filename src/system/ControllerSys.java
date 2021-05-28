@@ -19,6 +19,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.chart.PieChart;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -27,6 +28,8 @@ import system.FxmlLoaderr;
 public class ControllerSys implements Initializable{
 
 
+    @FXML
+    private AnchorPane scenePane;
 	@FXML
 	private PieChart pieChart;
 
@@ -38,10 +41,30 @@ public class ControllerSys implements Initializable{
 
     @FXML
     private JFXButton LogouBtn;
+    @FXML
+    private JFXButton dash;
+
+    @FXML
+    private JFXButton studM;
+
+    @FXML
+    private JFXButton grpM;
+
+    @FXML
+    private JFXButton subP;
+
+    @FXML
+    private JFXButton sesP;
+
+    @FXML
+    private JFXButton teamP;
+
+    @FXML
+    private JFXButton Eval;
 
    
 
-    @FXML
+   /* @FXML
     void logout(ActionEvent event) {
     	Parent root = null;
     	try {
@@ -51,7 +74,11 @@ public class ControllerSys implements Initializable{
 			e.printStackTrace();
 		}
     }
-	
+	*/
+    @FXML
+    void logoutBTNAction(ActionEvent event) {
+    	
+    }
 	
 
    

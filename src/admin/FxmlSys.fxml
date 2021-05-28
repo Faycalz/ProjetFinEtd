@@ -16,7 +16,7 @@
    <children>
       <BorderPane fx:id="mainPane" layoutX="-5.0" layoutY="-5.0" prefHeight="660.0" prefWidth="1110.0">
          <top>
-            <HBox prefHeight="48.0" prefWidth="1110.0" spacing="10.0" BorderPane.alignment="TOP_LEFT">
+            <HBox prefHeight="40.0" prefWidth="1110.0" spacing="10.0" BorderPane.alignment="TOP_LEFT">
                <children>
                   <ImageView fitHeight="47.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
                      <HBox.margin>
@@ -107,7 +107,7 @@
                   </Pane>
                   <HBox prefHeight="77.0" prefWidth="250.0">
                      <children>
-                        <JFXButton fx:id="dash" alignment="BASELINE_LEFT" graphicTextGap="30.0" onAction="#DashAction" prefHeight="72.0" prefWidth="269.0" text="Dashboard" textFill="#0000008d">
+                        <JFXButton fx:id="dash" alignment="BASELINE_LEFT" graphicTextGap="30.0" onAction="#DashAction" prefHeight="95.0" prefWidth="250.0" text="Dashboard" textFill="#0000008d">
                            <font>
                               <Font name="Calibri Bold" size="16.0" />
                            </font>
@@ -118,6 +118,9 @@
                                  </image>
                               </ImageView>
                            </graphic>
+                           <HBox.margin>
+                              <Insets left="-10.0" />
+                           </HBox.margin>
                         </JFXButton>
                      </children>
                      <VBox.margin>
@@ -129,7 +132,7 @@
                   </HBox>
                   <HBox prefHeight="77.0" prefWidth="263.0">
                      <children>
-                        <JFXButton fx:id="studM" alignment="BASELINE_LEFT" graphicTextGap="30.0" onAction="#studentAction" prefHeight="72.0" prefWidth="255.0" text="Students Management" textFill="#0000008d">
+                        <JFXButton fx:id="studM" alignment="BASELINE_LEFT" graphicTextGap="30.0" onAction="#studentAction" prefHeight="99.0" prefWidth="250.0" text="Students Management" textFill="#0000008d">
                            <font>
                               <Font name="Calibri Bold" size="16.0" />
                            </font>
@@ -143,6 +146,9 @@
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
+                           <HBox.margin>
+                              <Insets left="-10.0" />
+                           </HBox.margin>
                         </JFXButton>
                      </children>
                      <padding>
@@ -151,7 +157,7 @@
                   </HBox>
                   <HBox prefHeight="77.0" prefWidth="250.0">
                      <children>
-                        <JFXButton fx:id="grpM" alignment="BASELINE_LEFT" graphicTextGap="30.0" onAction="#GroupAction" prefHeight="72.0" prefWidth="287.0" text="Group Management" textFill="#0000008c">
+                        <JFXButton fx:id="grpM" alignment="BASELINE_LEFT" graphicTextGap="30.0" onAction="#GroupAction" prefHeight="77.0" prefWidth="264.0" text="Group Management" textFill="#0000008c">
                            <font>
                               <Font name="Calibri Bold" size="16.0" />
                            </font>
@@ -162,6 +168,9 @@
                                  </image>
                               </ImageView>
                            </graphic>
+                           <HBox.margin>
+                              <Insets left="-10.0" />
+                           </HBox.margin>
                         </JFXButton>
                      </children>
                      <padding>
@@ -170,7 +179,7 @@
                   </HBox>
                   <HBox prefHeight="77.0" prefWidth="250.0">
                      <children>
-                        <JFXButton fx:id="teacherAd" alignment="BASELINE_LEFT" graphicTextGap="30.0" onAction="#TeacherAction" prefHeight="72.0" prefWidth="343.0" text="Teacher Management" textFill="#0000008c">
+                        <JFXButton fx:id="teacherAd" alignment="BASELINE_LEFT" graphicTextGap="30.0" onAction="#TeacherAction" prefHeight="92.0" prefWidth="250.0" text="Teacher Management" textFill="#0000008c">
                            <font>
                               <Font name="Calibri Bold" size="16.0" />
                            </font>
@@ -181,6 +190,9 @@
                                  </image>
                               </ImageView>
                            </graphic>
+                           <HBox.margin>
+                              <Insets left="-10.0" />
+                           </HBox.margin>
                         </JFXButton>
                      </children>
                      <padding>
@@ -189,7 +201,7 @@
                   </HBox>
                   <HBox prefHeight="77.0" prefWidth="250.0">
                      <children>
-                        <JFXButton fx:id="sesP" alignment="BASELINE_LEFT" graphicTextGap="30.0" onAction="#SessionAction" prefHeight="72.0" prefWidth="357.0" text="Session" textFill="#0000008c">
+                        <JFXButton fx:id="sesP" alignment="BASELINE_LEFT" graphicTextGap="30.0" onAction="#SessionAction" prefHeight="95.0" prefWidth="250.0" text="Session" textFill="#0000008c">
                            <font>
                               <Font name="Calibri Bold" size="16.0" />
                            </font>
@@ -200,6 +212,9 @@
                                  </image>
                               </ImageView>
                            </graphic>
+                           <HBox.margin>
+                              <Insets left="-10.0" />
+                           </HBox.margin>
                         </JFXButton>
                      </children>
                      <padding>

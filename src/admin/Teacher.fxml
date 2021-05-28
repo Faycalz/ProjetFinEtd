@@ -12,20 +12,23 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.TeacherController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="840.0" styleClass="container" stylesheets="@StyleSys.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.TeacherController">
    <children>
-      <Pane layoutX="87.0" layoutY="137.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Pane layoutX="87.0" layoutY="137.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ScrollPane layoutX="52.0" layoutY="124.0" prefHeight="426.0" prefWidth="737.0" style="-fx-border-color: white;">
+            <ScrollPane hbarPolicy="NEVER" layoutX="10.0" layoutY="125.0" prefHeight="470.0" prefWidth="815.0">
                <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="466.0" prefWidth="722.0">
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="507.0" prefWidth="845.0">
                      <children>
-                        <TableView fx:id="tableTeacher" fixedCellSize="0.0" layoutX="-2.0" prefHeight="471.0" prefWidth="731.0" stylesheets="@StyleSys.css" AnchorPane.bottomAnchor="-5.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="0.0">
+                        <TableView fx:id="tableTeacher" fixedCellSize="0.0" layoutX="1.0" layoutY="2.0" prefHeight="503.0" prefWidth="799.0" stylesheets="@StyleSys.css" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="2.0">
                            <columns>
-                              <TableColumn fx:id="nameTeach" prefWidth="159.3333740234375" text="Teacher Name" />
-                              <TableColumn fx:id="LastNTeach" minWidth="0.0" prefWidth="171.3333740234375" text="Last Name" />
-                              <TableColumn fx:id="degreeTech" prefWidth="201.6666259765625" text="Degree" />
-                              <TableColumn minWidth="0.0" prefWidth="196.3333740234375" text="Update" />
+                              <TableColumn fx:id="id" prefWidth="60.0" text="id" />
+                              <TableColumn fx:id="nameT" prefWidth="145.0" text="Teacher Name" />
+                              <TableColumn fx:id="lastNameT" minWidth="0.0" prefWidth="145.0" text="Last Name" />
+                              <TableColumn fx:id="username" prefWidth="120.0" text="Username" />
+                              <TableColumn fx:id="password" minWidth="0.0" prefWidth="120.0" text="Password" />
+                              <TableColumn fx:id="Degree" prefWidth="93.0" text="Grade" />
+                              <TableColumn fx:id="Edit" prefWidth="121.0" text="Edit" />
                            </columns>
                         </TableView>
                      </children>
@@ -36,7 +39,7 @@
       </Pane>
       <HBox layoutX="618.0" layoutY="63.0" prefHeight="56.0" prefWidth="160.0">
          <children>
-            <JFXButton fx:id="RefTeach" prefHeight="68.0" prefWidth="168.0" ripplerFill="#ffffff34" text="Refresh" textFill="#000000ba">
+            <JFXButton fx:id="RefTeach" onAction="#refreshView" prefHeight="68.0" prefWidth="168.0" ripplerFill="#ffffff34" text="Refresh" textFill="#000000ba">
                <font>
                   <Font name="Calibri Bold" size="14.0" />
                </font>

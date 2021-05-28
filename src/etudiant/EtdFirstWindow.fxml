@@ -12,9 +12,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="658.0" prefWidth="1102.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="658.0" prefWidth="1102.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="etudiant.ControllerEtd">
    <children>
-      <BorderPane fx:id="mainPane" layoutX="-5.0" layoutY="-5.0" prefHeight="660.0" prefWidth="1110.0">
+      <BorderPane layoutX="-5.0" layoutY="-5.0" prefHeight="660.0" prefWidth="1110.0">
          <top>
             <HBox prefHeight="48.0" prefWidth="1110.0" spacing="10.0" BorderPane.alignment="TOP_LEFT">
                <children>
@@ -34,7 +34,7 @@
                         <Insets left="10.0" top="15.0" />
                      </HBox.margin>
                   </Label>
-                  <Pane maxHeight="4.0" prefHeight="4.0" prefWidth="747.0" styleClass="line-color" stylesheets="@StyleSys.css" HBox.hgrow="ALWAYS">
+                  <Pane maxHeight="4.0" prefHeight="0.0" prefWidth="721.0" styleClass="line-color" stylesheets="@StyleSys.css" HBox.hgrow="ALWAYS">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -54,7 +54,7 @@
                         <Insets top="2.0" />
                      </HBox.margin>
                   </JFXButton>
-                  <JFXButton ellipsisString="" prefHeight="55.0" prefWidth="50.0">
+                  <JFXButton ellipsisString="" onAction="#logoutBTNAction" prefHeight="55.0" prefWidth="50.0">
                      <graphic>
                         <ImageView fitHeight="34.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                            <image>

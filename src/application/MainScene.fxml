@@ -157,17 +157,14 @@
                </VBox.margin>
                <children>
                   <JFXRadioButton fx:id="AdminRbtn" layoutX="153.0" layoutY="8.0" prefHeight="41.0" prefWidth="99.0" text="Admin">
-                     <toggleGroup>
-                        <ToggleGroup fx:id="Groupe1" />
-                     </toggleGroup>
                      <font>
                         <Font name="Calibri" size="14.0" />
                      </font>
-                  </JFXRadioButton>
-                  <JFXRadioButton fx:id="TeacherRbtn" prefHeight="41.0" prefWidth="103.0" text="Teacher">
                      <toggleGroup>
                         <ToggleGroup fx:id="Groupe" />
                      </toggleGroup>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="TeacherRbtn" prefHeight="41.0" prefWidth="103.0" text="Teacher" toggleGroup="$Groupe">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>

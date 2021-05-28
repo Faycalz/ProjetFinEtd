@@ -76,9 +76,9 @@ public class AddStudentController implements Initializable{
 	String query;
 	private boolean update;
 	int studentId;
-	
+
 	int id;
-	
+
 
 
 
@@ -162,7 +162,7 @@ public class AddStudentController implements Initializable{
 
 
 
-	
+
 
 	@FXML
 	private void clean() {
@@ -179,34 +179,34 @@ public class AddStudentController implements Initializable{
 
 	}
 
-	
-	
-void generatePass() {
-    	
-    	
-    	   String q1 = "SELECT num_insc+1 AS id FROM etudiant ORDER BY num_insc DESC LIMIT 1";
 
-           try {
-               ResultSet rs1 = DbConnection.executeQuery(q1, DbConnection.createConnection());
 
-               while (rs1.next()) {
-                   id = rs1.getInt("id");
-                   
-                   
-               }
-           } catch (SQLException ex) {
-               System.out.println(ex);
-           }
-    }
+	void generatePass() {
+
+
+		String q1 = "SELECT num_insc+1 AS id FROM etudiant ORDER BY num_insc DESC LIMIT 1";
+
+		try {
+			ResultSet rs1 = DbConnection.executeQuery(q1, DbConnection.createConnection());
+
+			while (rs1.next()) {
+				id = rs1.getInt("id");
+
+
+			}
+		} catch (SQLException ex) {
+			System.out.println(ex);
+		}
+	}
 
 	@FXML
 	public void save (ActionEvent event )  {
 		con = DbConnection.createConnection();
-		
+
 		String name = Insertname.getText();
 		String lastname = Insertlastname.getText();
 		String bday = Insertbirthday.getValue().toString();
-		
+
 		String grpname = InsertGroup.getValue().toString();
 		//String username = Insertname.getText()+Insertlastname.getText();
 
@@ -226,9 +226,9 @@ void generatePass() {
 		}else 
 
 
-	   getQuery();
+			getQuery();
 		//insert();
-		
+
 		try {
 
 
@@ -249,6 +249,7 @@ void generatePass() {
 
 
 			clean();
+
 			Notifications.create()
 			.title("About Us")
 			.text("success")
@@ -261,8 +262,8 @@ void generatePass() {
 			System.out.println(ex);
 		}
 
-		
-	
+
+
 
 
 	}

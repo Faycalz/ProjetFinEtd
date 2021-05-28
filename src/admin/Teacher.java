@@ -8,6 +8,8 @@ public class Teacher {
 	String name;
 	String lastname;
 	String degree;
+	
+	
 	public Teacher(int id, String username, String password, String name, String lastname, String degree) {
 		super();
 		this.id = id;
@@ -16,6 +18,7 @@ public class Teacher {
 		this.name = name;
 		this.lastname = lastname;
 		this.degree = degree;
+		
 	}
 	public int getId() {
 		return id;
@@ -53,7 +56,7 @@ public class Teacher {
 	public void setDegree(String degree) {
 		this.degree = degree;
 	}
-	
+
 	
 	
 
