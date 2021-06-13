@@ -50,16 +50,19 @@ public class Controller {
 
 	@FXML
 	private TextField usernameField;
+	
 	@FXML
 	private PasswordField passwordField;
+	
 	@FXML
 	private JFXRadioButton TeacherRbtn;
-
+	
 	@FXML
 	private JFXRadioButton StudentRbtn;
 
 	@FXML 
 	private JFXRadioButton AdminRbtn;
+	
 	public static String typedID = null;
 
 	String id = null, pass = null;
@@ -81,6 +84,7 @@ public class Controller {
 
 
 		typedID = usernameField.getText();
+		
 		String typedPassword = passwordField.getText();
 		if (StudentRbtn.isSelected()) {
 			String q1 = "SELECT * FROM etudiant  WHERE username = '" + typedID + "'";
@@ -168,7 +172,7 @@ public class Controller {
 				label1.setVisible(true);
 			} }
 		else if (AdminRbtn.isSelected()) {
-			String q2= "SELECT * FROM admin  WHERE username = '" + typedID + "'";
+			String q2= "SELECT * FROM admin  WHERE username = '" + typedID + "'  ";
 			id = null;
 			pass = null;
 			try {
@@ -176,10 +180,8 @@ public class Controller {
 
 				while (rs1.next()) {
 					id = rs1.getString("username");
-
 					pass = rs1.getString("password");
-
-
+					
 				}
 			} catch (SQLException ex) {
 				System.out.println(ex);
@@ -251,6 +253,7 @@ public class Controller {
 
 		TeacherRbtn.setSelectedColor(Color.web("#407bff",1));
 		StudentRbtn.setSelectedColor(Color.web("#407bff",1));
+		AdminRbtn.setSelectedColor(Color.web("#407bff",1));
 
 	}
 

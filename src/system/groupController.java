@@ -10,12 +10,15 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXTextField;
 
 import database.DbConnection;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -54,6 +57,9 @@ public class groupController {
 
     @FXML
     private JFXButton AddGrp;
+
+    @FXML
+    private JFXTextField filtergrp;
 
     @FXML
     private JFXButton RefGrp;
@@ -174,7 +180,7 @@ public class groupController {
                            
                            try {
                               group = tableGroup.getSelectionModel().getSelectedItem();
-                               query = "DELETE FROM groups WHERE nom_grp="+group.getNom();
+                               query = "DELETE FROM groups WHERE nom_grp ="+group.getNom();
                                connection = DbConnection.createConnection();
                                preparedStatement = connection.prepareStatement(query);
                                preparedStatement.execute();
@@ -214,9 +220,9 @@ public class groupController {
 
                        });
 
-                       HBox managebtn = new HBox(editIcon,deleteIcon);
+                       HBox managebtn = new HBox(editIcon);
                        managebtn.setStyle("-fx-alignment:center");
-                       HBox.setMargin(deleteIcon, new Insets(2, 2, 0, 3));
+                      // HBox.setMargin(deleteIcon, new Insets(2, 2, 0, 3));
                        HBox.setMargin(editIcon, new Insets(2, 3, 0, 2));
 
                        setGraphic(managebtn);
@@ -242,7 +248,40 @@ public class groupController {
     @FXML
     void initialize() {
         loadInfo();
-
+     // Wrap the ObservableList in a FilteredList (initially display all data).
+        FilteredList<Group> filteredData = new FilteredList<>(GroupList, b -> true);
+		
+		// 2. Set the filter Predicate whenever the filter changes.
+		filtergrp.textProperty().addListener((observable, oldValue, newValue) -> {
+			filteredData.setPredicate(group -> {
+				// If filter text is empty, display all persons.
+								
+				if (newValue == null || newValue.isEmpty()) {
+					return true;
+				}
+				
+				// Compare first name and last name of every person with filter text.
+				String lowerCaseFilter = newValue.toLowerCase();
+				
+				if (group.getNom().toLowerCase().indexOf(lowerCaseFilter) != -1 ) {
+					return true; // Filter matches first name.
+				} else if (group.getProf().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+					return true; // Filter matches last name.
+				}
+				else  
+				    	 return false; // Does not match.
+			});
+		});
+		
+		// 3. Wrap the FilteredList in a SortedList. 
+		SortedList<Group> sortedData = new SortedList<>(filteredData);
+		
+		// 4. Bind the SortedList comparator to the TableView comparator.
+		// 	  Otherwise, sorting the TableView would have no effect.
+		sortedData.comparatorProperty().bind(tableGroup.comparatorProperty());
+		
+		// 5. Add sorted (and filtered) data to the table.
+		tableGroup.setItems(sortedData);
     }
     
     

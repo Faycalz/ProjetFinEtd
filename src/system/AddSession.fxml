@@ -94,7 +94,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <ComboBox fx:id="location" prefWidth="150.0">
+                  <ComboBox fx:id="salle" prefWidth="150.0">
                      <HBox.margin>
                         <Insets left="20.0" top="30.0" />
                      </HBox.margin>
@@ -126,12 +126,12 @@
             </HBox>
             <HBox prefHeight="85.0" prefWidth="393.0" spacing="60.0">
                <children>
-                  <JFXButton fx:id="save" prefHeight="37.0" prefWidth="130.0" stylesheets="@StyleSys.css" text="Save" textFill="#141414b5">
+                  <JFXButton fx:id="save" onAction="#save" prefHeight="37.0" prefWidth="130.0" stylesheets="@StyleSys.css" text="Save" textFill="#141414b5">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton fx:id="reset" prefHeight="37.0" prefWidth="130.0" stylesheets="@StyleSys.css" text="Reset" textFill="#0f0f0fb4">
+                  <JFXButton fx:id="reset" onAction="#clean" prefHeight="37.0" prefWidth="130.0" stylesheets="@StyleSys.css" text="Reset" textFill="#0f0f0fb4">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>

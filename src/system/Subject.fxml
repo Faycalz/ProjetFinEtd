@@ -16,18 +16,19 @@
    <children>
       <Pane layoutX="243.0" layoutY="95.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ScrollPane layoutX="3.0" layoutY="96.0" prefHeight="481.0" prefWidth="831.0" style="-fx-border-color: white;" stylesheets="@StyleSys.css">
+            <ScrollPane hbarPolicy="NEVER" layoutX="3.0" layoutY="96.0" prefHeight="481.0" prefWidth="831.0" style="-fx-border-color: white;" stylesheets="@StyleSys.css" vbarPolicy="NEVER">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="480.0" prefWidth="832.0">
                      <children>
-                        <TableView fixedCellSize="0.0" layoutX="3.0" layoutY="3.0" prefHeight="461.0" prefWidth="797.0" stylesheets="@StyleSys.css" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="3.0">
+                        <TableView fx:id="tableSub" fixedCellSize="0.0" layoutX="3.0" layoutY="3.0" prefHeight="461.0" prefWidth="797.0" stylesheets="@StyleSys.css" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="3.0">
                            <columns>
-                              <TableColumn fx:id="titleSub" prefWidth="144.0" text="Title" />
-                              <TableColumn fx:id="descrip" minWidth="0.0" prefWidth="226.0" text="Description" />
-                              <TableColumn fx:id="field" prefWidth="101.33331298828125" text="Field" />
-                              <TableColumn fx:id="Keyword" minWidth="0.0" prefWidth="113.66668701171875" text="Keywords" />
-                              <TableColumn fx:id="DevTools" prefWidth="154.33331298828125" text="Development tools" />
-                              <TableColumn prefWidth="75.0" text="Edit" />
+                              <TableColumn fx:id="Id" prefWidth="38.0" text="ID" />
+                              <TableColumn fx:id="titleSub" prefWidth="119.0" text="Title" />
+                              <TableColumn fx:id="descrip" minWidth="0.0" prefWidth="184.0" text="Description" />
+                              <TableColumn fx:id="field" prefWidth="147.0" text="Field" />
+                              <TableColumn fx:id="Keyword" minWidth="0.0" prefWidth="117.0" text="Keywords" />
+                              <TableColumn fx:id="DevTools" prefWidth="146.0" text="Development tools" />
+                              <TableColumn fx:id="Edit" prefWidth="61.0" text="Edit" />
                            </columns>
                         </TableView>
                      </children>
@@ -55,7 +56,7 @@
             </HBox>
             <HBox layoutX="619.0" layoutY="29.0" prefHeight="56.0" prefWidth="160.0" stylesheets="@StyleSys.css">
                <children>
-                  <JFXButton fx:id="RefSub" prefHeight="57.0" prefWidth="161.0" ripplerFill="#ffffff34" text="Refresh" textFill="#000000ba">
+                  <JFXButton fx:id="RefSub" onAction="#refreshView" prefHeight="57.0" prefWidth="161.0" ripplerFill="#ffffff34" text="Refresh" textFill="#000000ba">
                      <font>
                         <Font name="Calibri Bold" size="14.0" />
                      </font>

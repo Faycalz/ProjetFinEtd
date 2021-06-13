@@ -135,7 +135,7 @@ public class StudentManagememntController {
             preparedStatement = connection.prepareStatement(query);
             resultSet = preparedStatement.executeQuery();
 
-            while (resultSet.next()) {
+            while (resultSet.next()) { 
                 StudentList.add(new Student(
                         resultSet.getInt("num_insc"),
                         resultSet.getString("nom"),
@@ -239,9 +239,9 @@ public class StudentManagememntController {
 
                        });
 
-                       HBox managebtn = new HBox(editIcon,deleteIcon);
+                       HBox managebtn = new HBox(editIcon);
                        managebtn.setStyle("-fx-alignment:center");
-                       HBox.setMargin(deleteIcon, new Insets(2, 2, 0, 3));
+                      // HBox.setMargin(deleteIcon, new Insets(2, 2, 0, 3));
                        HBox.setMargin(editIcon, new Insets(2, 3, 0, 2));
 
                        setGraphic(managebtn);

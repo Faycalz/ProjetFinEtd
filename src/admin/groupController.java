@@ -174,14 +174,14 @@ public class groupController {
                            
                            try {
                               group = tableGroup.getSelectionModel().getSelectedItem();
-                               query = "DELETE FROM groups WHERE nom_grp="+group.getNom();
+                               query = "DELETE FROM `groups` WHERE `groups`.`nom_grp`="+group.getNom();
                                connection = DbConnection.createConnection();
                                preparedStatement = connection.prepareStatement(query);
                                preparedStatement.execute();
                                refreshView();
                                
                            } catch (SQLException ex) {
-                               Logger.getLogger(StudentManagememntController.class.getName()).log(Level.SEVERE, null, ex);
+                               Logger.getLogger(groupController.class.getName()).log(Level.SEVERE, null, ex);
                            }
                            
                           

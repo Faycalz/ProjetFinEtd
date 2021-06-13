@@ -19,5 +19,6 @@
 	<classpathentry kind="lib" path="libs/jfoenix-8.0.1.jar"/>
 	<classpathentry kind="lib" path="libs/mysql-connector-java-5.1.42-bin.jar"/>
 	<classpathentry kind="lib" path="C:/Users/faycal/Downloads/Compressed/controlsfx-8.40.11.jar"/>
+	<classpathentry kind="lib" path="libs/itextpdf-5.5.9.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -11,8 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="806.0" style="-fx-background-color: #eceff1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="806.0" style="-fx-background-color: #eceff1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="system.AddSubjectController">
    <children>
       <HBox prefHeight="48.0" prefWidth="806.0" style="-fx-background-color: #407bff;">
          <children>
@@ -52,12 +51,9 @@
                         <Insets left="30.0" />
                      </padding>
                   </Label>
-                  <JFXTextArea fx:id="title" focusColor="#407bff" prefHeight="43.0" prefWidth="161.0">
-                     <padding>
-                        <Insets top="16.0" />
-                     </padding>
+                  <JFXTextArea fx:id="title" focusColor="#407bff" maxHeight="40.0" prefHeight="43.0" prefWidth="161.0">
                      <HBox.margin>
-                        <Insets left="60.0" />
+                        <Insets left="60.0" top="4.0" />
                      </HBox.margin>
                   </JFXTextArea>
                </children>
@@ -81,13 +77,10 @@
                         <Insets left="30.0" />
                      </padding>
                   </Label>
-                  <JFXTextArea fx:id="field" focusColor="#407bff" prefHeight="43.0" prefWidth="161.0">
+                  <JFXTextArea fx:id="field" focusColor="#407bff" maxHeight="40.0" prefHeight="43.0" prefWidth="161.0">
                      <HBox.margin>
-                        <Insets left="60.0" />
+                        <Insets left="60.0" top="4.0" />
                      </HBox.margin>
-                     <padding>
-                        <Insets top="16.0" />
-                     </padding>
                   </JFXTextArea>
                </children>
                <padding>
@@ -107,12 +100,9 @@
                         <Insets left="30.0" />
                      </padding>
                   </Label>
-                  <JFXTextArea fx:id="descrip" focusColor="#407bff" prefHeight="43.0" prefWidth="161.0">
-                     <padding>
-                        <Insets top="16.0" />
-                     </padding>
+                  <JFXTextArea fx:id="descrip" focusColor="#407bff" maxHeight="40.0" prefHeight="43.0" prefWidth="161.0">
                      <HBox.margin>
-                        <Insets left="60.0" />
+                        <Insets left="60.0" top="4.0" />
                      </HBox.margin>
                   </JFXTextArea>
                </children>
@@ -133,12 +123,9 @@
                         <Insets left="30.0" />
                      </padding>
                   </Label>
-                  <JFXTextArea fx:id="keyw" focusColor="#407bff" prefHeight="43.0" prefWidth="161.0">
-                     <padding>
-                        <Insets top="16.0" />
-                     </padding>
+                  <JFXTextArea fx:id="keyw" focusColor="#407bff" maxHeight="40.0" prefHeight="52.0" prefWidth="161.0">
                      <HBox.margin>
-                        <Insets left="60.0" />
+                        <Insets left="60.0" top="4.0" />
                      </HBox.margin>
                   </JFXTextArea>
                </children>
@@ -159,12 +146,9 @@
                         <Insets left="30.0" />
                      </padding>
                   </Label>
-                  <JFXTextArea fx:id="devtool" focusColor="#407bff" prefHeight="43.0" prefWidth="161.0">
-                     <padding>
-                        <Insets top="16.0" />
-                     </padding>
+                  <JFXTextArea fx:id="devtool" focusColor="#407bff" maxHeight="40.0" prefHeight="22.0" prefWidth="164.0">
                      <HBox.margin>
-                        <Insets left="13.0" />
+                        <Insets left="12.0" top="4.0" />
                      </HBox.margin>
                   </JFXTextArea>
                </children>
@@ -174,12 +158,12 @@
             </HBox>
             <HBox prefHeight="102.0" prefWidth="406.0" spacing="60.0" stylesheets="@StyleSys.css">
                <children>
-                  <JFXButton fx:id="save" prefHeight="37.0" prefWidth="130.0" text="Save" textFill="#121212cb">
+                  <JFXButton fx:id="save" onAction="#save" prefHeight="37.0" prefWidth="130.0" text="Save" textFill="#121212cb">
                      <font>
                         <Font name="Calibri Bold" size="14.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton fx:id="reset" prefHeight="37.0" prefWidth="130.0" text="Reset" textFill="#121212cc">
+                  <JFXButton fx:id="reset" onAction="#clean" prefHeight="37.0" prefWidth="130.0" text="Reset" textFill="#121212cc">
                      <font>
                         <Font name="Calibri Bold" size="14.0" />
                      </font>

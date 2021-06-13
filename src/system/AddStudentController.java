@@ -259,8 +259,6 @@ public class AddStudentController implements Initializable{
 		Insertbirthday.setValue(birthday);
 		InsertGroup.setValue(group);
 
-		// InsertGroup.setValue(group);
-
 
 	}
 

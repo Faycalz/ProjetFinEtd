@@ -17,6 +17,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -62,28 +63,20 @@ public class ControllerSys implements Initializable{
     @FXML
     private JFXButton Eval;
 
+   private Stage stage ;
+   private Scene scene ;
+   private Parent root ;
    
-
-   /* @FXML
-    void logout(ActionEvent event) {
-    	Parent root = null;
-    	try {
-			root = FXMLLoader.load(getClass().getResource("/application/MainScene.fxml"));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-    }
-	*/
     @FXML
-    void logoutBTNAction(ActionEvent event) {
-    	
+    void logoutBTNAction(ActionEvent event) throws IOException {
+    	root=FXMLLoader.load(getClass().getResource("/application/MainScene.fxml"));
+    	stage =(Stage)((Node)event.getSource()).getScene().getWindow();
+    	scene = new Scene(root);
+    	stage.setScene(scene);
+    	stage.centerOnScreen();
+    	stage.show();
     }
 	
-
-   
-    
-    
     
     @FXML
 	void studentAction(ActionEvent event) {
@@ -91,7 +84,6 @@ public class ControllerSys implements Initializable{
     	FxmlLoaderr object = new FxmlLoaderr();
 	     Pane view = object.getPage("Student");
 	     mainPane.setCenter(view);
-		
 	}
     
     @FXML

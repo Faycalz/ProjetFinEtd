@@ -10,7 +10,8 @@ public class Session {
 	String room;
 	String group;
 	
-	public Session(int id, Time hour, Date date, String room, String group) {
+	
+	public Session(int id, Time hour, Date date, String room, String group ) {
 		super();
 		this.id = id;
 		this.hour = hour;
@@ -48,5 +49,6 @@ public class Session {
 	public void setGroup(String group) {
 		this.group = group;
 	}
+
 	
 }
