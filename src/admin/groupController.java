@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Optional;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -22,9 +23,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -63,7 +67,7 @@ public class groupController {
     Connection connection = null;
     PreparedStatement preparedStatement = null;
     ResultSet resultSet = null;
-    Group group = null;
+    Group group ;
     String espace = " ";
     
     ObservableList<Group> GroupList = FXCollections.observableArrayList();
@@ -116,29 +120,7 @@ public class groupController {
 
         
     }
-    
-    
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     private void loadInfo() {
         System.out.println("Loading info");
@@ -174,12 +156,20 @@ public class groupController {
                            
                            try {
                               group = tableGroup.getSelectionModel().getSelectedItem();
-                               query = "DELETE FROM `groups` WHERE `groups`.`nom_grp`="+group.getNom();
+                              Alert alert = new Alert(AlertType.CONFIRMATION);
+								alert.setTitle("Delete group");
+								alert.setHeaderText("Are you sure want to delete "+group.getNom()+"?");
+								Optional<ButtonType> option = alert.showAndWait();
+								if (option.get() == ButtonType.OK) {
+									group = tableGroup.getSelectionModel().getSelectedItem();
+                               query = "DELETE FROM groups WHERE nom_grp="+group.getNom();
                                connection = DbConnection.createConnection();
                                preparedStatement = connection.prepareStatement(query);
                                preparedStatement.execute();
-                               refreshView();
-                               
+                               refreshView();}
+                               else if (option.get() == ButtonType.CANCEL) {
+									System.out.println("nothing");;
+								} 
                            } catch (SQLException ex) {
                                Logger.getLogger(groupController.class.getName()).log(Level.SEVERE, null, ex);
                            }

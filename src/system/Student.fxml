@@ -11,6 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="840.0" styleClass="container" stylesheets="@StyleSys.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="system.StudentManagememntController">
    <children>
@@ -52,10 +53,21 @@
                      <HBox.margin>
                         <Insets left="15.0" top="20.0" />
                      </HBox.margin>
+                     <font>
+                        <Font name="Calibri" size="13.0" />
+                     </font>
                   </JFXTextField>
                </children>
             </HBox>
-            <Label id="lbl1" fx:id="lbl1" layoutX="38.0" layoutY="43.0" prefHeight="25.0" prefWidth="174.0" text="Student List" />
+            <HBox layoutX="31.0" layoutY="25.0" prefHeight="71.0" prefWidth="229.0" stylesheets="@StyleSys.css">
+               <children>
+                  <Label fx:id="list" prefHeight="71.0" prefWidth="236.0" stylesheets="@../etudiant/StyleSys.css" text="Students List" textFill="#407bff">
+                     <font>
+                        <Font name="Calibri Bold" size="35.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
          </children>
       </Pane>
    </children>

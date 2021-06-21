@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import com.jfoenix.controls.JFXButton;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -20,6 +22,10 @@ public class ControllerEtd implements Initializable{
 
     @FXML
     private BorderPane mainPane;
+
+
+    
+    
 	  private Stage stage ;
 	    private Scene scene ;
 	    private Parent root ;
@@ -42,6 +48,48 @@ public class ControllerEtd implements Initializable{
 	   	     mainPane.setCenter(view);
 	   		
 	   	}
+	    
+	    @FXML
+	   	void SubjectAction(ActionEvent event) {
+	   		
+	       	FxmlLoaderr object = new FxmlLoaderr();
+	   	     Pane view = object.getPage("Subject");
+	   	     mainPane.setCenter(view);
+	   		
+	   	}
+	    
+	    @FXML
+	   	void SessionAction(ActionEvent event) {
+	   		
+	       	FxmlLoaderr object = new FxmlLoaderr();
+	   	     Pane view = object.getPage("Session");
+	   	     mainPane.setCenter(view);
+	   		
+	   	}
+	    
+	    @FXML
+	   	void TeamAction(ActionEvent event) {
+	   		
+	       	FxmlLoaderr object = new FxmlLoaderr();
+	   	     Pane view = object.getPage("Team");
+	   	     mainPane.setCenter(view);
+	   		
+	   	}
+	    
+	    @FXML
+	   	void FMarkAction(ActionEvent event) {
+	   		
+	       	FxmlLoaderr object = new FxmlLoaderr();
+	   	     Pane view = object.getPage("FinalMark");
+	   	     mainPane.setCenter(view);
+	   		
+	   	}
+	    
+	    
+	    
+	    
+	    
+	    
 	    @Override
 		public void initialize(URL arg0, ResourceBundle arg1) {
 			// TODO Auto-generated method stub

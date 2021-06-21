@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
@@ -14,32 +13,32 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="system.subjectController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="etudiant.SubjectController">
    <children>
       <Pane layoutX="243.0" layoutY="95.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <ScrollPane hbarPolicy="NEVER" layoutX="3.0" layoutY="96.0" prefHeight="481.0" prefWidth="831.0" style="-fx-border-color: white;" stylesheets="@StyleSys.css" vbarPolicy="NEVER">
                <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="480.0" prefWidth="832.0">
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="832.0">
                      <children>
-                        <TableView fx:id="tableSub" fixedCellSize="0.0" layoutX="3.0" layoutY="3.0" prefHeight="461.0" prefWidth="797.0" stylesheets="@StyleSys.css" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="3.0">
+                        <TableView fx:id="tableSub" fixedCellSize="0.0" layoutX="3.0" layoutY="3.0" minHeight="950.0" prefHeight="950.0" prefWidth="813.0" stylesheets="@StyleSys.css" AnchorPane.bottomAnchor="-83.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="3.0">
                            <columns>
                               <TableColumn fx:id="Id" prefWidth="38.0" text="ID" />
-                              <TableColumn fx:id="titleSub" prefWidth="119.0" text="Title" />
-                              <TableColumn fx:id="descrip" minWidth="0.0" prefWidth="184.0" text="Description" />
-                              <TableColumn fx:id="field" prefWidth="147.0" text="Field" />
-                              <TableColumn fx:id="Keyword" minWidth="0.0" prefWidth="117.0" text="Keywords" />
-                              <TableColumn fx:id="DevTools" prefWidth="146.0" text="Development tools" />
-                              <TableColumn fx:id="Edit" prefWidth="61.0" text="Edit" />
+                              <TableColumn fx:id="titleSub" prefWidth="136.00001525878906" text="Title" />
+                              <TableColumn fx:id="descrip" minWidth="0.0" prefWidth="174.0" text="Description" />
+                              <TableColumn fx:id="field" prefWidth="126.0" text="Field" />
+                              <TableColumn fx:id="Keyword" minWidth="0.0" prefWidth="122.0" text="Keywords" />
+                              <TableColumn fx:id="DevTools" prefWidth="151.0" text="Development tools" />
+                              <TableColumn fx:id="Edit" prefWidth="64.0" text="PDF" />
                            </columns>
                         </TableView>
                      </children>
                   </AnchorPane>
                </content>
             </ScrollPane>
-            <HBox layoutX="412.0" layoutY="29.0" prefHeight="56.0" prefWidth="160.0" stylesheets="@StyleSys.css">
+            <HBox layoutX="472.0" layoutY="29.0" prefHeight="56.0" prefWidth="160.0" stylesheets="@StyleSys.css">
                <children>
-                  <JFXButton fx:id="AddSub" onAction="#getAddView" prefHeight="60.0" prefWidth="159.0" ripplerFill="#ffffff34" text="New Subject" textFill="#000000ba">
+                  <JFXButton fx:id="chooseSub" onAction="#getAddView" prefHeight="60.0" prefWidth="159.0" ripplerFill="#ffffff34" text="Choose a subject" textFill="#000000ba">
                      <font>
                         <Font name="Calibri Bold" size="14.0" />
                      </font>
@@ -47,16 +46,16 @@
                         <Insets />
                      </HBox.margin>
                      <graphic>
-                        <ImageView fitHeight="46.0" fitWidth="36.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="46.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../images/add%20(1).png" />
+                              <Image url="@../images/syllabus.png" />
                            </image>
                         </ImageView>
                      </graphic>
                   </JFXButton>
                </children>
             </HBox>
-            <HBox layoutX="619.0" layoutY="29.0" prefHeight="56.0" prefWidth="160.0" stylesheets="@StyleSys.css">
+            <HBox layoutX="650.0" layoutY="29.0" prefHeight="56.0" prefWidth="160.0" stylesheets="@StyleSys.css">
                <children>
                   <JFXButton fx:id="RefSub" onAction="#refreshView" prefHeight="57.0" prefWidth="161.0" ripplerFill="#ffffff34" text="Refresh" textFill="#000000ba">
                      <font>
@@ -75,18 +74,14 @@
                   </JFXButton>
                </children>
             </HBox>
-            <HBox layoutX="32.0" layoutY="14.0" prefHeight="71.0" prefWidth="229.0">
+            <HBox layoutX="24.0" layoutY="22.0" prefHeight="71.0" prefWidth="229.0">
                <children>
-                  <Label fx:id="list" prefHeight="71.0" prefWidth="236.0" stylesheets="@../etudiant/StyleSys.css" text="List of Subjects " textFill="#407bff">
+                  <Label fx:id="list" prefHeight="71.0" prefWidth="236.0" stylesheets="@StyleSys.css" text="List of Subjects " textFill="#407bff">
                      <font>
                         <Font name="Calibri Bold" size="35.0" />
                      </font>
                   </Label>
                </children>
-               <stylesheets>
-                  <URL value="@../etudiant/StyleSys.css" />
-                  <URL value="@StyleSys.css" />
-               </stylesheets>
             </HBox>
          </children>
       </Pane>

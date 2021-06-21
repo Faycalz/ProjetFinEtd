@@ -7,6 +7,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Optional;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -37,9 +38,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
@@ -179,12 +183,20 @@ public class subjectController {
                        deleteIcon.setOnMouseClicked((MouseEvent event) -> {
                            
                            try {
+                        	   Alert alert = new Alert(AlertType.CONFIRMATION);
+								alert.setTitle("Delete Student");
+								alert.setHeaderText("Are you sure want to delete this subject?");
+								Optional<ButtonType> option = alert.showAndWait();
+								if (option.get() == ButtonType.OK) {
                         	   subject = tableSub.getSelectionModel().getSelectedItem();
                                query = "DELETE FROM sujet WHERE id  ="+subject.getId();
                                connection = DbConnection.createConnection();
                                preparedStatement = connection.prepareStatement(query);
                                preparedStatement.execute();
-                               refreshView(); 
+                               refreshView(); }
+								else if (option.get() == ButtonType.CANCEL) {
+									System.out.println("nothing");;
+								} 
                            } catch (SQLException ex) {
                                Logger.getLogger(StudentManagememntController.class.getName()).log(Level.SEVERE, null, ex);
                            }
@@ -263,7 +275,6 @@ public class subjectController {
 	    		
 	    		i++;
 	    		PdfPTable table = new PdfPTable(2);
-	    		
 	    		// Creating an Area Break    
 	    		Paragraph para = new Paragraph ("Thème 0"+i); 
 	    		document.add(para); 

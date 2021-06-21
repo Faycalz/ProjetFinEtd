@@ -22,3 +22,140 @@
 .shadow{
 	-fx-effect: dropshadow(three-pass-box , rgba(0,0,0,0.2) , 10 , 0 , 0 , 10) ;
 }
+
+
+#save, #reset {
+  -fx-background-color:  #407bff;
+  -fx-border-radius: 16;
+  -fx-background-radius: 16;
+  -fx-text-fill: white;
+}
+
+ #reset:hover {
+  -fx-background-color:  white;
+  -fx-border-color:#407bff;
+  -fx-text-fill: #407bff;
+  -fx-border-radius: 16;
+}
+
+#save:hover {
+  -fx-background-color:  white;
+  -fx-border-color:#407bff;
+  -fx-text-fill: #407bff;
+  -fx-border-radius: 16;
+}
+
+
+.table-view{
+-fx-background-color: #407bff;
+-fx-background-radius: 10;
+}
+.table-view .column-header-background{
+	-fx-background-color: #407bff;
+	-fx-background-radius: 10;
+	-fx-background-insets: 0 0 10 0;
+	-fx-padding: 0 0 10 0;
+	-fx-effect: dropshadow(three-pass-box , rgba(0,0,0,0.2) , 20 , 0 , 0 , 2) ;
+}
+
+.table-view .column-header, .table-view .filler{
+	-fx-size: 40;
+	-fx-background-color: transparent;
+	
+}
+
+.table-view .column-header .label{
+	-fx-text-fill: white;
+	-fx-font-weight: bold;
+	-fx-font-size: 15;
+}
+
+#RefSub, #chooseSub, #RefT, #chooseStud, #RefSess{
+	-fx-border-radius: 25;
+	-fx-background-radius: 25;
+	
+}
+
+#chooseSub:hover{
+	
+	-fx-effect: dropshadow(three-pass-box, rgba(1,182,63,1), 10, 0, 0, 0);
+}
+
+#chooseStud:hover{
+	
+	-fx-effect: dropshadow(three-pass-box, rgba(1,182,63,1), 10, 0, 0, 0);
+}
+
+
+#RefSub:hover{
+	
+	-fx-effect: dropshadow(three-pass-box, rgba(64,123,255,1), 10, 0, 0, 0);
+}
+
+#RefT:hover{
+	
+	-fx-effect: dropshadow(three-pass-box, rgba(64,123,255,1), 10, 0, 0, 0);
+}
+
+#RefSess:hover{
+	
+	-fx-effect: dropshadow(three-pass-box, rgba(64,123,255,1), 10, 0, 0, 0);
+}
+
+
+#dash, #team, #subj, #sched, #fmark{
+	-fx-border-radius: 30;
+	-fx-background-radius: 30;
+}
+
+#dash:hover{
+	-fx-font-size: 16;
+	-fx-text-fill: #4a83ff;
+	-fx-padding: 4px;
+	-fx-font-weight: Bold;
+}
+
+#team:hover{
+	-fx-font-size: 16;
+	-fx-text-fill: #4a83ff;
+	-fx-padding: 4px;
+	-fx-font-weight: Bold;
+}
+
+#subj:hover{
+	-fx-font-size: 16;
+	-fx-text-fill: #4a83ff;
+	-fx-padding: 4px;
+	-fx-font-weight: Bold;
+}
+#sched:hover{
+	-fx-font-size: 16;
+	-fx-text-fill: #4a83ff;
+	-fx-padding: 4px;
+	-fx-font-weight: Bold;
+}
+
+#fmark:hover{
+	-fx-font-size: 16;
+	-fx-text-fill: #4a83ff;
+	-fx-padding: 4px;
+	-fx-font-weight: Bold;
+}
+
+
+#list{
+-fx-effect: dropshadow(three-pass-box , rgba(151,151,151,0.4) , 10 , 0 , 0 , 10) ;
+}
+
+
+#listF{
+-fx-effect: dropshadow(three-pass-box , rgba(64,123,255,0.3) , 10 , 0 , 0 , 10) ;
+}
+#my_icon2{
+	
+	-glyph-size:28px;
+	-fx-fill:#ff3800;
+}
+
+
+

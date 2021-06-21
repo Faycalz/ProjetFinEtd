@@ -84,7 +84,7 @@
 }
 
 
-#AddGrp, #AddSub, #AddSess{
+#AddGrp, #AddSub, #AddSess, #AddEv{
 	-fx-border-radius: 25;
 	-fx-background-radius: 25;
 	
@@ -111,6 +111,11 @@
 	-fx-effect: dropshadow(three-pass-box, rgba(1,182,63,1), 10, 0, 0, 0);
 }
 
+#AddEv:hover{
+	
+	-fx-effect: dropshadow(three-pass-box, rgba(1,182,63,1), 10, 0, 0, 0);
+}
+
 #rem:hover{
 	
 	-fx-effect: dropshadow(three-pass-box, rgba(255,69,69,1), 10, 0, 0, 0);
@@ -125,12 +130,17 @@
 	-fx-effect: dropshadow(three-pass-box, rgba(64,123,255,1), 10, 0, 0, 0);
 }
 
-#RefGrp, #RefSub{
+#RefGrp, #RefSub, #RefEv{
 	-fx-border-radius: 25;
     -fx-background-radius: 25;
     
 }
 #RefGrp:hover{
+	-fx-effect: dropshadow(three-pass-box, rgba(64,123,255,1), 10, 0, 0, 0);
+	
+}
+
+#RefEv:hover{
 	-fx-effect: dropshadow(three-pass-box, rgba(64,123,255,1), 10, 0, 0, 0);
 	
 }

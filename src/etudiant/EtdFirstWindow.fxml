@@ -97,7 +97,7 @@
                            </HBox.margin>
                         </Label>
                      </children></HBox>
-                  <Pane maxHeight="35.0" prefHeight="8.0" prefWidth="218.0" style="-fx-background-color: #EAE7E6;" styleClass="line-color" VBox.vgrow="ALWAYS">
+                  <Pane maxHeight="6.0" prefHeight="8.0" prefWidth="218.0" style="-fx-background-color: #EAE7E6;" styleClass="line-color" VBox.vgrow="ALWAYS">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -105,11 +105,11 @@
                         <Insets left="20.0" right="18.0" />
                      </VBox.margin>
                   </Pane>
-                  <HBox prefHeight="77.0" prefWidth="250.0">
+                  <HBox fx:id="dash" prefHeight="77.0" prefWidth="250.0">
                      <children>
-                        <JFXButton alignment="BASELINE_LEFT" graphicTextGap="30.0" onAction="#DashAction" prefHeight="80.0" prefWidth="250.0" text="Dashboard" textFill="#000000b2" HBox.hgrow="ALWAYS">
+                        <JFXButton fx:id="dash" alignment="BASELINE_LEFT" graphicTextGap="30.0" onAction="#DashAction" prefHeight="80.0" prefWidth="250.0" text="Dashboard" textFill="#0000008c" HBox.hgrow="ALWAYS">
                            <font>
-                              <Font size="15.0" />
+                              <Font name="Calibri Bold" size="17.0" />
                            </font>
                            <graphic>
                               <ImageView fitHeight="32.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
@@ -130,11 +130,11 @@
                         <Insets left="10.0" />
                      </padding>
                   </HBox>
-                  <HBox prefHeight="77.0" prefWidth="250.0">
+                  <HBox fx:id="team" prefHeight="77.0" prefWidth="250.0">
                      <children>
-                        <JFXButton alignment="BASELINE_LEFT" graphicTextGap="30.0" prefHeight="77.0" prefWidth="253.0" text="Team" textFill="#000000b2">
+                        <JFXButton fx:id="team" alignment="BASELINE_LEFT" graphicTextGap="30.0" onAction="#TeamAction" prefHeight="77.0" prefWidth="253.0" text="Team" textFill="#0000008c">
                            <font>
-                              <Font size="15.0" />
+                              <Font name="System Bold" size="16.0" />
                            </font>
                            <graphic>
                               <ImageView fitHeight="32.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
@@ -152,11 +152,11 @@
                         <Insets left="10.0" />
                      </padding>
                   </HBox>
-                  <HBox prefHeight="77.0" prefWidth="250.0">
+                  <HBox fx:id="subj" prefHeight="77.0" prefWidth="250.0">
                      <children>
-                        <JFXButton alignment="BASELINE_LEFT" graphicTextGap="30.0" prefHeight="95.0" prefWidth="250.0" text="Subjects " textFill="#000000b2">
+                        <JFXButton fx:id="subj" alignment="BASELINE_LEFT" graphicTextGap="30.0" onAction="#SubjectAction" prefHeight="95.0" prefWidth="250.0" text="Subjects " textFill="#0000008c">
                            <font>
-                              <Font size="15.0" />
+                              <Font name="Calibri Bold" size="17.0" />
                            </font>
                            <graphic>
                               <ImageView fitHeight="32.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
@@ -174,11 +174,11 @@
                         <Insets left="10.0" />
                      </padding>
                   </HBox>
-                  <HBox prefHeight="77.0" prefWidth="250.0">
+                  <HBox fx:id="sched" prefHeight="77.0" prefWidth="250.0">
                      <children>
-                        <JFXButton alignment="BASELINE_LEFT" graphicTextGap="30.0" prefHeight="93.0" prefWidth="250.0" text="Schedule" textFill="#000000b2">
+                        <JFXButton fx:id="sched" alignment="BASELINE_LEFT" graphicTextGap="30.0" onAction="#SessionAction" prefHeight="93.0" prefWidth="250.0" text="Schedule" textFill="#0000008c">
                            <font>
-                              <Font size="15.0" />
+                              <Font name="Calibri Bold" size="17.0" />
                            </font>
                            <graphic>
                               <ImageView fitHeight="32.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
@@ -196,11 +196,11 @@
                         <Insets left="10.0" />
                      </padding>
                   </HBox>
-                  <HBox prefHeight="77.0" prefWidth="250.0">
+                  <HBox fx:id="fmark" prefHeight="77.0" prefWidth="250.0">
                      <children>
-                        <JFXButton alignment="BASELINE_LEFT" graphicTextGap="30.0" prefHeight="77.0" prefWidth="251.0" text="Final Mark" textFill="#000000b2">
+                        <JFXButton fx:id="fmark" alignment="BASELINE_LEFT" graphicTextGap="30.0" onAction="#FMarkAction" prefHeight="77.0" prefWidth="251.0" text="Final Mark" textFill="#0000008d">
                            <font>
-                              <Font size="15.0" />
+                              <Font name="Calibri Bold" size="16.0" />
                            </font>
                            <graphic>
                               <ImageView fitHeight="32.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="806.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="system.AddEvaluationController">
+   <children>
+      <Pane layoutX="180.0" layoutY="79.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ECEFF1;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox layoutX="403.0" layoutY="45.0" prefHeight="443.0" prefWidth="403.0">
+               <children>
+                  <VBox prefHeight="402.0" prefWidth="395.0">
+                     <children>
+                        <HBox prefHeight="55.0" prefWidth="401.0">
+                           <children>
+                              <HBox prefHeight="70.0" prefWidth="117.0">
+                                 <children>
+                                    <Label text="Teacher" textFill="#453d3db1">
+                                       <HBox.margin>
+                                          <Insets left="15.0" top="33.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Arial Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <JFXComboBox fx:id="InsertTeacher" focusColor="#407bff" prefHeight="25.0" prefWidth="135.0">
+                                 <HBox.margin>
+                                    <Insets left="49.0" top="27.0" />
+                                 </HBox.margin>
+                              </JFXComboBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="2.0" top="-13.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="59.0" prefWidth="401.0">
+                           <children>
+                              <HBox prefHeight="70.0" prefWidth="117.0">
+                                 <children>
+                                    <Label text="Team Code" textFill="#453d3db1">
+                                       <HBox.margin>
+                                          <Insets left="15.0" top="33.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Arial Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <JFXComboBox fx:id="InsertTeam" focusColor="#407bff" prefHeight="25.0" prefWidth="135.0">
+                                 <HBox.margin>
+                                    <Insets left="49.0" top="27.0" />
+                                 </HBox.margin>
+                              </JFXComboBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="38.0" prefWidth="401.0">
+                           <children>
+                              <HBox prefHeight="70.0" prefWidth="117.0">
+                                 <children>
+                                    <Label prefHeight="16.0" prefWidth="91.0" text="Date" textFill="#453d3db2">
+                                       <HBox.margin>
+                                          <Insets left="15.0" top="33.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Arial Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <JFXDatePicker fx:id="InsertDate" defaultColor="#407bff" prefHeight="25.0" prefWidth="179.0">
+                                 <HBox.margin>
+                                    <Insets left="48.0" top="20.0" />
+                                 </HBox.margin>
+                              </JFXDatePicker>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="36.0" prefWidth="401.0">
+                           <children>
+                              <HBox prefHeight="70.0" prefWidth="117.0">
+                                 <children>
+                                    <Label text="Mark" textFill="#453d3db5">
+                                       <HBox.margin>
+                                          <Insets left="15.0" top="33.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Arial Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <JFXTextField fx:id="InsertMark" focusColor="#407bff" prefHeight="25.0" prefWidth="170.0">
+                                 <HBox.margin>
+                                    <Insets left="47.0" top="20.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="48.0" prefWidth="401.0">
+                           <children>
+                              <HBox prefHeight="70.0" prefWidth="117.0">
+                                 <children>
+                                    <Label text="Remark" textFill="#453d3db5">
+                                       <HBox.margin>
+                                          <Insets left="15.0" top="33.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Arial Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <JFXTextField fx:id="InsertRemark" focusColor="#407bff" prefHeight="25.0" prefWidth="170.0">
+                                 <HBox.margin>
+                                    <Insets left="45.0" top="20.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="48.0" prefWidth="401.0">
+                           <children>
+                              <HBox prefHeight="50.0" prefWidth="142.0">
+                                 <children>
+                                    <Label prefHeight="51.0" prefWidth="130.0" text="Repport progress" textFill="#453d3db5">
+                                       <HBox.margin>
+                                          <Insets left="15.0" top="33.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Arial Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <JFXTextField fx:id="InsertRapp" focusColor="#407bff" prefHeight="25.0" prefWidth="170.0">
+                                 <HBox.margin>
+                                    <Insets left="21.0" top="20.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="44.0" prefWidth="401.0">
+                           <children>
+                              <HBox prefHeight="70.0" prefWidth="117.0">
+                                 <children>
+                                    <Label text="App progress" textFill="#453d3db5">
+                                       <HBox.margin>
+                                          <Insets left="15.0" top="33.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Arial Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <JFXTextField fx:id="InsertApp" focusColor="#407bff" prefHeight="25.0" prefWidth="170.0">
+                                 <HBox.margin>
+                                    <Insets left="46.0" top="20.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="85.0" prefWidth="393.0" spacing="60.0">
+                           <children>
+                              <JFXButton fx:id="save" prefHeight="37.0" prefWidth="130.0" stylesheets="@StyleSys.css" text="Save" textFill="#141414b5">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="reset" prefHeight="37.0" prefWidth="130.0" stylesheets="@StyleSys.css" text="Reset" textFill="#0f0f0fb4">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                           <padding>
+                              <Insets left="29.0" top="32.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="8.0" top="4.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox layoutY="77.0" prefHeight="411.0" prefWidth="403.0">
+               <children>
+                  <ImageView fitHeight="434.0" fitWidth="403.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Grades.gif" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="37.0" prefWidth="806.0" style="-fx-background-color: #407bff;">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/more.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="45.0" prefWidth="258.0" text="Evaluation" textFill="#ffffff" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="172.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="63.0" />
+                     </padding>
+                     <font>
+                        <Font name="Calibri Bold" size="29.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

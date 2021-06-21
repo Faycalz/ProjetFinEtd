@@ -122,6 +122,15 @@ public class ControllerSys implements Initializable{
    		
    	}
     
+    @FXML
+   	void EvaluationAction(ActionEvent event) {
+   		
+       	FxmlLoaderr object = new FxmlLoaderr();
+   	     Pane view = object.getPage("Evaluation");
+   	     mainPane.setCenter(view);
+   		
+   	}
+    
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
