@@ -3,13 +3,17 @@ package etudiant;
 public class Team {
 
 	int code;
-	int id_sujet;
-	String id_grp;
-	public Team(int code, int id_sujet, String id_grp) {
+	String std1;
+	String std2;
+	String sujet;
+	String grp;
+	public Team(int code, String std1, String std2, String sujet, String grp) {
 		super();
 		this.code = code;
-		this.id_sujet = id_sujet;
-		this.id_grp = id_grp;
+		this.std1 = std1;
+		this.std2 = std2;
+		this.sujet = sujet;
+		this.grp = grp;
 	}
 	public int getCode() {
 		return code;
@@ -17,17 +21,31 @@ public class Team {
 	public void setCode(int code) {
 		this.code = code;
 	}
-	public int getId_sujet() {
-		return id_sujet;
+	public String getStd1() {
+		return std1;
 	}
-	public void setId_sujet(int id_sujet) {
-		this.id_sujet = id_sujet;
+	public void setStd1(String std1) {
+		this.std1 = std1;
 	}
-	public String getId_grp() {
-		return id_grp;
+	public String getStd2() {
+		return std2;
 	}
-	public void setId_grp(String id_grp) {
-		this.id_grp = id_grp;
+	public void setStd2(String std2) {
+		this.std2 = std2;
 	}
+	public String getSujet() {
+		return sujet;
+	}
+	public void setSujet(String sujet) {
+		this.sujet = sujet;
+	}
+	public String getGrp() {
+		return grp;
+	}
+	public void setGrp(String grp) {
+		this.grp = grp;
+	}
+	
+	
 	
 }

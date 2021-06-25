@@ -42,12 +42,11 @@
                         <TableView fx:id="tableGroup" fixedCellSize="0.0" prefHeight="396.0" prefWidth="729.0" stylesheets="@../system/StyleSys.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="0.0">
                            <columns>
                               <TableColumn fx:id="teamc" prefWidth="98.33334350585938" text="Team code" />
-                              <TableColumn fx:id="stud1" minWidth="0.0" prefWidth="125.66665649414062" text="Student01 Name" />
-                              <TableColumn fx:id="stud11" prefWidth="155.0" text="Student01 Last name" />
-                              <TableColumn fx:id="stud2" prefWidth="136.0" text="Student02 Name" />
-                              <TableColumn fx:id="stud22" prefWidth="163.66668701171875" text="Student02 Last name" />
-                              <TableColumn fx:id="subj" minWidth="0.0" prefWidth="61.33331298828125" text="Subject" />
-                              <TableColumn fx:id="grpt" prefWidth="52.33331298828125" text="Group" />
+                              <TableColumn fx:id="stud1" minWidth="0.0" prefWidth="170.0" text="Student01 Name" />
+                              <TableColumn fx:id="stud2" prefWidth="170.0" text="Student02 Name" />
+                              <TableColumn fx:id="subj" minWidth="0.0" prefWidth="170.0" text="Subject" />
+                              <TableColumn fx:id="grpt" prefWidth="96.0" text="Group" />
+                              <TableColumn fx:id="Edit" prefWidth="96.0" text="Edit" />
                            </columns>
                         </TableView>
                      </children>
@@ -72,7 +71,7 @@
             </HBox>
             <HBox layoutX="622.0" layoutY="182.0" prefHeight="71.0" prefWidth="160.0" stylesheets="@StyleSys.css">
                <children>
-                  <JFXButton fx:id="RefT" prefHeight="80.0" prefWidth="161.0" ripplerFill="#ffffff34" text="Refresh" textFill="#000000ba">
+                  <JFXButton fx:id="RefT" onAction="#refreshView" prefHeight="80.0" prefWidth="161.0" ripplerFill="#ffffff34" text="Refresh" textFill="#000000ba">
                      <font>
                         <Font name="Calibri Bold" size="14.0" />
                      </font>

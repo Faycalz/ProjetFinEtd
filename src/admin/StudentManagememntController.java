@@ -199,13 +199,13 @@ public class StudentManagememntController {
 								Optional<ButtonType> option = alert.showAndWait();
 								if (option.get() == ButtonType.OK) {
 									student = Table.getSelectionModel().getSelectedItem();
-									query = "DELETE FROM etudiant WHERE num_insc  ="+student.getId();
+									query = "DELETE FROM etudiant WHERE num_insc ="+student.getId();
 									connection = DbConnection.createConnection();
 									preparedStatement = connection.prepareStatement(query);
 									preparedStatement.execute();
 									refreshView();}
 								else if (option.get() == ButtonType.CANCEL) {
-									System.out.println("nothing");;
+									System.out.println("nothing");
 								} 
 							} catch (SQLException ex) {
 								Logger.getLogger(StudentManagememntController.class.getName()).log(Level.SEVERE, null, ex);

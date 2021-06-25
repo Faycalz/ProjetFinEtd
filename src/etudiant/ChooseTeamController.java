@@ -11,6 +11,7 @@ import java.util.ResourceBundle;
 import org.controlsfx.control.Notifications;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXRadioButton;
 import com.jfoenix.controls.JFXTextField;
 
 import application.Controller;
@@ -22,6 +23,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
@@ -31,8 +33,7 @@ public class ChooseTeamController implements Initializable {
 	  @FXML
 	    private ComboBox<String> innsertname;
 
-	    @FXML
-	    private ComboBox<String> innsertname1;
+	  
 	    
 	    @FXML
 	    private JFXTextField codeSTU;
@@ -42,6 +43,14 @@ public class ChooseTeamController implements Initializable {
 
 	    @FXML
 	    private JFXButton reset;
+	    @FXML
+	    private JFXRadioButton monomial;
+
+	    @FXML
+	    private ToggleGroup TeamToggle;
+
+	    @FXML
+	    private JFXRadioButton partner;
 	    String espacee = " ";
 	    static String grp = null;
 	    Connection con ;
@@ -54,6 +63,7 @@ public class ChooseTeamController implements Initializable {
 	    String query2=null;
 	    String query3=null;
 	    String secondId= null ;
+	    
 	    public static String getGrp() throws ClassNotFoundException {
 	    	
 	    	try {
@@ -72,6 +82,8 @@ public class ChooseTeamController implements Initializable {
 			return grp;
 	    }
 	    
+	    
+	   
 	    public static ObservableList<String> loadComboGroup() throws ClassNotFoundException {
 
 			ObservableList<String> List = FXCollections.observableArrayList();
@@ -183,11 +195,7 @@ public class ChooseTeamController implements Initializable {
 					preparedStatement.setString(1, grp);	
 					preparedStatement.execute();
 	
-					Notifications.create()
-					.title("About Us")
-					.text("success")
-					.position(Pos.CENTER)
-					.showInformation();
+					
 
 
 
@@ -206,11 +214,7 @@ public class ChooseTeamController implements Initializable {
 							
 						preparedStatement.execute();
 		
-						Notifications.create()
-						.title("About Us")
-						.text("success")
-						.position(Pos.CENTER)
-						.showInformation();
+						
 					} catch (Exception ex) {
 						System.out.println(ex);
 					}
@@ -246,12 +250,26 @@ public class ChooseTeamController implements Initializable {
 		public void initialize(URL location, ResourceBundle resources) {
 			// TODO Auto-generated method stub
 			try {
-				innsertname.setItems(loadComboGroup());
+				if(monomial.isSelected()) {
+					
+					innsertname.setDisable(true);
+				
+				
+				}
+				else 
+				{
+					innsertname.setItems(loadComboGroup());
+				}
+				
 			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 
 			}
+
+			
+		    	
+			
 		}
 	
 

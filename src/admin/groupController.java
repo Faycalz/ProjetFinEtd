@@ -64,11 +64,14 @@ public class groupController {
 
 
     String query = null;
+    String query2 = null;
     Connection connection = null;
     PreparedStatement preparedStatement = null;
     ResultSet resultSet = null;
-    Group group ;
+    Group group = null;
     String espace = " ";
+    int index;
+    
     
     ObservableList<Group> GroupList = FXCollections.observableArrayList();
     
@@ -88,10 +91,6 @@ public class groupController {
         }
 
     }
-    
-   
-  
-    
     
 
     @FXML
@@ -154,25 +153,37 @@ public class groupController {
                        editIcon.setStyleClass("StyleSys.css");
                        deleteIcon.setOnMouseClicked((MouseEvent event) -> {
                            
-                           try {
-                              group = tableGroup.getSelectionModel().getSelectedItem();
-                              Alert alert = new Alert(AlertType.CONFIRMATION);
-								alert.setTitle("Delete group");
-								alert.setHeaderText("Are you sure want to delete "+group.getNom()+"?");
-								Optional<ButtonType> option = alert.showAndWait();
-								if (option.get() == ButtonType.OK) {
-									group = tableGroup.getSelectionModel().getSelectedItem();
-                               query = "DELETE FROM groups WHERE nom_grp="+group.getNom();
-                               connection = DbConnection.createConnection();
-                               preparedStatement = connection.prepareStatement(query);
-                               preparedStatement.execute();
-                               refreshView();}
-                               else if (option.get() == ButtonType.CANCEL) {
-									System.out.println("nothing");;
-								} 
-                           } catch (SQLException ex) {
-                               Logger.getLogger(groupController.class.getName()).log(Level.SEVERE, null, ex);
-                           }
+                         
+                    	   
+                    	 index = tableGroup.getSelectionModel().getSelectedIndex();
+                   		if (index <= -1){
+                   			return;
+                   		}
+                   		String from_table=nameGrp.getCellData(index);
+                   		Connection conn;
+                   		PreparedStatement pst;
+                   		conn = DbConnection.createConnection();
+                   		String sql = "delete from groups where `nom_grp` = ? " ;
+                   		try {
+                   		 group = tableGroup.getSelectionModel().getSelectedItem();
+                         Alert alert = new Alert(AlertType.CONFIRMATION);
+							alert.setTitle("Delete group");
+							alert.setHeaderText("Are you sure want to delete "+group.getNom());
+							Optional<ButtonType> option = alert.showAndWait();
+							if (option.get() == ButtonType.OK) {
+                   			pst = conn.prepareStatement(sql);
+                   			pst.setString(1, from_table);
+                   			pst.execute();
+                   			
+                   			refreshView();}
+							else if (option.get() == ButtonType.CANCEL) {
+								System.out.println("nothing");
+							} 
+							
+                   		} catch (Exception e) {
+                   			JOptionPane.showMessageDialog(null, e);
+                   		}
+                   	
                            
                           
 

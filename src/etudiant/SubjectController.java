@@ -7,11 +7,15 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.controlsfx.control.Notifications;
+
 import com.jfoenix.controls.JFXButton;
 
+import application.Controller;
 import database.DbConnection;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
@@ -23,6 +27,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -30,11 +35,14 @@ import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Callback;
+import javafx.util.Duration;
 import system.AddSubjectController;
 import system.Student;
 import system.StudentManagememntController;
@@ -72,7 +80,8 @@ public class SubjectController {
     
     @FXML
     private Label list;
-    
+    static int code;
+    static String test ;
     String query = null;
     Connection connection = null;
     PreparedStatement preparedStatement = null;
@@ -81,17 +90,70 @@ public class SubjectController {
     String file_name = "C:\\Users\\faycal\\eclipse-workspace\\Gestion des etudiants\\src\\images\\theme.pdf";
     ObservableList<Subject> SubjectList = FXCollections.observableArrayList();
     
+    
+    private static int getCode() throws ClassNotFoundException {
+    	try {
+			DbConnection.Setconnection();
+			Statement st=(Statement) DbConnection.con.createStatement();
+			
+	    	String requette="SELECT  code_binome FROM `etudiant` WHERE `username`='"+Controller.typedID+"'";
+			ResultSet rs=st.executeQuery(requette);
+			while (rs.next()) {
+				code=rs.getInt(1);
+			}
+		} catch (SQLException ex) {
+
+			System.err.println(ex.getMessage());
+		}
+		return code;
+    }
+    public static String getSujet() throws ClassNotFoundException {
+    	getCode();
+		try {
+			
+			DbConnection.Setconnection();
+			Statement st=(Statement) DbConnection.con.createStatement();
+
+			String requette="SELECT code  FROM `binome` WHERE id_sujet IS NULL AND code = '" + code + "'";
+			ResultSet rs=st.executeQuery(requette);
+			while (rs.next()) {
+				test="null2";
+			}
+		} catch (SQLException ex) {
+
+			System.err.println(ex.getMessage());
+		}
+		System.out.println(test);
+		return test;
+	}
+    
+    
     @FXML
-    public void getAddView(ActionEvent actionEvent) {
+    public void getAddView(ActionEvent actionEvent) throws ClassNotFoundException {
         try {
+        	 
+        	getSujet();
+        	getCode();
+			if (test == "null2" ) {
             Parent parent = FXMLLoader.load(getClass().getResource("ChooseSubject.fxml"));
             Scene scene = new Scene(parent);
             Stage stage = new Stage();
             stage.setScene(scene);
             stage.initStyle(StageStyle.UTILITY);
             stage.setResizable(false);
-            stage.show();
-            //refreshView();
+            stage.show();}
+			else {
+				Notifications notif2 = Notifications.create();
+				Image img2 = new Image("/images/protection.png");
+				notif2.title("Team ");
+				notif2.text("You choose subject already");
+				notif2.darkStyle();
+				notif2.hideAfter(Duration.seconds(5));
+				notif2.position(Pos.BOTTOM_RIGHT);
+				notif2.graphic(new ImageView(img2) );
+				notif2.show();
+			}
+           
         } catch (IOException ex) {
             Logger.getLogger(SubjectController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -200,6 +262,7 @@ public class SubjectController {
     @FXML
     void initialize() {
         loadInfo();
+        
    
     }
 

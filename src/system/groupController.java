@@ -187,7 +187,7 @@ public class groupController {
                                refreshView();
                                
                            } catch (SQLException ex) {
-                               Logger.getLogger(StudentManagememntController.class.getName()).log(Level.SEVERE, null, ex);
+                               Logger.getLogger(groupController.class.getName()).log(Level.SEVERE, null, ex);
                            }
                            
                           
