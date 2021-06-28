@@ -144,7 +144,7 @@ public class SubjectController {
             stage.show();}
 			else if(test==null){
 				Notifications notif2 = Notifications.create();
-				Image img2 = new Image("/images/protection.png");
+				Image img2 = new Image("/images/exam.png");
 				notif2.title("Team ");
 				notif2.text("You choose subject already");
 				notif2.darkStyle();

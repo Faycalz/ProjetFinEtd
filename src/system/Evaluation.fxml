@@ -68,7 +68,6 @@
                         <TableColumn fx:id="ReppP" prefWidth="159.0" text="Repport progress" />
                         <TableColumn fx:id="AppP" prefWidth="140.0" text="App progress" />
                         <TableColumn fx:id="remark" prefWidth="127.0" text="Remark" />
-                        <TableColumn fx:id="Edit" prefWidth="64.0" text="Edit" />
                      </columns>
                   </TableView>
                </children>

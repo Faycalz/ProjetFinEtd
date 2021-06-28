@@ -34,7 +34,7 @@
                <font>
                   <Font name="Calibri Bold" size="25.0" />
                </font></Label>
-            <Label fx:id="name" layoutX="498.0" layoutY="199.0" text="Label">
+            <Label fx:id="name" layoutX="498.0" layoutY="199.0" text="Benyahia">
                <font>
                   <Font name="Calibri" size="20.0" />
                </font></Label>
@@ -42,7 +42,7 @@
                <font>
                   <Font name="Calibri Bold" size="25.0" />
                </font></Label>
-            <Label fx:id="lastname" layoutX="498.0" layoutY="261.0" text="Label">
+            <Label fx:id="lastname" layoutX="498.0" layoutY="261.0" text="Imad">
                <font>
                   <Font name="Calibri" size="20.0" />
                </font></Label>
@@ -50,7 +50,7 @@
                <font>
                   <Font name="Calibri Bold" size="24.0" />
                </font></Label>
-            <Label fx:id="fmark" layoutX="498.0" layoutY="319.0" text="Label">
+            <Label fx:id="fmark" layoutX="498.0" layoutY="319.0" text="16.5">
                <font>
                   <Font name="Calibri" size="20.0" />
                </font></Label>

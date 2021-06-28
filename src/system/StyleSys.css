@@ -161,6 +161,11 @@
 	-glyph-size:28px;
 	-fx-fill:#00E84F;
 }
+.edit_iconn{
+	
+	-glyph-size:28px;
+	-fx-fill:#00E84F;
+}
 
 #dash, #studM, #grpM, #subP, #sesP, #teamP, #Eval{
 	-fx-border-radius: 30;

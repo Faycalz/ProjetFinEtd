@@ -97,7 +97,7 @@
                            </HBox.margin>
                         </Label>
                      </children></HBox>
-                  <Pane maxHeight="35.0" prefHeight="8.0" prefWidth="218.0" style="-fx-background-color: #EAE7E6;" styleClass="line-color" stylesheets="@StyleSys.css" VBox.vgrow="ALWAYS">
+                  <Pane maxHeight="4.0" prefHeight="4.0" prefWidth="218.0" style="-fx-background-color: #EAE7E6;" styleClass="line-color" stylesheets="@StyleSys.css" VBox.vgrow="ALWAYS">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -208,7 +208,7 @@
                   </HBox>
                   <HBox prefHeight="77.0" prefWidth="250.0">
                      <children>
-                        <JFXButton fx:id="teamP" alignment="BASELINE_LEFT" graphicTextGap="30.0" onAction="#TeamAction" prefHeight="72.0" prefWidth="275.0" text="Team" textFill="#0000008c">
+                        <JFXButton fx:id="teamP" alignment="BASELINE_LEFT" graphicTextGap="30.0" onAction="#TeamAction" prefHeight="72.0" prefWidth="275.0" text="Team Monitoring " textFill="#0000008c">
                            <font>
                               <Font name="Calibri Bold" size="16.0" />
                            </font>
@@ -225,21 +225,7 @@
                         <Insets left="10.0" />
                      </padding>
                   </HBox>
-                  <HBox prefHeight="77.0" prefWidth="250.0">
-                     <children>
-                        <JFXButton fx:id="Eval" alignment="BASELINE_LEFT" graphicTextGap="30.0" onAction="#EvaluationAction" prefHeight="72.0" prefWidth="331.0" text="Evaluation" textFill="#0000008c">
-                           <font>
-                              <Font name="Calibri Bold" size="16.0" />
-                           </font>
-                           <graphic>
-                              <ImageView fitHeight="32.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../images/checklist.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </JFXButton>
-                     </children>
+                  <HBox prefHeight="19.0" prefWidth="250.0">
                      <padding>
                         <Insets left="10.0" />
                      </padding>

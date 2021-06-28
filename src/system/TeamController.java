@@ -1,5 +1,7 @@
 package system;
 
+
+import java.awt.Color;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -28,7 +30,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
+
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Callback;
@@ -71,6 +73,8 @@ public class TeamController {
 	Connection connection = null;
 	PreparedStatement preparedStatement = null;
 	ResultSet resultSet = null;
+	  public static int idteam ;
+	  public static String grpteam ;
 	Team team ;
 	ControllerSys cont ;
     ObservableList<Team> TeamsList = FXCollections.observableArrayList();
@@ -79,7 +83,7 @@ public class TeamController {
     @FXML
     public void getAddView(ActionEvent actionEvent) {
         try {
-            Parent parent = FXMLLoader.load(getClass().getResource("Addteamev.fxml"));
+            Parent parent = FXMLLoader.load(getClass().getResource("AddEvaluation.fxml"));
             Scene scene = new Scene(parent);
             Stage stage = new Stage();
             stage.setScene(scene);
@@ -91,6 +95,9 @@ public class TeamController {
         }
 
     }
+    
+    
+    
     
     @FXML
     public void refreshView() {
@@ -108,7 +115,7 @@ public class TeamController {
                         resultSet.getString("grp"),
                         resultSet.getInt("suj")
                        
-                      
+                         
                        
                 ));
             	tableSub.setItems(TeamsList);
@@ -134,7 +141,7 @@ public class TeamController {
       
 
       //add cell of button edit 
-       /* Callback<TableColumn<Team, String>, TableCell<Team, String>> cellFoctory = (TableColumn<Team, String> param) -> {
+        Callback<TableColumn<Team, String>, TableCell<Team, String>> cellFoctory = (TableColumn<Team, String> param) -> {
            // make cell containing buttons
            final TableCell<Team, String> cell = new TableCell<Team, String>() {
                @Override
@@ -147,24 +154,51 @@ public class TeamController {
 
                    } else {
 
-                       FontAwesomeIconView deleteIcon = new FontAwesomeIconView(FontAwesomeIcon.TRASH_ALT);
-                       FontAwesomeIconView editIcon = new FontAwesomeIconView(FontAwesomeIcon.PENCIL_SQUARE);
+                      // FontAwesomeIconView deleteIcon = new FontAwesomeIconView(FontAwesomeIcon.TRASH_ALT);
+                       FontAwesomeIconView editIconn = new FontAwesomeIconView(FontAwesomeIcon.EDIT);
                        
               
-                       deleteIcon.setId("my_icon");
-                       deleteIcon.setStyleClass("StyleSys.css");
-                       editIcon.setId("edit_icon");
-                       editIcon.setStyleClass("StyleSys.css");
+                  
+                       editIconn.setId("edit_iconn");
+                       editIconn.setGlyphSize(23);
+                       editIconn.setGlyphStyle( "-fx-fill:#FFC764");                       
+                       editIconn.setStyleClass("StyleSys.css");
                 
-                       editIcon.setOnMouseClicked((MouseEvent event) -> {
+                       editIconn.setOnMouseClicked((MouseEvent event) -> {
                            
                          //  team = tableSub.getSelectionModel().getSelectedItem();
                     
-                          cont.EvaluationActionn(event);
+                          
                           
                           
                           		
-                          	
+                         
+                              try {
+                            	  team = tableSub.getSelectionModel().getSelectedItem();
+                            	  idteam = team.getTeamcode();
+                            	  grpteam = team.getGrp();
+                                  Parent parent = FXMLLoader.load(getClass().getResource("AddEvaluation.fxml"));
+                                  Scene scene = new Scene(parent);
+                                  Stage stage = new Stage();
+                                  stage.setScene(scene);
+                                  stage.initStyle(StageStyle.UTILITY);
+                                  stage.show();
+                                  //refreshView();
+                              } catch (IOException ex) {
+                                  Logger.getLogger(StudentManagememntController.class.getName()).log(Level.SEVERE, null, ex);
+                              }
+                              
+                             
+                    	  /* team = tables.getSelectionModel().getSelectedItem();
+                           FXMLLoader loader = new FXMLLoader ();
+                           loader.setLocation(getClass().getResource("AddEvaluation.fxml"));
+                           try {
+                               loader.load();
+                           } catch (IOException ex) {
+                               Logger.getLogger(StudentManagememntController.class.getName()).log(Level.SEVERE, null, ex);
+                           }*/
+
+                          
                          
                          
                            
@@ -175,10 +209,10 @@ public class TeamController {
 
                        });
 
-                       HBox managebtn = new HBox(editIcon);
+                       HBox managebtn = new HBox(editIconn);
                        managebtn.setStyle("-fx-alignment:center");
                       // HBox.setMargin(deleteIcon, new Insets(2, 2, 0, 3));
-                       HBox.setMargin(editIcon, new Insets(2, 3, 0, 2));
+                       HBox.setMargin(editIconn, new Insets(2, 3, 0, 2));
 
                        setGraphic(managebtn);
 
@@ -192,7 +226,7 @@ public class TeamController {
            return cell;
        };
         Edit.setCellFactory(cellFoctory);
-        tableSub.setItems(TeamsList);*/
+        tableSub.setItems(TeamsList);
 
 
     }

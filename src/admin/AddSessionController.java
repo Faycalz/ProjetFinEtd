@@ -66,7 +66,7 @@ public class AddSessionController implements Initializable {
 			try {
 				DbConnection.Setconnection();
 				Statement st=(Statement) DbConnection.con.createStatement();
-				String qe="SELECT `nom_grp` FROM `groups`";
+				String qe="SELECT `nom_grp` FROM `groups`  ";
 				ResultSet rs=st.executeQuery(qe);
 				while (rs.next()) {
 					List.add(rs.getString(1));

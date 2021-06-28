@@ -2,10 +2,12 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXComboBox?>
-<?import com.jfoenix.controls.JFXDatePicker?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -14,60 +16,20 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="806.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="system.AddEvaluationController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="system.AddEvaluationController">
    <children>
       <Pane layoutX="180.0" layoutY="79.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ECEFF1;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox layoutX="403.0" layoutY="45.0" prefHeight="443.0" prefWidth="403.0">
+            <HBox layoutX="638.0" layoutY="46.0" prefHeight="472.0" prefWidth="455.0">
                <children>
                   <VBox prefHeight="402.0" prefWidth="395.0">
                      <children>
-                        <HBox prefHeight="55.0" prefWidth="401.0">
+                        <HBox prefHeight="22.0" prefWidth="395.0">
                            <children>
-                              <HBox prefHeight="70.0" prefWidth="117.0">
-                                 <children>
-                                    <Label text="Teacher" textFill="#453d3db1">
-                                       <HBox.margin>
-                                          <Insets left="15.0" top="33.0" />
-                                       </HBox.margin>
-                                       <font>
-                                          <Font name="Arial Bold" size="15.0" />
-                                       </font>
-                                    </Label>
-                                 </children>
-                              </HBox>
-                              <JFXComboBox fx:id="InsertTeacher" focusColor="#407bff" prefHeight="25.0" prefWidth="135.0">
-                                 <HBox.margin>
-                                    <Insets left="49.0" top="27.0" />
-                                 </HBox.margin>
-                              </JFXComboBox>
-                           </children>
-                           <VBox.margin>
-                              <Insets left="2.0" top="-13.0" />
-                           </VBox.margin>
-                        </HBox>
-                        <HBox prefHeight="59.0" prefWidth="401.0">
-                           <children>
-                              <HBox prefHeight="70.0" prefWidth="117.0">
-                                 <children>
-                                    <Label text="Team Code" textFill="#453d3db1">
-                                       <HBox.margin>
-                                          <Insets left="15.0" top="33.0" />
-                                       </HBox.margin>
-                                       <font>
-                                          <Font name="Arial Bold" size="15.0" />
-                                       </font>
-                                    </Label>
-                                 </children>
-                              </HBox>
-                              <JFXComboBox fx:id="InsertTeam" focusColor="#407bff" prefHeight="25.0" prefWidth="135.0">
-                                 <HBox.margin>
-                                    <Insets left="49.0" top="27.0" />
-                                 </HBox.margin>
-                              </JFXComboBox>
+                              <HBox prefHeight="70.0" prefWidth="117.0" />
                            </children>
                         </HBox>
-                        <HBox prefHeight="38.0" prefWidth="401.0">
+                        <HBox prefHeight="70.0" prefWidth="395.0">
                            <children>
                               <HBox prefHeight="70.0" prefWidth="117.0">
                                  <children>
@@ -81,18 +43,18 @@
                                     </Label>
                                  </children>
                               </HBox>
-                              <JFXDatePicker fx:id="InsertDate" defaultColor="#407bff" prefHeight="25.0" prefWidth="179.0">
+                              <JFXComboBox fx:id="InsertDate1" prefHeight="25.0" prefWidth="165.0">
                                  <HBox.margin>
-                                    <Insets left="48.0" top="20.0" />
+                                    <Insets left="47.0" top="20.0" />
                                  </HBox.margin>
-                              </JFXDatePicker>
+                              </JFXComboBox>
                            </children>
                         </HBox>
-                        <HBox prefHeight="36.0" prefWidth="401.0">
+                        <HBox prefHeight="70.0" prefWidth="395.0">
                            <children>
                               <HBox prefHeight="70.0" prefWidth="117.0">
                                  <children>
-                                    <Label text="Mark" textFill="#453d3db5">
+                                    <Label text="score" textFill="#453d3db5">
                                        <HBox.margin>
                                           <Insets left="15.0" top="33.0" />
                                        </HBox.margin>
@@ -109,7 +71,7 @@
                               </JFXTextField>
                            </children>
                         </HBox>
-                        <HBox prefHeight="48.0" prefWidth="401.0">
+                        <HBox prefHeight="70.0" prefWidth="401.0">
                            <children>
                               <HBox prefHeight="70.0" prefWidth="117.0">
                                  <children>
@@ -130,7 +92,7 @@
                               </JFXTextField>
                            </children>
                         </HBox>
-                        <HBox prefHeight="48.0" prefWidth="401.0">
+                        <HBox prefHeight="70.0" prefWidth="395.0">
                            <children>
                               <HBox prefHeight="50.0" prefWidth="142.0">
                                  <children>
@@ -151,7 +113,7 @@
                               </JFXTextField>
                            </children>
                         </HBox>
-                        <HBox prefHeight="44.0" prefWidth="401.0">
+                        <HBox prefHeight="70.0" prefWidth="401.0">
                            <children>
                               <HBox prefHeight="70.0" prefWidth="117.0">
                                  <children>
@@ -174,12 +136,12 @@
                         </HBox>
                         <HBox prefHeight="85.0" prefWidth="393.0" spacing="60.0">
                            <children>
-                              <JFXButton fx:id="save" prefHeight="37.0" prefWidth="130.0" stylesheets="@StyleSys.css" text="Save" textFill="#141414b5">
+                              <JFXButton fx:id="save" onAction="#save" prefHeight="37.0" prefWidth="130.0" stylesheets="@StyleSys.css" text="Save" textFill="#141414b5">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
                               </JFXButton>
-                              <JFXButton fx:id="reset" prefHeight="37.0" prefWidth="130.0" stylesheets="@StyleSys.css" text="Reset" textFill="#0f0f0fb4">
+                              <JFXButton fx:id="reset" onAction="#clean" prefHeight="37.0" prefWidth="130.0" stylesheets="@StyleSys.css" text="Reset" textFill="#0f0f0fb4">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
@@ -196,16 +158,29 @@
                   </VBox>
                </children>
             </HBox>
-            <HBox layoutY="77.0" prefHeight="411.0" prefWidth="403.0">
+            <HBox layoutY="77.0" prefHeight="439.0" prefWidth="626.0">
                <children>
-                  <ImageView fitHeight="434.0" fitWidth="403.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/Grades.gif" />
-                     </image>
-                  </ImageView>
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="478.0" prefWidth="627.0" style="-fx-border-color: white;" stylesheets="@../etudiant/StyleSys.css" vbarPolicy="NEVER">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="395.0" prefWidth="623.0">
+                           <children>
+                              <TableView fx:id="tableSub" fixedCellSize="0.0" layoutX="3.0" layoutY="-2.0" prefHeight="491.0" prefWidth="626.0" stylesheets="@../etudiant/StyleSys.css" AnchorPane.bottomAnchor="-94.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="-2.0">
+                                 <columns>
+                                    <TableColumn fx:id="teamcode" prefWidth="73.0" text="Code " />
+                                    <TableColumn fx:id="DateEV" prefWidth="106.0" text="Date" />
+                                    <TableColumn fx:id="mark" minWidth="0.0" prefWidth="93.0" text="Mark" />
+                                    <TableColumn fx:id="ReppP" prefWidth="129.0" text="Repport progress" />
+                                    <TableColumn fx:id="AppP" prefWidth="115.0" text="App progress" />
+                                    <TableColumn fx:id="remark" prefWidth="98.0" text="Remark" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
                </children>
             </HBox>
-            <HBox prefHeight="37.0" prefWidth="806.0" style="-fx-background-color: #407bff;">
+            <HBox prefHeight="46.0" prefWidth="1100.0" style="-fx-background-color: #407bff;">
                <children>
                   <ImageView fitHeight="50.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -215,7 +190,7 @@
                         <Insets left="20.0" />
                      </HBox.margin>
                   </ImageView>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="45.0" prefWidth="258.0" text="Evaluation" textFill="#ffffff" HBox.hgrow="ALWAYS">
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="45.0" prefWidth="626.0" text="Evaluation" textFill="#ffffff" HBox.hgrow="ALWAYS">
                      <HBox.margin>
                         <Insets left="172.0" />
                      </HBox.margin>

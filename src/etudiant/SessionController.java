@@ -82,7 +82,7 @@ public class SessionController {
 		    Connection connection = null;
 		    PreparedStatement preparedStatement = null;
 		    ResultSet resultSet = null;
-		    
+		    String idd ;
 		    String espace = " ";
 		    Session session ;
 		    
@@ -103,16 +103,32 @@ public class SessionController {
 				}
 				return code;
 		    }*/
+		    void getgrp() {
+		    	
+		    	   String q1 = "SELECT * FROM etudiant  WHERE username = '"+ Controller.typedID+ "'";
+
+		           try {
+		               ResultSet rs1 = DbConnection.executeQuery(q1, DbConnection.createConnection());
+
+		               while (rs1.next()) {
+		                   idd = rs1.getString("id_grp");
+		                   
+		               }
+		           } catch (SQLException ex) {
+		               System.out.println(ex);
+		           }
+		    }
 		    
 		    ObservableList<Session> SessionList = FXCollections.observableArrayList();
 		    @FXML
 		    public void refreshView() {
 		        try {
+		        	getgrp();
 		        	DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
 		        	Calendar cal = Calendar.getInstance();
 		        	
 		        	SessionList.clear();
-		            query = "SELECT * FROM séance LEFT JOIN salle ON séance.id_salle=salle.id WHERE séance.date >='"+dateFormat.format(cal.getTime())+"'  ";
+		            query = "SELECT * FROM séance LEFT JOIN salle ON séance.id_salle=salle.id WHERE séance.date >='"+dateFormat.format(cal.getTime())+"' AND séance.id_grp ='"+idd+"'  ";
 		            //séance.date>='"+ +"'
 		            preparedStatement = connection.prepareStatement(query);
 		            resultSet = preparedStatement.executeQuery();

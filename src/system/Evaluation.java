@@ -5,7 +5,6 @@ import java.sql.Date;
 public class Evaluation {
 
 	int code;
-	
 	Date date ;
 	double note;
 	String ev_rapport;
@@ -22,13 +21,18 @@ public class Evaluation {
 		this.ev_app = ev_app;
 		this.remarque = remarque;
 	}
-	public int getCode_binome() {
+	
+	
+	public int getCode() {
 		return code;
 	}
-	public void setCode_binome(int code_binome) {
-		this.code = code_binome;
+
+
+	public void setCode(int code) {
+		this.code = code;
 	}
-	
+
+
 	public Date getDate() {
 		return date;
 	}
