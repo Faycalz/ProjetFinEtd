@@ -208,7 +208,7 @@
                   </HBox>
                   <HBox prefHeight="77.0" prefWidth="250.0">
                      <children>
-                        <JFXButton fx:id="teamP" alignment="BASELINE_LEFT" graphicTextGap="30.0" prefHeight="72.0" prefWidth="275.0" text="Team" textFill="#0000008c">
+                        <JFXButton fx:id="teamP" alignment="BASELINE_LEFT" graphicTextGap="30.0" onAction="#TeamAction" prefHeight="72.0" prefWidth="275.0" text="Team" textFill="#0000008c">
                            <font>
                               <Font name="Calibri Bold" size="16.0" />
                            </font>

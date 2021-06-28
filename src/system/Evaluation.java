@@ -1,45 +1,45 @@
 package system;
 
+import java.sql.Date;
+
 public class Evaluation {
+
+	int code;
 	
-	int id;
-	int note;
-	String remarque;
+	Date date ;
+	double note;
 	String ev_rapport;
 	String ev_app;
-	int code_binome;
-	int id_prof;
-	
-	
-	
-	public Evaluation(int id, int note, String remarque, String ev_rapport, String ev_app, int code_binome,
-			int id_prof) {
+	String remarque;
+	public Evaluation(int code, Date date, double note, String ev_rapport, String ev_app,
+			String remarque) {
 		super();
-		this.id = id;
+		this.code = code;
+		
+		this.date = date;
 		this.note = note;
-		this.remarque = remarque;
 		this.ev_rapport = ev_rapport;
 		this.ev_app = ev_app;
-		this.code_binome = code_binome;
-		this.id_prof = id_prof;
+		this.remarque = remarque;
 	}
-	public int getId() {
-		return id;
+	public int getCode_binome() {
+		return code;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setCode_binome(int code_binome) {
+		this.code = code_binome;
 	}
-	public int getNote() {
+	
+	public Date getDate() {
+		return date;
+	}
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	public double getNote() {
 		return note;
 	}
-	public void setNote(int note) {
+	public void setNote(double note) {
 		this.note = note;
-	}
-	public String getRemarque() {
-		return remarque;
-	}
-	public void setRemarque(String remarque) {
-		this.remarque = remarque;
 	}
 	public String getEv_rapport() {
 		return ev_rapport;
@@ -53,18 +53,18 @@ public class Evaluation {
 	public void setEv_app(String ev_app) {
 		this.ev_app = ev_app;
 	}
-	public int getCode_binome() {
-		return code_binome;
+	public String getRemarque() {
+		return remarque;
 	}
-	public void setCode_binome(int code_binome) {
-		this.code_binome = code_binome;
+	public void setRemarque(String remarque) {
+		this.remarque = remarque;
 	}
-	public int getId_prof() {
-		return id_prof;
-	}
-	public void setId_prof(int id_prof) {
-		this.id_prof = id_prof;
-	}
+	
+	
+	
+	
+	
+	
 	
 
 }

@@ -123,10 +123,28 @@ public class ControllerSys implements Initializable{
    	}
     
     @FXML
+   	void EvaluationActionn(MouseEvent event) {
+   		
+       	FxmlLoaderr object = new FxmlLoaderr();
+   	     Pane view = object.getPage("Evaluation");
+   	     mainPane.setCenter(view);
+   		
+   	}
+    
+    @FXML
    	void EvaluationAction(ActionEvent event) {
    		
        	FxmlLoaderr object = new FxmlLoaderr();
    	     Pane view = object.getPage("Evaluation");
+   	     mainPane.setCenter(view);
+   		
+   	}
+    
+    @FXML
+   	void TeamAction(ActionEvent event) {
+   		
+       	FxmlLoaderr object = new FxmlLoaderr();
+   	     Pane view = object.getPage("team");
    	     mainPane.setCenter(view);
    		
    	}

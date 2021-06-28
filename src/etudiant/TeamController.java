@@ -48,9 +48,6 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Callback;
 import javafx.util.Duration;
-import system.Evaluation;
-import system.EvaluationController;
-import system.Student;
 
 public class TeamController implements Initializable {
 	@FXML

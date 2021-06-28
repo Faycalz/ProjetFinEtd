@@ -6,7 +6,11 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.sql.Time;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Optional;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -14,6 +18,7 @@ import java.util.logging.Logger;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 
+import application.Controller;
 import database.DbConnection;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
@@ -80,13 +85,35 @@ public class SessionController {
 		    
 		    String espace = " ";
 		    Session session ;
+		    
+		    
+		   /* private static int getDate() throws ClassNotFoundException {
+		    	try {
+					DbConnection.Setconnection();
+					Statement st=(Statement) DbConnection.con.createStatement();
+					
+			    	String requette="SELECT  date FROM `s` WHERE `username`='"+Controller.typedID+"'";
+					ResultSet rs=st.executeQuery(requette);
+					while (rs.next()) {
+						code=rs.getInt(1);
+					}
+				} catch (SQLException ex) {
+
+					System.err.println(ex.getMessage());
+				}
+				return code;
+		    }*/
+		    
 		    ObservableList<Session> SessionList = FXCollections.observableArrayList();
 		    @FXML
 		    public void refreshView() {
 		        try {
+		        	DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+		        	Calendar cal = Calendar.getInstance();
 		        	
 		        	SessionList.clear();
-		            query = "SELECT * FROM séance LEFT JOIN salle ON séance.id_salle=salle.id";
+		            query = "SELECT * FROM séance LEFT JOIN salle ON séance.id_salle=salle.id WHERE séance.date >='"+dateFormat.format(cal.getTime())+"'  ";
+		            //séance.date>='"+ +"'
 		            preparedStatement = connection.prepareStatement(query);
 		            resultSet = preparedStatement.executeQuery();
 

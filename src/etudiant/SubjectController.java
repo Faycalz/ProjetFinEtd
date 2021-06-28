@@ -81,7 +81,7 @@ public class SubjectController {
     @FXML
     private Label list;
     static int code;
-    static String test ;
+    static String test =null ;
     String query = null;
     Connection connection = null;
     PreparedStatement preparedStatement = null;
@@ -114,8 +114,8 @@ public class SubjectController {
 			DbConnection.Setconnection();
 			Statement st=(Statement) DbConnection.con.createStatement();
 
-			String requette="SELECT code  FROM `binome` WHERE id_sujet IS NULL AND code = '" + code + "'";
-			ResultSet rs=st.executeQuery(requette);
+			String requette2="SELECT code  FROM `binome` WHERE id_sujet IS NULL AND code = '" + code + "'";
+			ResultSet rs=st.executeQuery(requette2);
 			while (rs.next()) {
 				test="null2";
 			}
@@ -131,9 +131,9 @@ public class SubjectController {
     @FXML
     public void getAddView(ActionEvent actionEvent) throws ClassNotFoundException {
         try {
-        	 
-        	getSujet();
         	getCode();
+        	getSujet();
+        	
 			if (test == "null2" ) {
             Parent parent = FXMLLoader.load(getClass().getResource("ChooseSubject.fxml"));
             Scene scene = new Scene(parent);
@@ -142,7 +142,7 @@ public class SubjectController {
             stage.initStyle(StageStyle.UTILITY);
             stage.setResizable(false);
             stage.show();}
-			else {
+			else if(test==null){
 				Notifications notif2 = Notifications.create();
 				Image img2 = new Image("/images/protection.png");
 				notif2.title("Team ");

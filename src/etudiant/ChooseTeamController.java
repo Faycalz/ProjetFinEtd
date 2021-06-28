@@ -204,7 +204,7 @@ public class ChooseTeamController implements Initializable {
 				}
 				getTeamId();
 				getTextField();
-				   getQuery2();
+				getQuery2();
 					  
 				   
 					try {
