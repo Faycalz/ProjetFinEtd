@@ -166,8 +166,8 @@
                            <children>
                               <TableView fx:id="tableSub" fixedCellSize="0.0" layoutX="3.0" layoutY="-2.0" prefHeight="491.0" prefWidth="626.0" stylesheets="@../etudiant/StyleSys.css" AnchorPane.bottomAnchor="-94.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="-2.0">
                                  <columns>
-                                    <TableColumn fx:id="teamcode" prefWidth="73.0" text="Code " />
-                                    <TableColumn fx:id="DateEV" prefWidth="106.0" text="Date" />
+                                    <TableColumn fx:id="teamcode" minWidth="8.0" prefWidth="75.0" text="Code " />
+                                    <TableColumn fx:id="DateEV" prefWidth="104.0" text="Date" />
                                     <TableColumn fx:id="mark" minWidth="0.0" prefWidth="93.0" text="Mark" />
                                     <TableColumn fx:id="ReppP" prefWidth="129.0" text="Repport progress" />
                                     <TableColumn fx:id="AppP" prefWidth="115.0" text="App progress" />

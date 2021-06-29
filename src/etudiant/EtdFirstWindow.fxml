@@ -77,15 +77,15 @@
                <children>
                   <HBox prefHeight="70.0" prefWidth="250.0">
                      <children>
-                        <ImageView fitHeight="46.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="52.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../images/user.png" />
+                              <Image url="@../images/business-man.png" />
                            </image>
                            <HBox.margin>
                               <Insets left="10.0" top="7.0" />
                            </HBox.margin>
                         </ImageView>
-                        <Label prefHeight="50.0" prefWidth="128.0" text="Username">
+                        <Label fx:id="username" prefHeight="50.0" prefWidth="157.0" text="Username">
                            <font>
                               <Font size="13.0" />
                            </font>

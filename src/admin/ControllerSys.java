@@ -4,6 +4,7 @@ package admin;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.ResultSet;
 import java.util.ResourceBundle;
 
 import com.jfoenix.controls.JFXButton;
@@ -19,11 +20,14 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import admin.FxmlLoaderr;
+import application.Controller;
+import database.DbConnection;
 
 public class ControllerSys implements Initializable{
 
@@ -55,7 +59,9 @@ public class ControllerSys implements Initializable{
     @FXML
     private JFXButton sesP;
 
-    
+
+    @FXML
+    private Label username;
 
 
     private Stage stage ;
@@ -76,7 +82,25 @@ public class ControllerSys implements Initializable{
 	
 
    
+    public void updateData() {
+        
+    	System.out.println(Controller.typedID);
+         String query = "SELECT * FROM prof WHERE username = '" + Controller.typedID + "'";
+
+        try {
+            ResultSet rs = DbConnection.executeQuery(query, DbConnection.createConnection());
+            while (rs.next()) {
+                
+               String name = rs.getString("username");
+              
+                username.setText(name);
+                username.setVisible(true);
     
+            }
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
+    }
     
     
     @FXML

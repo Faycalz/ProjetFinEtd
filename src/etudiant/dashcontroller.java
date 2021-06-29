@@ -1,4 +1,4 @@
-package admin;
+package etudiant;
 
 import java.net.URL;
 import java.sql.Connection;
@@ -6,21 +6,18 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ResourceBundle;
 
+import application.Controller;
+import database.DbConnection;
 import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.PieChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
-import javafx.scene.text.Text;
-import application.Controller;
-import database.DbConnection;
 
-public class DashController  implements Initializable{
-
+public class dashcontroller implements Initializable {
 	String name = null ;
 	Connection connection = null;
     PreparedStatement preparedStatement = null;
@@ -100,7 +97,7 @@ public class DashController  implements Initializable{
 public void updateData() {
        
     	System.out.println(Controller.typedID);
-        query = "SELECT * FROM prof WHERE username = '" + Controller.typedID + "'";
+        query = "SELECT * FROM etudiant WHERE username = '" + Controller.typedID + "'";
 
         try {
             ResultSet rs = DbConnection.executeQuery(query, DbConnection.createConnection());

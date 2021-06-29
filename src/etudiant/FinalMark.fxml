@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="etudiant.FinalMarkController">
    <children>
       <Pane layoutX="229.0" layoutY="202.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -34,7 +34,7 @@
                <font>
                   <Font name="Calibri Bold" size="25.0" />
                </font></Label>
-            <Label fx:id="name" layoutX="498.0" layoutY="199.0" text="Benyahia">
+            <Label fx:id="name" layoutX="498.0" layoutY="199.0" text="label">
                <font>
                   <Font name="Calibri" size="20.0" />
                </font></Label>
@@ -50,7 +50,7 @@
                <font>
                   <Font name="Calibri Bold" size="24.0" />
                </font></Label>
-            <Label fx:id="fmark" layoutX="498.0" layoutY="319.0" text="16.5">
+            <Label fx:id="fmark" layoutX="498.0" layoutY="319.0" prefHeight="23.0" prefWidth="41.0" text="16.5">
                <font>
                   <Font name="Calibri" size="20.0" />
                </font></Label>

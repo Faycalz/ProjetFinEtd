@@ -2,10 +2,13 @@ package etudiant;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.ResultSet;
 import java.util.ResourceBundle;
 
 import com.jfoenix.controls.JFXButton;
 
+import application.Controller;
+import database.DbConnection;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +16,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -23,7 +27,8 @@ public class ControllerEtd implements Initializable{
     @FXML
     private BorderPane mainPane;
 
-
+    @FXML
+    private Label username;
     
     
 	  private Stage stage ;
@@ -38,6 +43,25 @@ public class ControllerEtd implements Initializable{
 	    	stage.setScene(scene);
 	    	stage.centerOnScreen();
 	    	stage.show();
+	    }
+	    public void updateData() {
+	        
+	    	System.out.println(Controller.typedID);
+	         String query = "SELECT * FROM prof WHERE username = '" + Controller.typedID + "'";
+
+	        try {
+	            ResultSet rs = DbConnection.executeQuery(query, DbConnection.createConnection());
+	            while (rs.next()) {
+	                
+	               String name = rs.getString("username");
+	              
+	                username.setText(name);
+	                username.setVisible(true);
+	    
+	            }
+	        } catch (Exception ex) {
+	            System.out.println(ex);
+	        }
 	    }
 	    
 	    @FXML
@@ -95,7 +119,7 @@ public class ControllerEtd implements Initializable{
 			// TODO Auto-generated method stub
 			
 			
-			
+	    	updateData();
 			 FxmlLoaderr object = new FxmlLoaderr();
 		     Pane view = object.getPage("Dashboard");
 		     mainPane.setCenter(view);

@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="604.0" prefWidth="840.0" styleClass="container" stylesheets="@StyleSys.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="system.DashController">
+<AnchorPane prefHeight="604.0" prefWidth="840.0" styleClass="container" stylesheets="@StyleSys.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="etudiant.dashcontroller">
    <children>
       <Pane layoutX="14.0" layoutY="51.0" prefHeight="131.0" prefWidth="805.0" stylesheets="@StyleSys.css">
          <children>

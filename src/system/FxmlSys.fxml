@@ -79,13 +79,13 @@
                      <children>
                         <ImageView fitHeight="46.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../images/user.png" />
+                              <Image url="@../images/bussiness-man.png" />
                            </image>
                            <HBox.margin>
                               <Insets left="10.0" top="7.0" />
                            </HBox.margin>
                         </ImageView>
-                        <Label prefHeight="50.0" prefWidth="72.0" text="Username">
+                        <Label fx:id="username" prefHeight="50.0" prefWidth="179.0" text="Username">
                            <font>
                               <Font name="Calibri" size="16.0" />
                            </font>
